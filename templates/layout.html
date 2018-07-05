@@ -13,24 +13,19 @@
   <header role="banner">
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item" href="/">kendin için kodla</a>
+        <div class="navbar-item">
+          <a{% if this._path == '/' %} class="has-text-primary"{% endif
+            %} href="{{ '/'|url }}">kendin için kodla</a>
+        </div>
       </div>
       <div class="navbar-menu">
         <ul class="navbar-start">
+          {% for path, label in bag('main-nav').items() %}
           <li class="navbar-item">
-            <a{% if this._path == '/' %} class="has-text-primary"{% endif
-              %} href="{{ '/'|url }}">ana sayfa</a>
+            <a{% if this.is_child_of(path) %} class="has-text-primary"{% endif
+              %} href="{{ path|url }}">{{ bag('translate', this.alt, label) }}</a></a>
           </li>
-            {% for href, title in [
-              ['/blog', 'blog'],
-              ['/projeler', 'projeler'],
-              ['/biz-kimiz', 'biz kimiz?']
-            ] %}
-          <li class="navbar-item">
-            <a{% if this.is_child_of(href) %} class="has-text-primary"{% endif
-              %} href="{{ href|url }}">{{ title }}</a></a>
-          </li>
-            {% endfor %}
+          {% endfor %}
         </ul>
       </div>
     </nav>
