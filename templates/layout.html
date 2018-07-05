@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %} — kendin için kodla</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+<body>
+  <header role="banner">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">kendin için kodla</a>
+      </div>
+      <div class="navbar-menu">
+        <ul class="navbar-start">
+          <li class="navbar-item">
+            <a{% if this._path == '/' %} class="has-text-primary"{% endif
+              %} href="{{ '/'|url }}">ana sayfa</a>
+          </li>
+            {% for href, title in [
+              ['/blog', 'blog'],
+              ['/projeler', 'projeler'],
+              ['/biz-kimiz', 'biz kimiz?']
+            ] %}
+          <li class="navbar-item">
+            <a{% if this.is_child_of(href) %} class="has-text-primary"{% endif
+              %} href="{{ href|url }}">{{ title }}</a></a>
+          </li>
+            {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  <header>
+  <main role="main">
+    <section class="section">
+      <div class="content">
+        {% block body %}{% endblock %}
+      </div>
+    </section>
+  </main>
+  <footer class="footer" role="contentinfo">
+    <div class="content has-text-centered">
+      <small>
+        <strong>kendin için kodla</strong> site içeriği telif hakkı: &copy; Ayşe Tosun</a>, <time>2018</time>. <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a> lisansına tabidir.
+      </small>
+    </div>
+  </footer>
+</body>
+</html>

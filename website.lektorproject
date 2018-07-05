@@ -1,0 +1,15 @@
+[project]
+name = kendin için kodla
+
+[alternatives.tr]
+name = Türkçe
+primary = yes
+locale = tr_TR
+
+[alternatives.en]
+name = English
+url_prefix = /en/
+locale = en_US
+
+[servers.ghpages]
+target = ghpages://kendinicinkodla/kendinicinkodla.github.io
