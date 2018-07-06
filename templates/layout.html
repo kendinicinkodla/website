@@ -19,12 +19,12 @@
           <a class="navbar-item{% if this.is_child_of(path) %} class="has-text-primary"{% endif
         %}" href="{{ path|url }}">{{ bag('translate', this.alt, label) }}</a></a>
         {% endfor %}
-        <span class="navbar-item is-size-7">
-          <a href="/">türkçe</a> &nbsp; | &nbsp; <a href="/en/">english</a>
-        </span>
       </div>
     </nav>
-  <header>
+  </header>
+  <div class="container is-size-7">
+    <a href="/">türkçe</a> &nbsp; | &nbsp; <a href="/en/">english</a>
+  </div>
   <main role="main">
     <section class="section">
       <div class="content">
