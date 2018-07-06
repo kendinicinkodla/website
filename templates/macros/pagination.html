@@ -1,5 +1,5 @@
 {% macro render_pagination(pagination) %}
-  <div class="pagination">
+  <div class="pagination is-size-7">
     {% if pagination.has_prev %}
       <a href="{{ pagination.prev|url }}">&laquo; {{ bag('translate', pagination.current.alt, 'previous') }}</a>
     {% else %}
