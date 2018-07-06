@@ -15,10 +15,19 @@
       <div class="navbar-brand">
         <a class="navbar-item{% if this._path == '/' %} has-text-primary{% endif
           %}" href="{{ '/'|url }}">kendin için kodla</a>
-        {% for path, label in bag('main-nav').items() %}
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          {% for path, label in bag('main-nav').items() %}
           <a class="navbar-item{% if this.is_child_of(path) %} class="has-text-primary"{% endif
-        %}" href="{{ path|url }}">{{ bag('translate', this.alt, label) }}</a></a>
-        {% endfor %}
+        %}" href="{{ path|url }}">{{ bag('translate', this.alt, label) }}</a>
+          {% endfor %}
+        </div>
       </div>
     </nav>
   </header>
