@@ -20,7 +20,7 @@
   <header role="banner">
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item{% if this._path == '/' %} has-text-primary{% endif
+        <a class="navbar-item{% if this._path == '/' %} is-active{% endif
           %}" href="{{ '/'|url }}">kendin için kodla</a>
         <span role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
           <span aria-hidden="true"></span>
@@ -28,11 +28,12 @@
           <span aria-hidden="true"></span>
         </span>
       </div>
+
       <div class="navbar-menu" id="navMenu">
         <div class="navbar-start">
           {% for path, label in bag('main-nav').items() %}
-          <a class="navbar-item{% if this.is_child_of(path) %} class="has-text-primary"{% endif
-        %}" href="{{ path|url }}">{{ bag('translate', this.alt, label) }}</a>
+          <a class="navbar-item{% if this.is_child_of(path) %} is-active{% endif
+            %}" href="{{ path|url }}">{{ bag('translate', this.alt, label) }}</a>
           {% endfor %}
         </div>
       </div>
