@@ -33,7 +33,7 @@
         <div class="navbar-end">
           {% for path, (label, icon) in bag('main-nav').items() %}
           <span class="navbar-item">
-            <a class="button is-gray is-outlined{% if this.is_child_of(path) %} is-active{% endif
+            <a class="button is-grey is-outlined{% if this.is_child_of(path) %} is-active{% endif
               %}" href="{{ path|url }}">
               <span class="icon">
                 <i class="{{ icon }}"></i>
