@@ -32,8 +32,15 @@
       <div class="navbar-menu" id="navMenu">
         <div class="navbar-start">
           {% for path, label in bag('main-nav').items() %}
-          <a class="navbar-item{% if this.is_child_of(path) %} is-active{% endif
-            %}" href="{{ path|url }}">{{ bag('translate', this.alt, label) }}</a>
+          <span class="navbar-item">
+            <a class="button is-black is-outlined{% if this.is_child_of(path) %} is-active{% endif
+              %}" href="{{ path|url }}">
+              <span class="icon">
+                <i class="fa fa-book"></i>
+              </span>
+              <span>{{ bag('translate', this.alt, label) }}</span>
+            </a>
+          </span>
           {% endfor %}
         </div>
       </div>
