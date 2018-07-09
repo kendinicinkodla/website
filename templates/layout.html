@@ -8,7 +8,7 @@
   <title>{% block title %}{% endblock %} — kendin için kodla</title>
   <meta name="description" content="">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/pulse/bulmaswatch.min.css">
   <link rel="stylesheet" href="{{ '/static/kendinicinkodla.css'|url }}">
 
   <script src="{{ '/static/bulma.js'|url }}"></script>
@@ -33,7 +33,7 @@
         <div class="navbar-start">
           {% for path, (label, icon) in bag('main-nav').items() %}
           <span class="navbar-item">
-            <a class="button is-grey is-outlined{% if this.is_child_of(path) %} is-active{% endif
+            <a class="button is-gray is-outlined{% if this.is_child_of(path) %} is-active{% endif
               %}" href="{{ path|url }}">
               <span class="icon">
                 <i class="fa fa-{{ icon }}"></i>
