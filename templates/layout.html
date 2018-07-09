@@ -36,7 +36,7 @@
             <a class="button is-gray is-outlined{% if this.is_child_of(path) %} is-active{% endif
               %}" href="{{ path|url }}">
               <span class="icon">
-                <i class="fa fa-{{ icon }}"></i>
+                <i class="{{ icon }}"></i>
               </span>
               <span>{{ bag('translate', this.alt, label) }}</span>
             </a>

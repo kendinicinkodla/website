@@ -1,5 +1,5 @@
 {
-  "/blog": ["blog", "book"],
-  "/projeler": ["projects", "superpowers"],
-  "/biz-kimiz": ["about-us", "user-friends"]
+  "/blog": ["blog", "fa fa-book"],
+  "/projeler": ["projects", "fab fa-superpowers"],
+  "/biz-kimiz": ["about-us", "fa fa-user-friends"]
 }
