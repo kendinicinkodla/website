@@ -1,5 +1,4 @@
 {
-  "/blog": ["blog", "fa fa-book"],
   "/projeler": ["projects", "fab fa-superpowers"],
   "/biz-kimiz": ["about-us", "fa fa-user-friends"]
 }
