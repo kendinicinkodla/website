@@ -1,0 +1,14 @@
+{% macro render_groupsio_form(page) %}
+  <div class="box">
+    <form action="https://groups.io/g/kendinicinkodla/signup?u=8637121172495632261" method="post" target="_blank">
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input type="email" name="email" value="" class="input" placeholder="{{ bag('translate', page.alt, 'my-email') }}" required>
+        </p>
+        <p class="control">
+          <input type="submit" class="button is-primary" name="subscribe" value="{{ bag('translate', page.alt, 'notify-me') }}">
+        </p>
+      </div>
+    </form>
+  </div>
+{% endmacro %}
