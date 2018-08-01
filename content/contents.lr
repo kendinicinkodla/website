@@ -9,3 +9,16 @@ ve etkinliklerimizi duyurmaya başlayacağız.
 
 Yenilikleri haber almak isterseniz aşağıdaki formu doldurarak
 yazışma grubumuza üye olabilirsiniz.
+
+<div class="box">
+  <form action="https://groups.io/g/kendinicinkodla/signup?u=8637121172495632261" method="post" target="_blank">
+    <div class="field is-grouped">
+      <p class="control is-expanded">
+        <input type="email" name="email" value="" class="input" placeholder="e-posta adresim" required>
+      </p>
+      <p class="control">
+        <input type="submit" class="button is-primary" name="subscribe" value="haber ver">
+      </p>
+    </div>
+  </form>
+</div>
