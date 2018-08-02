@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
   <header role="banner">
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
@@ -32,15 +31,13 @@
       <div class="navbar-menu" id="navMenu">
         <div class="navbar-end">
           {% for path, (label, icon) in bag('main-nav').items() %}
-          <span class="navbar-item">
-            <a class="button is-grey is-outlined{% if this.is_child_of(path) %} is-active{% endif
-              %}" href="{{ path|url }}">
-              <span class="icon">
-                <i class="{{ icon }}"></i>
-              </span>
-              <span>{{ bag('translate', this.alt, label) }}</span>
-            </a>
-          </span>
+          <a class="navbar-item{% if this.is_child_of(path) %} is-active{% endif
+            %}" href="{{ path|url }}">
+            <span class="icon">
+              <i class="{{ icon }}"></i>
+            </span>
+            <span>{{ bag('translate', this.alt, label) }}</span>
+          </a>
           {% endfor %}
         </div>
       </div>
@@ -67,7 +64,6 @@
       </small>
     </div>
   </footer>
-
 </body>
 
 </html>
