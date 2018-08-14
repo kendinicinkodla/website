@@ -1,3 +1,7 @@
+.navbar-item img {
+  max-height: 3rem;
+}
+
 #lektor-edit-link {
   display: none;
 }
