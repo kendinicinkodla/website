@@ -2,23 +2,21 @@
 <html lang="{{ this.alt }}">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>{% block title %}{% endblock %} — kendin için kodla</title>
-  <meta name="description" content="">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
-  <!--link rel="stylesheet" href="https://jenil.github.io/bulmaswatch/default/bulmaswatch.min.css"-->
-  <link rel="stylesheet" href="{{ '/static/kendinicinkodla.css'|url }}">
+  <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/spacelab/bulmaswatch.min.css" />
+  <link rel="stylesheet" href="{{ '/static/kendinicinkodla.css'|url }}" />
 
   <script src="{{ '/static/bulma.js'|url }}"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header role="banner">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <header>
+    <nav class="navbar" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item{% if this._path == '/' %} is-active{% endif
           %}" href="{{ '/'|url }}">
@@ -46,21 +44,18 @@
       </div>
     </nav>
 
-    <div class="field is-grouped">
+    <div class="field is-grouped is-pulled-right">
       <a class="button is-primary is-inverted is-small" href="{{ '.'|url(alt='tr') }}">türkçe</a>
       <a class="button is-primary is-inverted is-small" href="{{ '.'|url(alt='en') }}">english</a>
     </div>
   </header>
 
-  <main role="main">
-    <section class="section">
-      <div class="content">
-        {% block body %}{% endblock %}
-      </div>
-    </section>
+  <main>
+    <div class="content">{% block body %}{% endblock %}
+    </div>
   </main>
 
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="content has-text-centered">
       <small>
         {{ bag('translate', this.alt, "site-copyright")|markdown }}
