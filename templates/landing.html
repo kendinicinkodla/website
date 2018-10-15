@@ -4,14 +4,12 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <div class="column is-6 is-offset-3">
-          <h2 class="subtitle">{{ this.title }}</h2>
-          {{ this.body }}
-          {% if this.alt in ['tr'] %}
-            {% from "macros/groupsio.html" import render_groupsio_form %}
-            {{ render_groupsio_form(this) }}
-          {% endif %}
-        </div>
+        <h2 class="subtitle">{{ this.title }}</h2>
+        {{ this.body }}
+        {% if this.alt in ['tr'] %}
+          {% from "macros/groupsio.html" import render_groupsio_form %}
+          {{ render_groupsio_form(this) }}
+        {% endif %}
       </div>
     </div>
   </section>

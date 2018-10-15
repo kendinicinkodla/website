@@ -2,6 +2,19 @@
   max-height: 3rem;
 }
 
+.hero {
+  display: block;
+}
+
+.hero-body .container {
+  width: 20rem;
+  margin: auto;
+}
+
+.footer {
+  padding: 2rem;
+}
+
 #lektor-edit-link {
   display: none;
 }
