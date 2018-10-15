@@ -6,7 +6,7 @@
     "notify-me": "haber ver",
     "previous": "önceki",
     "projects": "projeler",
-    "site-copyright": "<strong>kendin için kodla</strong> site içeriği <a href=\"http://creativecommons.org/licenses/by-nd/4.0/\">CC BY ND 4.0</a> lisansına tabidir. &copy; Ayşe Tosun, <time>2018</time>"
+    "site-copyright": "<strong>kendin için kodla</strong> site içeriği <a href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\">CC BY NC ND 4.0</a> lisansına tabidir. &copy; Ayşe Tosun, <time>2018</time>"
   },
   "en": {
     "about-us": "about us",
@@ -15,6 +15,6 @@
     "notify-me": "notify me",
     "previous": "previous",
     "projects": "projects",
-    "site-copyright": "<strong>kendin için kodla</strong> site content is under the <a href=\"http://creativecommons.org/licenses/by-nd/4.0/\">CC BY ND 4.0</a> license. &copy; Ayşe Tosun, <time>2018</time>"
+    "site-copyright": "<strong>kendin için kodla</strong> site content is under the <a href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\">CC BY NC ND 4.0</a> license. &copy; Ayşe Tosun, <time>2018</time>"
   }
 }
