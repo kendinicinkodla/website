@@ -1,7 +1,10 @@
 {% macro render_banner(banner) %}
-  <figure class="image">
+  <div class="carousel-item has-background{{ ' is-active' if banner['active'] else '' }}">
     <a href="{{ banner['url'] }}">
-      <img src="{{ '/static/banners/' + banner['src']|url }}" alt="{{ banner['alt'] }}">
+      <img class="is-background"
+           src="{{ '/static/banners/' + banner['src']|url }}"
+           alt="{{ banner['alt'] }}" />
+      <div class="title">{{ banner['alt'] }}</div>
     </a>
-  </figure>
+  </div>
 {% endmacro %}

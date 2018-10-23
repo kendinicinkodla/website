@@ -1,6 +1,7 @@
 {
   "banners": [
     {
+      "active": true,
       "src": "turquoise.png",
       "url": "#",
       "alt": "Turquoise"
