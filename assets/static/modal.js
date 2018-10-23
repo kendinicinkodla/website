@@ -1,11 +1,11 @@
 function activate() {
-  document.querySelector('#modal-'+ this.id).classList.toggle('is-active');
+  document.querySelector('#modal-'+ this.id).classList.add('is-active');
 }
 
 function deactivate() {
   ms = document.querySelectorAll('.modal.is-active')
   for (i = 0; i < ms.length; i++) {
-    ms[i].classList.toggle('is-active')
+    ms[i].classList.remove('is-active')
   }
 }
 
