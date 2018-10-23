@@ -4,17 +4,20 @@
       "active": true,
       "src": "turquoise.png",
       "url": "#",
-      "alt": "Turquoise"
+      "alt": "alt-banner1",
+      "title": "title-banner1"
     },
     {
       "src": "amethyst.png",
       "url": "#",
-      "alt": "Amethyst"
+      "alt": "alt-banner2",
+      "title": "title-banner2"
     },
     {
       "src": "carrot.png",
       "url": "#",
-      "alt": "Carrot"
+      "alt": "alt-banner3",
+      "title": "title-banner3"
     }
   ]
 }

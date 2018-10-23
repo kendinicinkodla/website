@@ -9,7 +9,7 @@
     <div class="carousel carousel-animated carousel-animate-slide">
       <div class="carousel-container">
         {% for banner in bag('banner.banners') %}
-          {{ render_banner(banner) }}
+          {{ render_banner(banner, this.alt) }}
         {% endfor %}
       </div>
       <div class="carousel-navigation">

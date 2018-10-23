@@ -1,10 +1,10 @@
-{% macro render_banner(banner) %}
+{% macro render_banner(banner, alt) %}
   <div class="carousel-item has-background{{ ' is-active' if banner['active'] else '' }}">
     <a href="{{ banner['url'] }}">
       <img class="is-background"
            src="{{ '/static/banners/' + banner['src']|url }}"
-           alt="{{ banner['alt'] }}" />
-      <div class="title">{{ banner['alt'] }}</div>
+           alt="{{ bag('translate', alt, banner['alt']) }}" />
+      <div class="title">{{ bag('translate', alt, banner['title']) }}</div>
     </a>
   </div>
 {% endmacro %}
