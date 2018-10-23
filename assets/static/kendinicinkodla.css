@@ -6,6 +6,10 @@ div.card {
   margin-bottom: 1rem;
 }
 
+div.padded {
+  padding: 1rem;
+}
+
 .footer {
   padding: 2rem;
 }

@@ -46,9 +46,7 @@
   </section>
 
   {% if this.alt in ['tr'] %}
-  <section class="section">
     {% from "macros/groupsio.html" import render_groupsio_form %}
     {{ render_groupsio_form(this) }}
-  </section>
   {% endif %}
 {% endblock %}
