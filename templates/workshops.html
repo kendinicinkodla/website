@@ -11,6 +11,8 @@
       {% for workshop in this.children %}
         {{ render_workshop_card(workshop, this.alt) }}
       {% endfor %}
+
+      <script src="{{ '/static/modal.js'|url }}"></script>
     </section>
   </div>
 {% endblock %}
