@@ -3,8 +3,8 @@
     <a href="{{ banner['url'] }}">
       <img class="is-background"
            src="{{ '/static/banners/' + banner['src']|url }}"
-           alt="{{ bag('translate', alt, banner['alt']) }}" />
-      <div class="title">{{ bag('translate', alt, banner['title']) }}</div>
+           alt="{{ banner['alt'][alt] }}" />
+      <div class="title">{{ banner['title'][alt] }}</div>
     </a>
   </div>
 {% endmacro %}

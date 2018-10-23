@@ -4,20 +4,32 @@
       "active": true,
       "src": "turquoise.png",
       "url": "#",
-      "alt": "alt-banner1",
-      "title": "title-banner1"
+      "alt": {
+        "tr": "Banner 1"
+      },
+      "title": {
+        "tr": "Başlık 1"
+      }
     },
     {
       "src": "amethyst.png",
       "url": "#",
-      "alt": "alt-banner2",
-      "title": "title-banner2"
+      "alt": {
+        "tr": "Banner 2"
+      },
+      "title": {
+        "tr": "Başlık 2"
+      }
     },
     {
       "src": "carrot.png",
       "url": "#",
-      "alt": "alt-banner3",
-      "title": "title-banner3"
+      "alt": {
+        "tr": "Banner 3"
+      },
+      "title": {
+        "tr": "Başlık 3"
+      }
     }
   ]
 }
