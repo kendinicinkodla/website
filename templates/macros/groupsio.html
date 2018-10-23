@@ -1,16 +1,16 @@
 {% macro render_groupsio_form(page) %}
-  <div class="box">
-    <p class="container">
+  <div class="box container">
+    <p class="has-text-centered is-size-7">
       Yenilikleri haber almak isterseniz aşağıdaki formu doldurarak
-      yazışma grubumuza üye olabilirsiniz.
+      e-posta listemize üye olabilirsiniz.
     </p>
     <form action="https://groups.io/g/kendinicinkodla/signup?u=8637121172495632261" method="post" target="_blank">
-      <div class="field is-grouped">
+      <div class="field">
         <p class="control is-expanded">
           <input type="email" name="email" value="" class="input" placeholder="{{ bag('translate', page.alt, 'my-email') }}" required>
         </p>
-        <p class="control">
-          <input type="submit" class="button is-primary" name="subscribe" value="{{ bag('translate', page.alt, 'notify-me') }}">
+        <p class="control has-text-centered">
+          <input type="submit" class="button is-primary" name="subscribe" value="{{ bag('translate', page.alt, 'subscribe') }}">
         </p>
       </div>
     </form>
