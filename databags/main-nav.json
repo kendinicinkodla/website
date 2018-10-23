@@ -1,4 +1,5 @@
 {
+  "/hakkimizda": ["about-us", "fa fa-user-friends"],
   "/atolyeler": ["workshops", "fab fa-superpowers"],
-  "/hakkimizda": ["about-us", "fa fa-user-friends"]
+  "/kutuphane": ["library", "fa fa-book"]
 }
