@@ -1,0 +1,7 @@
+{% macro render_banner(banner) %}
+  <figure class="image">
+    <a href="{{ banner['url'] }}">
+      <img src="{{ '/static/banners/' + banner['src']|url }}" alt="{{ banner['alt'] }}">
+    </a>
+  </figure>
+{% endmacro %}

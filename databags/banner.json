@@ -1,0 +1,19 @@
+{
+  "banners": [
+    {
+      "src": "turquoise.png",
+      "url": "#",
+      "alt": "Turquoise"
+    },
+    {
+      "src": "amethyst.png",
+      "url": "#",
+      "alt": "Amethyst"
+    },
+    {
+      "src": "carrot.png",
+      "url": "#",
+      "alt": "Carrot"
+    }
+  ]
+}

@@ -2,17 +2,16 @@
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
   <section class="hero">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        {{ this.body }}
-      </div>
-    </div>
+    {% from "macros/banner.html" import render_banner %}
+    {% for banner in bag('banner.banners') %}
+      {{ render_banner(banner) }}
+    {% endfor %}
   </section>
 
   {% if this.alt in ['tr'] %}
-    <section class="section">
-      {% from "macros/groupsio.html" import render_groupsio_form %}
-      {{ render_groupsio_form(this) }}
-    </section>
+  <section class="section">
+    {% from "macros/groupsio.html" import render_groupsio_form %}
+    {{ render_groupsio_form(this) }}
+  </section>
   {% endif %}
 {% endblock %}

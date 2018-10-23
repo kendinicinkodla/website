@@ -6,6 +6,10 @@
   display: block;
 }
 
+.hero figure {
+  margin: 0;
+}
+
 .hero-body .container {
   width: 20rem;
   margin: auto;
