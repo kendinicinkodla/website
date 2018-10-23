@@ -1,0 +1,14 @@
+{% macro render_workshop_card(workshop, alt) %}
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      <a href="{{ workshop|url }}">
+      {{ workshop.title }}
+      </a>
+    </p> 
+  </header>
+  <div class="card-content">
+    {{ workshop.summary }}
+  </div>
+</div>
+{% endmacro %}
