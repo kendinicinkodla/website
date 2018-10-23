@@ -1,0 +1,13 @@
+_model: workshop
+---
+order: 10
+---
+title: Veri Analitiği
+---
+summary:
+
+Veri işleme, görselleştirme.
+---
+body:
+
+Python, Jupyter.

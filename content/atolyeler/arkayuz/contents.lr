@@ -1,0 +1,13 @@
+_model: workshop
+---
+order: 30
+---
+title: Arkayüz Geliştirme
+---
+summary:
+
+Web sitesi ve mobil uygulamalar için arkayüz geliştirme.
+---
+body:
+
+Python, web anaçatısı, REST API.
