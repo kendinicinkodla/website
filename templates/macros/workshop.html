@@ -1,11 +1,7 @@
 {% macro render_workshop_card(workshop, alt) %}
 <div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="card workshop">
   <header class="card-header">
-    <p class="card-header-title">
-      <a href="{{ workshop|url }}">
-      {{ workshop.title }}
-      </a>
-    </p> 
+    <p class="card-header-title">{{ workshop.title }}</p> 
   </header>
   <div class="card-content">
     {{ workshop.summary }}
@@ -30,6 +26,7 @@
               <br />
               {{ workshop.body }}
             </p>
+            <p><a href="{{ workshop|url }}">Ayrıntılı bilgi</a></p>
           </div>
           <nav class="level is-mobile">
             <div class="level-left">
