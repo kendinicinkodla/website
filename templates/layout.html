@@ -28,7 +28,7 @@
           {% for path, (label, icon) in bag('main-nav').items() %}
           <a class="navbar-item{% if this.is_child_of(path) %} is-active{% endif %}" href="{{ path|url }}">
             <span class="icon"><i class="{{ icon }}"></i></span>
-            {{ bag('translate', this.alt, label) }}
+            <span>{{ bag('translate', this.alt, label) }}</span>
           </a>
           {% endfor %}
         </div>
