@@ -1,20 +1,22 @@
-function activate() {
-  document.querySelector('#modal-'+ this.id).classList.add('is-active');
-}
-
-function deactivate() {
-  ms = document.querySelectorAll('.modal.is-active')
-  for (i = 0; i < ms.length; i++) {
-    ms[i].classList.remove('is-active')
+document.addEventListener('DOMContentLoaded', function () {
+  function activateModal() {
+    document.getElementById(this.dataset.target).classList.add('is-active');
   }
-}
 
-ws = document.querySelectorAll('.card.workshop')
-for (i = 0; i < ws.length; i++) {
-  ws[i].addEventListener('click', activate)
-}
+  function deactivateAllModals() {
+    activeModals = document.querySelectorAll('.modal.is-active')
+    for (i = 0; i < activeModals.length; i++) {
+      activeModals[i].classList.remove('is-active')
+    }
+  }
 
-xs = document.querySelectorAll('.modal-close')
-for (i = 0; i < xs.length; i++) {
-  xs[i].addEventListener('click', deactivate)
-}
+  workshopCards = document.querySelectorAll('.card.workshop')
+  for (i = 0; i < workshopCards.length; i++) {
+    workshopCards[i].addEventListener('click', activateModal)
+  }
+
+  closeButtons = document.querySelectorAll('.modal-close')
+  for (i = 0; i < closeButtons.length; i++) {
+    closeButtons[i].addEventListener('click', deactivateAllModals)
+  }
+});
