@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{ this.alt }}">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>{% block title %}{% endblock %} — kendin için kodla</title>
-
+  <title>{% block title %}{% endblock %} — {{ config.PROJECT.name }}</title>
   <link rel="stylesheet" href="{{ '/static/bulmaswatch.min.css'|url }}" />
   <link rel="stylesheet" href="{{ '/static/kendinicinkodla.css'|url }}" />
-
   <script src="{{ '/static/bulma.js'|url }}"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
-
   {% block extra_head %}{% endblock %}
 </head>
-
 <body>
   <header>
     <nav class="navbar" aria-label="main navigation">
       <div class="navbar-brand">
-        <a class="navbar-item{% if this._path == '/' %} is-active{% endif
-          %}" href="{{ '/'|url }}">
+        <a class="navbar-item{% if this._path == '/' %} is-active{% endif %}" href="{{ '/'|url }}">
           <img src="{{ '/static/logo.svg'|url }}" alt="kendin için kodla ana sayfası" title="ana sayfa" />
         </a>
         <span role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -30,28 +23,21 @@
           <span aria-hidden="true"></span>
         </span>
       </div>
-
       <div class="navbar-menu" id="navMenu">
         <div class="navbar-end">
           {% for path, (label, icon) in bag('main-nav').items() %}
-          <a class="navbar-item{% if this.is_child_of(path) %} is-active{% endif
-            %}" href="{{ path|url }}">
-            <span class="icon">
-              <i class="{{ icon }}"></i>
-            </span>
-            <span>{{ bag('translate', this.alt, label) }}</span>
+          <a class="navbar-item{% if this.is_child_of(path) %} is-active{% endif %}" href="{{ path|url }}">
+            <span class="icon"><i class="{{ icon }}"></i></span>
+            {{ bag('translate', this.alt, label) }}
           </a>
           {% endfor %}
         </div>
       </div>
     </nav>
   </header>
-
-  <main>
-    <div class="content">{% block body %}{% endblock %}
-    </div>
+  <main class="content">
+    {% block body %}{% endblock %}
   </main>
-
   <footer class="footer">
     <div class="content has-text-centered">
       <small>
@@ -60,5 +46,4 @@
     </div>
   </footer>
 </body>
-
 </html>
