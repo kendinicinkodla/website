@@ -10,6 +10,10 @@ div.padded {
   padding: 1rem;
 }
 
+.card.workshop {
+  height: 10rem;
+}
+
 .card.workshop:hover {
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
