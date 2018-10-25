@@ -1,10 +1,22 @@
 {% macro render_workshop_card(workshop, alt) %}
 <div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="content card workshop">
-  <header class="card-header">
-    <p class="card-header-title">{{ workshop.title }}</p>
-  </header>
+  <div class="card-image">
+    <figure class="image is-128x128">
+      <img src="{{ ('/static/' + workshop._slug + '.svg')|url }}" alt="{{ workshop.title }}">
+    </figure>
+  </div>
   <div class="card-content">
-    {{ workshop.summary }}
+    <div class="media">
+      <div class="media-content has-text-centered">
+        <p class="title is-4">{{ workshop.title }}</p>
+      </div>
+    </div>
+
+    <div class="content">
+      {{ workshop.summary }}
+      <br>
+      <time datetime="2016-1-1" class="is-size-7 is-pulled-right">11:09 PM - 1 Jan 2016</time>
+    </div>
   </div>
 </div>
 
