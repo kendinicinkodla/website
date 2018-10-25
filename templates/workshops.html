@@ -1,18 +1,24 @@
 {% extends "layout.html" %}
+
 {% block title %}{{ this.title }}{% endblock %}
+
 {% block body %}
-  <div class="container">
-    <section class="section">
-      <h2 class="subtitle">{{ this.title }}</h2>
+<div class="container">
+  <section class="section">
+    <h2 class="subtitle">{{ this.title }}</h2>
 
-      {{ this.body }}
+    {{ this.body }}
 
+    <div class="columns">
       {% from "macros/workshop.html" import render_workshop_card %}
       {% for workshop in this.children %}
+      <div class="column">
         {{ render_workshop_card(workshop, this.alt) }}
+      </div>
       {% endfor %}
+    </div>
 
-      <script src="{{ '/static/bulma-modal.js'|url }}"></script>
-    </section>
-  </div>
+    <script src="{{ '/static/bulma-modal.js'|url }}"></script>
+  </section>
+</div>
 {% endblock %}
