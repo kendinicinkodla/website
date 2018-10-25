@@ -14,10 +14,6 @@ div.padded {
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
 
-.footer {
-  padding: 2rem;
-}
-
 #lektor-edit-link {
   display: none;
 }
