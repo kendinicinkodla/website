@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ this.alt }}">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{% endblock %} — {{ config.PROJECT.name }}</title>
-  <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/default/bulmaswatch.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/default/bulmaswatch.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ '/static/kendinicinkodla.css'|url }}" />
+  <link rel="stylesheet" href="{{ '/static/kendinicinkodla.css'|url }}">
   <script src="{{ '/static/bulma-burger.js'|url }}"></script>
   {% block extra_head %}{% endblock %}
 </head>
@@ -15,7 +15,7 @@
     <nav class="navbar" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item{% if this._path == '/' %} is-active{% endif %}" href="{{ '/'|url }}">
-          <img src="{{ '/static/logo.svg'|url }}" alt="kendin için kodla ana sayfası" title="ana sayfa" />
+          <img src="{{ '/static/logo.svg'|url }}" alt="kendin için kodla ana sayfası" title="ana sayfa">
         </a>
         <span role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
           <span aria-hidden="true"></span>
