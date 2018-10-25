@@ -1,22 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-  function activateModal() {
-    document.getElementById(this.dataset.target).classList.add('is-active');
-  }
+  document.querySelectorAll('.card.workshop').forEach(function ($el) {
+    $el.addEventListener('click', function () {
+      document.getElementById($el.dataset.target).classList.add('is-active');
+    });
+  });
 
-  function deactivateAllModals() {
-    activeModals = document.querySelectorAll('.modal.is-active')
-    for (i = 0; i < activeModals.length; i++) {
-      activeModals[i].classList.remove('is-active')
-    }
-  }
-
-  workshopCards = document.querySelectorAll('.card.workshop')
-  for (i = 0; i < workshopCards.length; i++) {
-    workshopCards[i].addEventListener('click', activateModal)
-  }
-
-  closeButtons = document.querySelectorAll('.modal-close')
-  for (i = 0; i < closeButtons.length; i++) {
-    closeButtons[i].addEventListener('click', deactivateAllModals)
-  }
+  document.querySelectorAll('.modal-close').forEach(function ($el) {
+    $el.addEventListener('click', function () {
+      document.querySelectorAll('.modal.is-active').forEach(function ($modal) {
+        $modal.classList.remove('is-active');
+      });
+    });
+  });
 });
