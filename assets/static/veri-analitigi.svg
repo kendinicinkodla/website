@@ -12,7 +12,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg2"
    sodipodi:modified="TRUE"
-   viewBox="0 0 149.99999 119.99999"
+   viewBox="0 0 119.99999 119.99999"
    inkscape:export-ydpi="90"
    inkscape:export-xdpi="90"
    version="1.0"
@@ -21,7 +21,7 @@
    inkscape:export-filename="/media/disk/gfx/cliparts/released/graphics_rounded.png"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:version="0.32"
-   width="160"
+   width="128"
    height="128">
   <defs
      id="defs4">
@@ -204,7 +204,7 @@
      height="30px"
      borderopacity="1.0"
      inkscape:current-layer="layer1"
-     inkscape:cx="80"
+     inkscape:cx="64"
      inkscape:cy="64"
      inkscape:grid-points="true"
      inkscape:snap-bbox="true"
@@ -256,7 +256,7 @@
        x="16" />
     <g
        id="g880"
-       transform="matrix(2.4999999,0,0,2.4999999,-2.9999996,-82.499994)">
+       transform="matrix(1.9999998,0,0,1.9999998,-1.9999984,-66.999994)">
       <path
          inkscape:connector-curvature="0"
          d="M 6,29.867 C 6,29.867 6,28 7.8571,28 H 17.143 C 19,28 19,29.867 19,29.867 V 53 H 6 Z"

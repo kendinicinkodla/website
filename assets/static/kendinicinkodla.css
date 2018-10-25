@@ -3,6 +3,11 @@ img#kik-logo {
   max-height: 3rem;
 }
 
+.card.workshop {
+  padding: 1rem;
+  border-radius: 20px;
+}
+
 .card.workshop:hover {
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
