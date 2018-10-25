@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ this.alt }}">
-
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,14 +13,11 @@
   <script src="{{ '/static/bulma-burger.js'|url }}"></script>
 
   {% block extra_head %}{% endblock %}
-
 </head>
 
 <body>
-
   <header>
     <nav class="navbar" aria-label="main navigation">
-
       <div class="navbar-brand">
         <a class="navbar-item{% if this._path == '/' %} is-active{% endif %}" href="{{ '/'|url }}">
           <img src="{{ '/static/logo.svg'|url }}" alt="kendin için kodla ana sayfası" title="Ana Sayfa">
@@ -45,7 +40,6 @@
           {% endfor %}
         </div>
       </div>
-
     </nav>
   </header>
 
@@ -58,7 +52,5 @@
       {{ bag('translate', this.alt, "site-copyright")|safe }}
     </small>
   </footer>
-
 </body>
-
 </html>
