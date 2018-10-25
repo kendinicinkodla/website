@@ -47,10 +47,12 @@
     {% block body %}{% endblock %}
   </main>
 
-  <footer class="footer has-text-centered">
-    <small>
-      {{ bag('translate', this.alt, "site-copyright")|safe }}
-    </small>
+  <footer class="footer">
+    <p class="content has-text-centered">
+      <small>
+        {{ bag('translate', this.alt, "site-copyright")|safe }}
+      </small>
+    </p>
   </footer>
 </body>
 </html>
