@@ -1,7 +1,7 @@
 {% macro render_workshop_card(workshop, alt) %}
-<div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="card workshop">
+<div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="content card workshop">
   <header class="card-header">
-    <p class="card-header-title">{{ workshop.title }}</p> 
+    <p class="card-header-title">{{ workshop.title }}</p>
   </header>
   <div class="card-content">
     {{ workshop.summary }}
