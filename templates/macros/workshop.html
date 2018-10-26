@@ -17,7 +17,9 @@
     </div>
   </div>
 </div>
+{% endmacro %}
 
+{% macro render_workshop_modal(workshop, alt) %}
 <div id="modal-{{ workshop._slug }}" class="modal">
   <div class="modal-background"></div>
   <div class="modal-content">
@@ -31,11 +33,11 @@
         <div class="media-content">
           <div class="content">
             <h2 class="subtitle">{{ workshop.title }}</h2>
-            <p>
+            <div>
               <strong>Ayşe Tosun</strong>
               <br>
-              {{ workshop.body }}
-            </p>
+              {{ workshop.summary }}
+            </div>
             <p><a href="{{ workshop|url }}">Ayrıntılı bilgi</a></p>
           </div>
         </div>

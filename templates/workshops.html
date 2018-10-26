@@ -9,9 +9,10 @@
 
     {{ this.body }}
 
-    {% from "macros/workshop.html" import render_workshop_card %}
+    {% from "macros/workshop.html" import render_workshop_card, render_workshop_modal %}
     {% for workshop in this.children %}
       {{ render_workshop_card(workshop, this.alt) }}
+      {{ render_workshop_modal(workshop, this.alt) }}
     {% endfor %}
 
     <script src="{{ '/static/bulma-modal.js'|url }}"></script>
