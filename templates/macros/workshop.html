@@ -24,7 +24,7 @@
     <div class="box">
       <article class="media">
         <div class="media-left">
-          <figure class="image is-64x64">
+          <figure class="image is-128x128">
             <img src="{{ ('/static/workshops/' + workshop._slug + '.svg')|url }}" alt="{{ workshop.title }}">
           </figure>
         </div>
@@ -32,26 +32,12 @@
           <div class="content">
             <h2 class="subtitle">{{ workshop.title }}</h2>
             <p>
-              <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+              <strong>Ayşe Tosun</strong>
               <br>
               {{ workshop.body }}
             </p>
             <p><a href="{{ workshop|url }}">Ayrıntılı bilgi</a></p>
           </div>
-          <nav class="level is-mobile">
-            <div class="level-left">
-              <a class="level-item" aria-label="retweet">
-                  <span class="icon is-small">
-                    <i class="fas fa-retweet" aria-hidden="true"></i>
-                  </span>
-                </a>
-                <a class="level-item" aria-label="like">
-                  <span class="icon is-small">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                </span>
-              </a>
-            </div>
-          </nav>
         </div>
       </article>
     </div>
