@@ -1,0 +1,14 @@
+{% macro render_material_list(material, alt) %}
+<div class="content level material">
+  <figure class="image is-128x128">
+    <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ material.title }}">
+  </figure>
+
+  <div class="content">
+    <p class="title is-4">
+      <a href="{{ material._slug }}">{{ material.title }}</a>
+    </p>
+    <p>{{ material.summary }}</p>
+  </div>
+</div>
+{% endmacro %}

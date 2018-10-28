@@ -4,7 +4,7 @@
 
   <div class="card-image">
     <figure class="image is-128x128">
-      <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ workshop.title }}">
+      <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ material.title }}">
     </figure>
   </div>
 
@@ -38,7 +38,7 @@
       <article class="media">
         <div class="media-left">
           <figure class="image is-128x128">
-            <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ workshop.title }}">
+            <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ material.title }}">
           </figure>
         </div>
 
@@ -67,7 +67,7 @@
   {% set material = workshop.children.first() %}
 
   <figure class="image is-128x128">
-    <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ workshop.title }}">
+    <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ material.title }}">
   </figure>
 
   <div class="content">

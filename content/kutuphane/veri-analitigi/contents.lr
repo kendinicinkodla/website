@@ -2,6 +2,8 @@ _model: material
 ---
 title: Veri analitiği
 ---
+order: 10
+---
 authors:
 
 Ayşe Tosun

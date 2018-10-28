@@ -2,6 +2,8 @@ _model: material
 ---
 title: Arkayüz geliştirme
 ---
+order: 30
+---
 authors:
 
 H. Turgut Uyar
