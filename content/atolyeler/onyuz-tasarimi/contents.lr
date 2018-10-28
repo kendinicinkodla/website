@@ -1,6 +1,6 @@
 _model: workshop
 ---
-title: Önyüz tasarımı
+material: onyuz-tasarimi
 ---
 instructors:
 
@@ -9,12 +9,3 @@ H. Turgut Uyar
 location: İstanbul
 ---
 date: 2019-04-06
----
-summary:
-
-Web sitelerinin ve mobil uygulamaların kullanıcının gördüğü kısımlarının
-tasarlanması ve kodlanması.
----
-body:
-
-HTML, CSS.

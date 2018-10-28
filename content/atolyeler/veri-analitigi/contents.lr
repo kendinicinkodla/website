@@ -1,6 +1,6 @@
 _model: workshop
 ---
-title: Veri analitiği
+material: veri-analitigi
 ---
 instructors:
 
@@ -10,12 +10,3 @@ Ayşe Tosun
 location: Edirne
 ---
 date: 2018-12-01
----
-summary:
-
-Veriler üzerinde merak edilen sorulara yanıt bulma yöntemlerinin
-incelenmesi ve bunların kodlanması.
----
-body:
-
-Python, Jupyter.

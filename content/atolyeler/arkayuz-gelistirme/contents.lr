@@ -1,6 +1,6 @@
 _model: workshop
 ---
-title: Arkayüz geliştirme
+material: arkayuz-gelistirme
 ---
 instructors:
 
@@ -10,12 +10,3 @@ Gülçin Baykal
 location: İstanbul
 ---
 date: 2019-05-01
----
-summary:
-
-Web sitelerinin ve mobil uygulamaların sunucu tarafındaki işlemlerinin
-planlanması ve kodlanması.
----
-body:
-
-Python, web anaçatısı, REST API.

@@ -1,0 +1,17 @@
+_model: material
+---
+title: Veri analitiği
+---
+authors:
+
+Ayşe Tosun
+İrem İşlek
+---
+summary:
+
+Veriler üzerinde merak edilen sorulara yanıt bulma yöntemlerinin
+incelenmesi ve bunların kodlanması.
+---
+body:
+
+Python, Jupyter.

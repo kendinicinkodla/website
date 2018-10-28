@@ -1,0 +1,17 @@
+_model: material
+---
+title: Arkayüz geliştirme
+---
+authors:
+
+H. Turgut Uyar
+Neslihan Şirin Saygılı
+---
+summary:
+
+Web sitelerinin ve mobil uygulamaların sunucu tarafındaki işlemlerinin
+planlanması ve kodlanması.
+---
+body:
+
+Python, web anaçatısı, REST API.
