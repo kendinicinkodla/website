@@ -1,11 +1,13 @@
 {% macro render_workshop_card(workshop, alt) %}
 <div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="content card workshop">
   {% set material = workshop.children.first() %}
+
   <div class="card-image">
     <figure class="image is-128x128">
       <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ workshop.title }}">
     </figure>
   </div>
+
   <div class="card-content">
     <div class="media">
       <div class="media-content has-text-centered">
@@ -28,7 +30,9 @@
 {% macro render_workshop_modal(workshop, alt) %}
 <div id="modal-{{ workshop._slug }}" class="modal">
   {% set material = workshop.children.first() %}
+
   <div class="modal-background"></div>
+
   <div class="modal-content">
     <div class="box">
       <article class="media">
@@ -37,6 +41,7 @@
             <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ workshop.title }}">
           </figure>
         </div>
+
         <div class="media-content">
           <div class="content">
             <h2 class="subtitle">{{ material.title }}</h2>
@@ -54,5 +59,26 @@
     </div>
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
+</div>
+{% endmacro %}
+
+{% macro render_workshop_list(workshop, alt) %}
+<div class="content level workshop">
+  {% set material = workshop.children.first() %}
+
+  <figure class="image is-128x128">
+    <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ workshop.title }}">
+  </figure>
+
+  <div class="content">
+    <p class="title is-4">
+      <a href="{{ workshop._slug }}">{{ material.title }}</a>
+    </p>
+    <p>{{ material.summary }}</p>
+    <div class="is-size-7 is-pulled-right">
+      {{ workshop.location }} —
+      <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time>
+    </div>
+  </div>
 </div>
 {% endmacro %}

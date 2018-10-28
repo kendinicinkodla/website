@@ -3,19 +3,14 @@
 {% block title %}{{ this.title }}{% endblock %}
 
 {% block body %}
-<div class="container">
-  <section class="section">
-    <h2 class="subtitle">{{ this.title }}</h2>
+<section class="section">
+  <h2 class="subtitle">{{ bag('translate', this.alt, 'future-workshops') }}</h2>
 
-    {{ this.body }}
+  {{ this.body }}
 
-    {% from "macros/workshop.html" import render_workshop_card, render_workshop_modal %}
-    {% for workshop in this.children %}
-      {{ render_workshop_card(workshop, this.alt) }}
-      {{ render_workshop_modal(workshop, this.alt) }}
-    {% endfor %}
-
-    <script src="{{ '/static/bulma-modal.js'|url }}"></script>
-  </section>
-</div>
+  {% from "macros/workshop.html" import render_workshop_list %}
+  {% for workshop in this.children %}
+    {{ render_workshop_list(workshop, this.alt) }}
+  {% endfor %}
+</section>
 {% endblock %}
