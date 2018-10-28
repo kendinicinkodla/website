@@ -2,33 +2,33 @@
   "banners": [
     {
       "active": true,
-      "src": "belize.png",
+      "src": "amethyst.png",
       "url": "#",
       "alt": {
         "tr": "Banner 1"
       },
       "title": {
-        "tr": "Başlık 1"
-      }
-    },
-    {
-      "src": "amethyst.png",
-      "url": "#",
-      "alt": {
-        "tr": "Banner 2"
-      },
-      "title": {
-        "tr": "Başlık 2"
+        "tr": "Sitemizdeki bilgiler henüz kesinleşmemiştir."
       }
     },
     {
       "src": "carrot.png",
       "url": "#",
       "alt": {
+        "tr": "Banner 2"
+      },
+      "title": {
+        "tr": "Sitemizdeki bilgiler henüz kesinleşmemiştir."
+      }
+    },
+    {
+      "src": "belize.png",
+      "url": "#",
+      "alt": {
         "tr": "Banner 3"
       },
       "title": {
-        "tr": "Başlık 3"
+        "tr": "Sitemizdeki bilgiler henüz kesinleşmemiştir."
       }
     }
   ]
