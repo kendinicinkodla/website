@@ -39,7 +39,7 @@
   <div class="columns">
     {% for child in this.children %}
     {%   if child._model == 'workshops' %}
-    {%     for workshop in child.children %}
+    {%     for workshop in child.children.all()[:3] %}
     <div class="column">
     {{       render_workshop_card(workshop, this.alt) }}
     {{       render_workshop_modal(workshop, this.alt) }}
