@@ -36,7 +36,9 @@
           <div class="content">
             <h2 class="subtitle">{{ workshop.title }}</h2>
             <div>
-              <strong>{{ workshop.instructors }}</strong>
+              {% for instructor in workshop.instructors %}
+              <strong>{{ instructor }}</strong>{% if not loop.last %},{% endif %}
+              {% endfor %}
               <br>
               {{ workshop.summary }}
             </div>
