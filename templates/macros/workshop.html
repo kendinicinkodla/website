@@ -59,22 +59,30 @@
 {% endmacro %}
 
 {% macro render_workshop_list(workshop, alt) %}
-<div class="content level workshop">
+<div class="box">
   {% set material = workshop.children.first() %}
-
-  <figure class="image is-128x128">
-    <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ material.title }}">
-  </figure>
-
-  <div class="content">
-    <p class="title is-4">
-      <a href="{{ workshop._slug }}">{{ material.title }}</a>
-    </p>
-    <p>{{ material.summary }}</p>
-    <div class="is-size-7 is-pulled-right">
-      {{ workshop.location }} —
-      <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time>
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-128x128">
+        <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ material.title }}">
+      </figure>
     </div>
-  </div>
+
+    <div class="media-content">
+      <div class="content">
+        <h2 class="subtitle"><a href="{{ workshop|url }}">{{ material.title }}</a></h2>
+        <div>
+          {% for instructor in workshop.instructors %}
+          <strong>{{ instructor }}</strong>{% if not loop.last %},{% endif %}
+          {% endfor %}
+          <p>{{ material.summary }}</p>
+          <div class="is-size-7 is-pulled-right">
+            {{ workshop.location }} —
+            <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
 </div>
 {% endmacro %}
