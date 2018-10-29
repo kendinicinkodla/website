@@ -4,9 +4,9 @@
 
 {% block body %}
 <section class="hero">
-  <div class="hero-body">
+  <div class="hero-body is-paddingless">
     <div class="container has-text-centered">
-      <figure class="image is-2by1">
+      <figure class="image is-2by1 is-marginless">
         <img src="{{ ('/static/workshops/' + this._slug + '.jpg')|url }}" alt="{{ this.title }}" title="{{ this.img_credit|striptags }}">
       </figure>
       <div class="note is-size-7">{{ this.img_credit }}</div>
