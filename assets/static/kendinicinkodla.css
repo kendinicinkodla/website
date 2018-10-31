@@ -15,3 +15,7 @@ img#kik-logo {
 .card.workshop .image {
   margin: auto;
 }
+
+#lektor-edit-link {
+  top: 100px !important;
+}
