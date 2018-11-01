@@ -17,6 +17,15 @@
 <section class="section">
   <h2 class="subtitle has-text-centered">{{ this.title }}</h2>
 
+  <div class="subtitle has-text-centered">
+    {{ bag('translate', this.alt, 'authors') }}:
+    {% for author in this.authors %}
+    {% set person = site.query('/hakkimizda').filter(F._slug==author).first() %}
+    {% if person %}<a href="{{ person|url }}">{{ person.name }}</a>{%
+       else %}{{ author }}{% endif %}{% if not loop.last %},{% endif %}
+    {% endfor %}
+  </div>
+
   <div class="container">
     {{ this.body }}
   </div>
