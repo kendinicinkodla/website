@@ -55,7 +55,7 @@
 </div>
 {% endmacro %}
 
-{% macro render_workshop_list(workshop, alt) %}
+{% macro render_workshop_list(workshop, alt, summary=True) %}
 <div class="level">
   {% set material = workshop.children.first() %}
   <div class="level-left">
@@ -68,42 +68,18 @@
     <div class="level-item">
       <div class="content">
         <h2 class="subtitle"><a href="{{ workshop|url }}">{{ material.title }}</a></h2>
-        <div>
+        <p>
           {% for instructor in workshop.instructors %}
           {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
           <strong>{% if person %}{{ person.name }}{% else %}{{ instructor }}{% endif %}</strong>{% if not loop.last %},{% endif %}
           {% endfor %}
-          <p>{{ material.summary }}</p>
-          <div class="is-size-7 is-pulled-right">
-            {{ workshop.city }} —
-            <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endmacro %}
-
-{% macro render_workshop_short_list(workshop, alt) %}
-<div class="level">
-  {% set material = workshop.children.first() %}
-  <div class="level-left">
-    <div class="level-item">
-      <figure class="image is-128x128">
-        <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ material.title }}">
-      </figure>
-    </div>
-
-    <div class="level-item">
-      <div class="content">
-        {% for instructor in workshop.instructors %}
-        {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
-        <strong>{% if person %}{{ person.name }}{% else %}{{ instructor }}{% endif %}</strong>{% if not loop.last %},{% endif %}
-        {% endfor %}<br>
-        {{ workshop.city }}<br>
-        <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time><br>
-        <p><a href="{{ workshop|url }}">{{ bag('translate', alt, 'more-info') }}</a></p>
+        </p>
+        {% if summary %}<p>{{ material.summary }}</p>{% endif %}
+        </p>
+        <p>
+          {{ workshop.city }} —
+          <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time>
+        </p>
       </div>
     </div>
   </div>
