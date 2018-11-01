@@ -17,4 +17,37 @@ tasarlanması ve kodlanması.
 ---
 body:
 
-HTML, CSS.
+İnternetin yaygınlaşmaya başladığı yıllarda web sitelerinin hazırlanması
+teknik bir iş olarak görülüyordu ve kodlama becerileri olan insanlar
+tarafından yapılıyordu. Bu siteler amacı yerine getirmek için yeterli oluyor
+ancak gerek görünüm gerekse kullanım kolaylığı açısından zayıf kalıyorlardı.
+Sonraki yıllarda İnternetin giderek yaşamın her alanına yayılması ve
+öneminin artması nedeniyle bu sorunları gidermek üzere web sitesi hazırlanması
+projelerinde tasarımcılar da görev almaya başladılar. Ancak tasarımcıların
+kodlama tarafında, kodlamacıların ise tasarım tarafında eksik olmaları
+farklı becerileri olan bu iki grubun birlikte çalışmasını gerektirdi.
+Tasarım ve kodlama işlerinin birbirine bağımlı olması geliştirme aşamasında
+zorluklar yarattı. Son yıllarda mobil aygıtların devreye girmesi ve
+pek çok uygulamanın aslında bir web sitesi üzerine kurulması sürecin
+her iki yönüne hakim olabilen geliştiricilere olan talebi büyük oranda artırdı.
+"Önyüz geliştirme" terimi bu amaçla tasarım ile kodlamayı, diğer bir deyişle
+yaratıcılık ile teknik yetenekleri biraraya getiren bir alanı tanımlamak üzere
+kullanılmaya başlandı. Ayrıca günümüzde kadınların en önlerde yer aldıkları
+teknoloji alanlarından biri olarak dikkati çekiyor.
+
+Bu atölyede bir web sitesinin -ya da benzer şekilde bir mobil uygulamanın-
+önyüzünün, yani kullanıcının gördüğü yüzünün başından sonuna tasarımını ve
+kodlamasını yapacağız. Bunu yaparken güncel standartları ve tavsiye edilen
+yöntemleri izleyeceğiz. Birinci gün tasarım, ikinci ve üçüncü günler kodlama
+konularının örneklerle üzerinden geçilecek. Dördüncü gün ise katılımcılar
+kendi tasarımlarını yapacak ve uygulayacaklar. Tamamen açık kaynaklı,
+özgür yazılımlar kullanacağımız için katılımcılar edindikleri becerileri
+atölye sonrasında uygulamaya devam edebilecekler.
+
+Bu atölye kullanıcının görmediği kısımların, yani veri yönetimi, site
+işlevlerinin yerine getirilmesi gibi kısımların yer alacağı
+"arkayüz geliştirme" atölyemizle uyumlu bir içerikle hazırlandığı için
+katılımcıların her iki atölyeye katılarak komple bir geliştirici perspektifi
+kazanmalarına ya da iki atölyenin katılımcılarının biraraya gelmesiyle
+ortak projeler üzerinde çalışacakları ayrı atölyeler düzenlenmesine
+zemin hazırlayacak.
