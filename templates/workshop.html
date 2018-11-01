@@ -6,33 +6,37 @@
 {% set material = this.children.first() %}
 
 <div class="container">
-  <h1 class="subtitle">{{ material.title }}</h1>
+  <section class="section">
+    <h2 class="subtitle">{{ material.title }}</h2>
 
-  <table>
-    <tr>
-      <th>{{ bag('translate', this.alt, 'instructors') }}:</th>
-      <td>
-        {% for instructor in this.instructors %}
-        {{ instructor }}{% if not loop.last %},{% endif %}
-        {% endfor %}
-      </td>
-    </tr>
-    <tr>
-      <th>{{ bag('translate', this.alt, 'city') }}:</th>
-      <td>{{ this.city }}</td>
-    </tr>
-    <tr>
-      <th>{{ bag('translate', this.alt, 'dates') }}:</th>
-      <td>{{ this.dates }}</td>
-    </tr>
-  </table>
+    <table>
+      <tr>
+        <th>{{ bag('translate', this.alt, 'instructors') }}:</th>
+        <td>
+          {% for instructor in this.instructors %}
+          {{ instructor }}{% if not loop.last %},{% endif %}
+          {% endfor %}
+        </td>
+      </tr>
+      <tr>
+        <th>{{ bag('translate', this.alt, 'city') }}:</th>
+        <td>{{ this.city }}</td>
+      </tr>
+      <tr>
+        <th>{{ bag('translate', this.alt, 'dates') }}:</th>
+        <td>{{ this.dates }}</td>
+      </tr>
+    </table>
+  </section>
 
-  {{ this.body }}
+  <section class="section">
+    {{ this.body }}
 
-  <p>
-    {{ material.summary }}
-    <a href="{{ material|url }}">({{ bag('translate', this.alt, 'more-info') }})</a>
-  </p>
+    <p>
+      {{ material.summary }}
+      <a href="{{ material|url }}">({{ bag('translate', this.alt, 'more-info') }})</a>
+    </p>
+  </section>
 
   {% if this.alt == 'tr' and this.status == 'open' %}
   <p class="has-text-right"><a class="button is-primary" disabled href="https://tinyurl.com/kendinicinkodla">Başvur</a></p>
