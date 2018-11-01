@@ -8,6 +8,21 @@
 <div class="container">
   <h1 class="subtitle">{{ material.title }}</h1>
 
+  <table>
+    <tr>
+      <th>Şehir:<th>
+      <td>{{ this.city }}<td>
+    </tr>
+    <tr>
+      <th>Tarihler:<th>
+      <td>{{ this.date|dateformat('long') }}<td>
+    </tr>
+  </table>
+
   {{ this.body }}
+
+  <p>{{ material.summary }} <a href="{{ material|url }}">(ayrıntılı içerik)</a></p>
+
+  <p class="is-pulled-right"><a class="button is-primary" href="https://tinyurl.com/kendinicinkodla">Başvur</a></p>
 </div>
 {% endblock %}
