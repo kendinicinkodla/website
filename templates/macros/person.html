@@ -1,0 +1,17 @@
+{% macro render_person_card(person, alt) %}
+<div class="content card">
+  <div class="card-image">
+    <figure class="image is-128x128">
+      <img src="{{ ('/static/people/' + person._slug + '.jpg')|url }}" alt="{{ person.name }}">
+    </figure>
+  </div>
+
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content has-text-centered">
+        <p class="title is-5"><a href="{{ person|url }}">{{ person.name }}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block body %}
+{{ this.body }}
+
+<section class="section">
+  <h2 class="subtitle">{{ bag('translate', this.alt, 'contributors') }}</h2>
+
+  {{ this.body }}
+
+  <div class="columns">
+    {% from "macros/person.html" import render_person_card %}
+    {% for person in this.children %}
+    <div class="column">
+      {{ render_person_card(person, this.alt) }}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
