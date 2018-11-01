@@ -26,7 +26,7 @@
   <h2 class="subtitle">{{ bag('translate', this.alt, 'future-workshops') }}</h2>
 
   {% from "macros/workshop.html" import render_workshop_short_list %}
-  {% for workshop in this.children %}
+  {% for workshop in site.query('/atolyeler').filter(F.material==this._slug) %}
     {{ render_workshop_short_list(workshop, this.alt) }}
   {% endfor %}
 </section>
