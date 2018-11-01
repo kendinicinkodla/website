@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
 
-{% block title %}{{ this.title }}{% endblock %}
-
-{% block body %}
 {% set material = this.children.first() %}
 
+{% block title %}{{ material.title }}{% endblock %}
+
+{% block body %}
 <div class="container">
   <section class="section">
     <h2 class="subtitle">{{ material.title }}</h2>
@@ -14,9 +14,9 @@
         <th>{{ bag('translate', this.alt, 'instructors') }}:</th>
         <td>
           {% for instructor in this.instructors %}
-          {% set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
-          {% if person %}<a href="{{ person|url }}">{{ person.name }}</a>{%
-             else %}{{ instructor }}{% endif %}{% if not loop.last %},{% endif %}
+          {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
+          {%   if person %}<a href="{{ person|url }}">{{ person.name }}</a>{%
+               else %}{{ instructor }}{% endif %}{% if not loop.last %},{% endif %}
           {% endfor %}
         </td>
       </tr>
