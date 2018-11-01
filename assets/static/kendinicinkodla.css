@@ -4,6 +4,10 @@ img#kik-logo {
   filter: invert(100%);
 }
 
+.navbar-item.is-active {
+  color: #b1e3ff !important;
+}
+
 .card.kik .image {
   margin: auto;
   padding-top: 1rem;
