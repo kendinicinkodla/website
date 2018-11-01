@@ -17,7 +17,7 @@
 
     <div class="content">
       <div class="is-size-7 is-pulled-right">
-        {{ workshop.location }} —
+        {{ workshop.city }} —
         <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time>
       </div>
     </div>
@@ -73,7 +73,7 @@
           {% endfor %}
           <p>{{ material.summary }}</p>
           <div class="is-size-7 is-pulled-right">
-            {{ workshop.location }} —
+            {{ workshop.city }} —
             <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time>
           </div>
         </div>
