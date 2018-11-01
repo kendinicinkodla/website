@@ -44,7 +44,7 @@
               <br>
               {{ material.summary }}
             </div>
-            <p><a href="{{ workshop|url }}">Ayrıntılı bilgi</a></p>
+            <p><a href="{{ workshop|url }}">{{ bag('translate', alt, 'more-info') }}</a></p>
           </div>
         </div>
       </article>
@@ -100,7 +100,7 @@
         {% endfor %}<br>
         {{ workshop.city }}<br>
         <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time><br>
-        <p><a href="{{ workshop|url }}">Ayrıntılı bilgi</a></p>
+        <p><a href="{{ workshop|url }}">{{ bag('translate', alt, 'more-info') }}</a></p>
       </div>
     </div>
   </div>

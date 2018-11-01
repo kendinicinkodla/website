@@ -1,9 +1,12 @@
 {
   "tr": {
     "about-us": "Hakkımızda",
+    "city": "Şehir",
     "contact": "İletişim",
+    "dates": "Tarihler",
     "future-workshops": "Gelecek atölyeler",
     "library": "Eğitim kütüphanesi",
+    "more-info": "Ayrıntılı bilgi",
     "my-email": "e-posta adresim",
     "subscribe": "üye ol",
     "site-copyright": "<strong>kendin için kodla</strong> site içeriği <a href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\">CC BY NC ND 4.0</a> lisansına tabidir. &copy; Ayşe Tosun, <time>2018</time>",

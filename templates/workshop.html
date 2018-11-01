@@ -10,20 +10,23 @@
 
   <table>
     <tr>
-      <th>Şehir:<th>
+      <th>{{ bag('translate', this.alt, 'city') }}:<th>
       <td>{{ this.city }}<td>
     </tr>
     <tr>
-      <th>Tarihler:<th>
+      <th>{{ bag('translate', this.alt, 'dates') }}:<th>
       <td>{{ this.dates }}<td>
     </tr>
   </table>
 
   {{ this.body }}
 
-  <p>{{ material.summary }} <a href="{{ material|url }}">(ayrıntılı içerik)</a></p>
+  <p>
+    {{ material.summary }}
+    <a href="{{ material|url }}">({{ bag('translate', this.alt, 'more-info') }})</a>
+  </p>
 
-  {% if this.status == 'open' %}
+  {% if this.alt == 'tr' and this.status == 'open' %}
   <p class="has-text-right"><a class="button is-primary" disabled href="https://tinyurl.com/kendinicinkodla">Başvur</a></p>
   {% endif %}
 </div>
