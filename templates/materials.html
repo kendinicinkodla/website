@@ -6,7 +6,7 @@
 <section class="section">
   <h2 class="subtitle">{{ this.title }}</h2>
 
-  {{ this.body|cleanrst }}
+  {{ this.body }}
 
   {% from "macros/material.html" import render_material_list %}
   {% for material in this.children %}
