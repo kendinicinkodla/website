@@ -5,7 +5,19 @@
 {% block body %}
 <div class="container">
   <section class="section">
-    <h2 class="subtitle">{{ this.name }}</h2>
+    <div class="card-image">
+      <figure class="is-1by1">
+        <img src="{{ ('/static/people/' + this._slug + '.jpg')|url }}" alt="{{ this.name }}">
+      </figure>
+    </div>
+
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content has-text-centered">
+          <h2 class="title">{{ this.name }}</h2>
+        </div>
+      </div>
+    </div>
   </section>
 
   {% set authored = site.query('/kutuphane').filter(F.authors.contains(this._slug)) %}
