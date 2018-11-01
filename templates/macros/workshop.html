@@ -1,5 +1,5 @@
 {% macro render_workshop_card(workshop, alt) %}
-<div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="content card kik">
+<div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="content card kik workshop">
   {% set material = workshop.children.first() %}
 
   <div class="card-image">
@@ -39,7 +39,8 @@
             <h2 class="subtitle">{{ material.title }}</h2>
             <div>
               {% for instructor in workshop.instructors %}
-              <strong>{{ instructor }}</strong>{% if not loop.last %},{% endif %}
+              {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
+              <strong>{% if person %}{{ person.name }}{% else %}{{ instructor }}{% endif %}</strong>{% if not loop.last %},{% endif %}
               {% endfor %}
               <br>
               {{ material.summary }}
@@ -69,7 +70,8 @@
         <h2 class="subtitle"><a href="{{ workshop|url }}">{{ material.title }}</a></h2>
         <div>
           {% for instructor in workshop.instructors %}
-          <strong>{{ instructor }}</strong>{% if not loop.last %},{% endif %}
+          {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
+          <strong>{% if person %}{{ person.name }}{% else %}{{ instructor }}{% endif %}</strong>{% if not loop.last %},{% endif %}
           {% endfor %}
           <p>{{ material.summary }}</p>
           <div class="is-size-7 is-pulled-right">
@@ -96,7 +98,8 @@
     <div class="level-item">
       <div class="content">
         {% for instructor in workshop.instructors %}
-        <strong>{{ instructor }}</strong>{% if not loop.last %},{% endif %}
+        {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
+        <strong>{% if person %}{{ person.name }}{% else %}{{ instructor }}{% endif %}</strong>{% if not loop.last %},{% endif %}
         {% endfor %}<br>
         {{ workshop.city }}<br>
         <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time><br>
