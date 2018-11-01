@@ -10,12 +10,20 @@
 
   <table>
     <tr>
-      <th>{{ bag('translate', this.alt, 'city') }}:<th>
-      <td>{{ this.city }}<td>
+      <th>{{ bag('translate', this.alt, 'instructors') }}:</th>
+      <td>
+        {% for instructor in this.instructors %}
+        {{ instructor }}{% if not loop.last %},{% endif %}
+        {% endfor %}
+      </td>
     </tr>
     <tr>
-      <th>{{ bag('translate', this.alt, 'dates') }}:<th>
-      <td>{{ this.dates }}<td>
+      <th>{{ bag('translate', this.alt, 'city') }}:</th>
+      <td>{{ this.city }}</td>
+    </tr>
+    <tr>
+      <th>{{ bag('translate', this.alt, 'dates') }}:</th>
+      <td>{{ this.dates }}</td>
     </tr>
   </table>
 
