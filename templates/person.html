@@ -25,9 +25,9 @@
   <section class="section">
     <h3 class="subtitle">{{ bag('translate', this.alt, 'instructed') }}</h3>
 
-    {% from "macros/workshop.html" import render_workshop_short_list %}
+    {% from "macros/workshop.html" import render_workshop_list %}
     {% for workshop in instructed %}
-      {{ render_workshop_short_list(workshop, this.alt) }}
+      {{ render_workshop_list(workshop, this.alt) }}
     {% endfor %}
   </section>
   {% endif %}
