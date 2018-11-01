@@ -23,6 +23,8 @@
 
   <p>{{ material.summary }} <a href="{{ material|url }}">(ayrıntılı içerik)</a></p>
 
-  <p class="is-pulled-right"><a class="button is-primary" href="https://tinyurl.com/kendinicinkodla">Başvur</a></p>
+  {% if this.status == 'open' %}
+  <p class="has-text-right"><a class="button is-primary" disabled href="https://tinyurl.com/kendinicinkodla">Başvur</a></p>
+  {% endif %}
 </div>
 {% endblock %}
