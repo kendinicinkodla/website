@@ -4,17 +4,17 @@ img#kik-logo {
   filter: invert(100%);
 }
 
-.card.workshop {
+.card.kik .image {
+  margin: auto;
   padding-top: 1rem;
+}
+
+.card.workshop {
   border-radius: 20px;
 }
 
 .card.workshop:hover {
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-}
-
-.card.workshop .image {
-  margin: auto;
 }
 
 #lektor-edit-link {
