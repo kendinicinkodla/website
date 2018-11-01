@@ -21,4 +21,13 @@
     {{ this.body }}
   </div>
 </section>
+
+<section class="section">
+  <h2 class="subtitle">{{ bag('translate', this.alt, 'future-workshops') }}</h2>
+
+  {% from "macros/workshop.html" import render_workshop_short_list %}
+  {% for workshop in this.children %}
+    {{ render_workshop_short_list(workshop, this.alt) }}
+  {% endfor %}
+</section>
 {% endblock %}

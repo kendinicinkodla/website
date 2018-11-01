@@ -82,3 +82,27 @@
   </div>
 </div>
 {% endmacro %}
+
+{% macro render_workshop_short_list(workshop, alt) %}
+<div class="level">
+  {% set material = workshop.children.first() %}
+  <div class="level-left">
+    <div class="level-item">
+      <figure class="image is-128x128">
+        <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ material.title }}">
+      </figure>
+    </div>
+
+    <div class="level-item">
+      <div class="content">
+        {% for instructor in workshop.instructors %}
+        <strong>{{ instructor }}</strong>{% if not loop.last %},{% endif %}
+        {% endfor %}<br>
+        {{ workshop.city }}<br>
+        <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time><br>
+        <p><a href="{{ workshop|url }}">Ayrıntılı bilgi</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
