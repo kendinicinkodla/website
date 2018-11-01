@@ -1,6 +1,7 @@
 img#kik-logo {
   width: auto;
   max-height: 3rem;
+  filter: invert(100%);
 }
 
 .card.workshop {
