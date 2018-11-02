@@ -5,18 +5,32 @@
 {% block body %}
 {{ this.body }}
 
-<section class="section">
-  <h2 class="subtitle">{{ bag('translate', this.alt, 'contributors') }}</h2>
+{% from "macros/person.html" import render_person_card %}
 
-  {{ this.body }}
+<section class="section">
+  <h2 class="subtitle">{{ bag('translate', this.alt, 'founders') }}</h2>
 
   <div class="columns">
-    {% from "macros/person.html" import render_person_card %}
-    {% for person in this.children %}
+    {% for founder in this.founders %}
+    {%   set person = site.query('/hakkimizda').filter(F._slug==founder).first() %}
     <div class="column">
       {{ render_person_card(person, this.alt) }}
     </div>
     {% endfor %}
   </div>
 </section>
+
+{% if this.contributors %}
+<section class="section">
+  <h2 class="subtitle">{{ bag('translate', this.alt, 'contributors') }}</h2>
+
+  <div class="columns">
+    {% for person in this.contributors %}
+    <div class="column">
+      {{ render_person_card(person, this.alt) }}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 {% endblock %}
