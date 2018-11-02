@@ -18,4 +18,33 @@ incelenmesi ve bunların kodlanması.
 ---
 body:
 
-Python, Jupyter.
+Dünyada "büyük veri", "veri analitiği" gibi terimler hızla yayılmaya
+devam ediyor. Şirketler ellerindeki büyük boyutlu verinin işlenmesi ve
+anlamlandırılması için gerekli araçları araştırıyor, veri üzerinde
+incelemeler yapabilen analistleri işe alıyor. Üniversiteler büyük veri
+konusunda bilgisayar mühendisliği ve istatistik gibi programlarına
+yeni dersler ekliyor, bu konuda yüksek lisans ve doktora programları açıyor.
+Ülkeler, üniversite ve endüstri ile ortaklaşa büyük veri ve yapay zeka
+konularına odaklanan araştırma merkezlerine yatırım yapıyor. 
+
+Çalışılan şirketten ve konudan bağımsız olarak, veriyi anlama, işleme ve
+istatistiksel analizlerle veriye dayalı karar verme becerileri herkes için
+çok cazip hale geldi. Bu konularda çok sayıda ders, program ve bilgiye
+ulaşmak mümkün.
+
+Veri analitiği, veri görselleştirme gibi konular, Amerika başta olmak üzere,
+çeşitli ülkelerde artık lise düzeyindeki öğrenciler için atölyeler ve online
+eğitim veren girişimler ile destekleniyor. Bu konuda verilen eğitimler,
+bilgisayar mühendisliğine ilgi duyan öğrenciler için de çok heyecan verici
+çünkü öğrencilere kodlama ile gerçek hayatta ne tip problemlere çözüm
+üretebildiklerini gösteriyor.
+
+Veri analitiği ve görselleştirme atölyesi, gerçek hayattan örnekler (filmler,
+sanatçılar, yiyecekler gibi) üzerinden toplanmış verilere merak edilen
+soruları sormayı, bu sorulara Python programlama dilini ve lise 1. sınıf
+matematik bilgilerini kullanarak cevap vermeyi öğretir. Ayrıca
+veri görselleştirme için Python dilinin çeşitli paketlerini kullanmayı öğretir.
+
+Atölye sayesinde, lise öğrencileri hem Python programlama diline ve Jupyter
+ortamına giriş yapmış olacak, hem de Python ile gerçek veriler üzerinde
+uygulanabilecek basit matematiksel işlemleri öğrenecekler. 
