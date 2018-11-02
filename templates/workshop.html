@@ -40,8 +40,8 @@
     </p>
   </section>
 
-  {% if this.alt == 'tr' and this.status == 'open' %}
-  <p class="has-text-right"><a class="button is-primary" disabled href="https://tinyurl.com/kendinicinkodla">Başvur</a></p>
+  {% if this.alt == 'tr' and this.status == 'open' and this.apply %}
+  <p class="has-text-right"><a class="button is-primary" href="{{ this.apply }}">{{ bag('translate', this.alt, 'apply') }}</a></p>
   {% endif %}
 </div>
 {% endblock %}
