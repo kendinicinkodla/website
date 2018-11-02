@@ -13,6 +13,3 @@ locale = tr_TR
 
 [servers.ghpages]
 target = ghpages://kendinicinkodla/kendinicinkodla.github.io
-
-[packages]
-lektor-rst = 0.1
