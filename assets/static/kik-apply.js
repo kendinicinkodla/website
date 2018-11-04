@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     ev.preventDefault();
 
     var form = document.querySelector('form#workshop-application');
+    var token = form.getAttribute('data-token');
+
     var params = new URLSearchParams(new FormData(form)).toString();
-    var url = '{{ this.submit_url }}' + '?' + params;
+    var url = 'https://script.google.com/macros/' + token + '/exec?' + params;
 
     var request = new XMLHttpRequest();
     request.open('GET', url, true);

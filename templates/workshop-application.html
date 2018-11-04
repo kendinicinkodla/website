@@ -18,7 +18,7 @@
     <h2 class="subtitle has-text-centered">
       {{ bag('translate', this.alt, 'application-form') }}
     </h2>
-    <form id="workshop-application">
+    <form id="workshop-application" data-token="{{ this.submit_url }}">
       <div class="field">
         <label>Adınız ve soyadınız <span class="has-text-danger">*</span></label>
         <div class="control">
