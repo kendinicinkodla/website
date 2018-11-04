@@ -3,23 +3,30 @@
 {% block title %}{{ bag('translate', this.alt, 'application-form') }}{% endblock %}
 
 {% block extra_head %}
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
-
 <script defer>
-  var $form = $('form#workshop-application');
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#submit-form').addEventListener('click', function(ev) {
+    ev.preventDefault();
+    var form = document.querySelector('form#workshop-application');
+    var params = new URLSearchParams(new FormData(form)).toString();
+    var url = '{{ this.submit_url }}' + '?' + params;
+    var request = new XMLHttpRequest();
+    request.open('GET', url, true);
 
-  document.querySelectorAll('#submit-form').forEach(function ($el) {
-    $el.addEventListener('click', function() {
-      e.preventDefault();
-      var jqxhr = $.ajax({
-        url: {{ this.submit_url }},
-        method: "GET",
-        dataType: "json",
-        data: $form.serializeObject()
-      }).success(
-        // do something
-      );
-    });
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        alert('Başvurunuz alındı.');
+      } else {
+        alert('Bir sorun oluştu, lütfen yeniden deneyiniz..');
+      }
+    };
+
+    request.onerror = function() {
+      alert('Bir sorun oluştu, lütfen yeniden deneyiniz..');
+    };
+
+    request.send();
+  });
 });
 </script>
 {% endblock %}
@@ -47,7 +54,7 @@
       <div class="field">
         <label>İletişim için e-posta adresini giriniz. <span class="has-text-danger">*</span></label>
         <div class="control">
-          <input type="text" class="input" name="email" required>
+          <input type="email" class="input" name="email" required>
         </div>
       </div>
   
@@ -61,22 +68,22 @@
       <div class="field">
         <label>Kaçıncı sınıfta okuyorsunuz? <span class="has-text-danger">*</span></label>
         <div class="control">
-          <input type="email" class="input" name="grade" required>
+          <input type="number" class="input" name="grade" required>
         </div>
       </div>
   
       <div class="field">
         <label>Daha önce kodlama/programlama konusunda bir eğitime katıldınız mı? <span class="has-text-danger">*</span></label>
-        <div class="control">
-          <input type="radio" class="radio" name="prior"> Evet<br>
-          <input type="radio" class="radio" name="prior"> Hayır
+        <div class="control is-grouped">
+          <input type="radio" class="radio" name="prior" value="1"> Evet
+          <input type="radio" class="radio" name="prior" value="0"> Hayır
         </div>
       </div>
   
       <div class="field">
         <label>Cevabınız Evet ise, lütfen katıldığınız eğitim hakkında bilgi veriniz.</label>
         <div class="control">
-          <textarea class="textarea" name="prior_explanation" required></textarea>
+          <textarea class="textarea" name="prior_explanation"></textarea>
         </div>
       </div>
   
