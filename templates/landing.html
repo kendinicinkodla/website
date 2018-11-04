@@ -5,11 +5,7 @@
 {% block extra_head %}
 <link rel="stylesheet" href="{{ '/static/bulma-carousel.min.css'|url }}">
 <script src="{{ '/static/bulma-carousel.min.js'|url }}" defer></script>
-<script defer>
-  document.addEventListener('DOMContentLoaded', function() {
-    var carousels = bulmaCarousel.attach();
-  }, false);
-</script>
+<script src="{{ '/static/kik-carousel.js'|url }}" defer></script>
 <script src="{{ '/static/bulma-modal.js'|url }}" defer></script>
 {% endblock %}
 
