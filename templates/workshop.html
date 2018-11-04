@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% set material = this.children.first() %}
+{% set material = site.query('/kutuphane').filter(F._slug==this.material).first() %}
 
 {% block title %}{{ material.title }}{% endblock %}
 

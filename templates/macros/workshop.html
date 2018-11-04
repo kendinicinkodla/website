@@ -1,6 +1,6 @@
 {% macro render_workshop_card(workshop, alt) %}
 <div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="content card kik workshop">
-  {% set material = workshop.children.first() %}
+  {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
 
   <div class="card-image">
     <figure class="image is-128x128">
@@ -27,7 +27,7 @@
 
 {% macro render_workshop_modal(workshop, alt) %}
 <div id="modal-{{ workshop._slug }}" class="modal">
-  {% set material = workshop.children.first() %}
+  {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
 
   <div class="modal-background"></div>
 
@@ -57,7 +57,7 @@
 
 {% macro render_workshop_list(workshop, alt, summary=True) %}
 <div class="level">
-  {% set material = workshop.children.first() %}
+  {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
   <div class="level-left">
     <div class="level-item">
       <figure class="image is-128x128">
