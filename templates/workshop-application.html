@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ bag('translate', this.alt, 'application-form') }}{% endblock %}
+
+{% block extra_head %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
+
+<script defer>
+  var $form = $('form#workshop-application');
+
+  document.querySelectorAll('#submit-form').forEach(function ($el) {
+    $el.addEventListener('click', function() {
+      e.preventDefault();
+      var jqxhr = $.ajax({
+        url: {{ this.submit_url }},
+        method: "GET",
+        dataType: "json",
+        data: $form.serializeObject()
+      }).success(
+        // do something
+      );
+    });
+});
+</script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+  <section class="section">
+    {% set workshop = this.parent %}
+    {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
+    <h1 class="title has-text-centered">
+      {{ material.title }}
+      - {{ workshop.city }}, {{ workshop.date|dateformat('long') }}
+    </h1>
+    <h2 class="subtitle has-text-centered">
+      {{ bag('translate', this.alt, 'application-form') }}
+    </h2>
+    <form id="workshop-application">
+      <div class="field">
+        <label>Adınız ve soyadınız <span class="has-text-danger">*</span></label>
+        <div class="control">
+          <input type="text" class="input" name="name" required>
+        </div>
+      </div>
+  
+      <div class="field">
+        <label>İletişim için e-posta adresini giriniz. <span class="has-text-danger">*</span></label>
+        <div class="control">
+          <input type="text" class="input" name="email" required>
+        </div>
+      </div>
+  
+      <div class="field">
+        <label>Okuduğunuz lise <span class="has-text-danger">*</span></label>
+        <div class="control">
+          <input type="text" class="input" name="school" required>
+        </div>
+      </div>
+  
+      <div class="field">
+        <label>Kaçıncı sınıfta okuyorsunuz? <span class="has-text-danger">*</span></label>
+        <div class="control">
+          <input type="email" class="input" name="grade" required>
+        </div>
+      </div>
+  
+      <div class="field">
+        <label>Daha önce kodlama/programlama konusunda bir eğitime katıldınız mı? <span class="has-text-danger">*</span></label>
+        <div class="control">
+          <input type="radio" class="radio" name="prior"> Evet<br>
+          <input type="radio" class="radio" name="prior"> Hayır
+        </div>
+      </div>
+  
+      <div class="field">
+        <label>Cevabınız Evet ise, lütfen katıldığınız eğitim hakkında bilgi veriniz.</label>
+        <div class="control">
+          <textarea class="textarea" name="prior_explanation" required></textarea>
+        </div>
+      </div>
+  
+      <div class="field">
+        <label>Bu atölyeye neden katılmak istiyorsunuz ve atölyeden neler bekliyorsunuz? <span class="has-text-danger">*</span></label>
+        <div class="control">
+          <textarea class="textarea" name="expectations" placeholder=""></textarea>
+        </div>
+      </div>
+
+      <div class="control has-text-centered">
+        <button class="button is-primary" id="submit-form">Gönder</button>
+      </div>
+    </form>
+  </section>
+</div>
+{% endblock %}
