@@ -25,7 +25,8 @@
   <h2 class="subtitle">{{ bag('translate', this.alt, 'contributors') }}</h2>
 
   <div class="columns">
-    {% for person in this.contributors %}
+    {% for contributor in this.contributors %}
+    {%   set person = site.query('/hakkimizda').filter(F._slug==contributor).first() %}
     <div class="column">
       {{ render_person_card(person, this.alt) }}
     </div>
