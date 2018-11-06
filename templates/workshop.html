@@ -38,6 +38,12 @@
     </p>
   </section>
 
+  <hr>
+
+  <section class="section has-text-centered">
+    {{ this.body|htu }}
+  </section>
+
   {% if this.alt == 'tr' and this.status == 'open' and this.apply %}
   <p class="has-text-right"><a class="button is-primary" href="{{ this.apply }}">{{ bag('translate', this.alt, 'apply') }}</a></p>
   {% endif %}
