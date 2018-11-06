@@ -17,10 +17,6 @@ def tweak_html(text):
     for node in body.xpath('//div[@class="section"]'):
         node.tag = "section"
 
-    # remove colgroup elements and their col children
-    for node in body.xpath("//table/colgroup"):
-        node.getparent().remove(node)
-
     # remove head class from th elements
     for node in body.xpath('//th[@class="head"]'):
         del node.attrib["class"]
