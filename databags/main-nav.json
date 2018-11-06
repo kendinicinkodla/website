@@ -1,6 +1,6 @@
 {
   "/hakkimizda": ["about-us", "fa fa-user-friends"],
-  "/atolyeler": ["workshops", "fab fa-superpowers"],
+  "/atolyeler": ["workshops", "fa fa-wrench"],
   "/kutuphane": ["library", "fa fa-book"],
   "/iletisim": ["contact", "fa fa-envelope"]
 }
