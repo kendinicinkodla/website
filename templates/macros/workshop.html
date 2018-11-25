@@ -4,7 +4,7 @@
 
   <div class="card-image">
     <figure class="image is-128x128">
-      <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ material.title }}">
+      <img src="{{ (material.path + '/logo.svg')|url }}" alt="{{ material.title }}">
     </figure>
   </div>
 
@@ -61,7 +61,7 @@
   <div class="level-left">
     <div class="level-item">
       <figure class="image is-128x128">
-        <img src="{{ ('/static/workshops/' + material._slug + '.svg')|url }}" alt="{{ material.title }}">
+        <img src="{{ (material.path + '/logo.svg')|url }}" alt="{{ material.title }}">
       </figure>
     </div>
 
