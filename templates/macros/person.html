@@ -2,7 +2,7 @@
 <div class="content card kik">
   <div class="card-image">
     <figure class="image is-128x128">
-      <a href="{{ person|url }}"><img src="{{ ('/static/people/' + person._slug + '.jpg')|url }}" alt="{{ person.name }}"></a>
+      <a href="{{ person|url }}"><img src="{{ (person.path + '/photo.jpg')|url }}" alt="{{ person.name }}"></a>
     </figure>
   </div>
 

@@ -25,6 +25,10 @@
         <td>{{ this.city }}</td>
       </tr>
       <tr>
+        <th>{{ bag('translate', this.alt, 'venue') }}:</th>
+        <td>{{ this.venue }}</td>
+      </tr>
+      <tr>
         <th>{{ bag('translate', this.alt, 'dates') }}:</th>
         <td>{{ this.dates }}</td>
       </tr>
@@ -40,8 +44,8 @@
 
   <hr>
 
-  <section class="section has-text-centered">
-    {{ this.body|htu }}
+  <section class="section">
+    {{ this.body }}
   </section>
 
   {% if this.alt == 'tr' and this.status == 'open' and this.apply %}

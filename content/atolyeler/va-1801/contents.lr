@@ -1,0 +1,23 @@
+_model: workshop
+---
+material: veri-analitigi
+---
+instructors:
+
+tosun
+islek
+uyar
+---
+city: Edirne
+---
+venue: Edirne Mesleki ve Teknik Anadolu Lisesi
+---
+date: 2018-12-01
+---
+dates: 1, 2, 8 Aralık 2019
+---
+body:
+
+.. container:: has-text-danger
+
+   Bu atölyenin başvuruları kapanmıştır.
