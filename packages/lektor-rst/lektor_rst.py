@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 import re
+import sys
 from datetime import datetime
 from io import StringIO
 from weakref import ref as weakref
@@ -63,6 +64,7 @@ def clean_html(text, **options):
             remove_class(node, "docutils")
 
     text = str(soup)
+    text = text.decode("utf-8") if sys.version_info.major < 3 else text
 
     tidy_options = config.section_as_dict("tidy")
     tidy_enabled = tidy_options.pop("enabled", False)
