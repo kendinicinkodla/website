@@ -8,13 +8,11 @@
 {% from "macros/person.html" import render_person_card %}
 
 <section class="section">
-  <h2 class="subtitle">{{ bag('translate', this.alt, 'founders') }}</h2>
-
   <div class="columns">
     {% for founder in this.founders %}
     {%   set person = site.query('/hakkimizda').filter(F._slug==founder).first() %}
     <div class="column">
-      {{ render_person_card(person, this.alt) }}
+      {{ render_person_card(person, '', this.alt) }}
     </div>
     {% endfor %}
   </div>
@@ -26,9 +24,10 @@
 
   <div class="columns">
     {% for contributor in this.contributors %}
-    {%   set person = site.query('/hakkimizda').filter(F._slug==contributor).first() %}
+    {%   set name, contribution = contributor.split(': ') %}
+    {%   set person = site.query('/hakkimizda').filter(F._slug==name).first() %}
     <div class="column">
-      {{ render_person_card(person, this.alt) }}
+      {{ render_person_card(person, contribution, this.alt) }}
     </div>
     {% endfor %}
   </div>

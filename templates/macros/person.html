@@ -1,4 +1,4 @@
-{% macro render_person_card(person, alt) %}
+{% macro render_person_card(person, contribution, alt) %}
 <div class="content card kik">
   <div class="card-image">
     <figure class="image is-128x128">
@@ -10,6 +10,7 @@
     <div class="media">
       <div class="media-content has-text-centered">
         <p class="title is-5"><a href="{{ person|url }}">{{ person.name }}</a></p>
+        <p>{{ contribution }}</p>
       </div>
     </div>
   </div>
