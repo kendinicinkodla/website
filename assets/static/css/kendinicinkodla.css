@@ -8,6 +8,10 @@ img#kik-logo {
   color: #b1e3ff !important;
 }
 
+.carousel .title {
+  display: none;
+}
+
 .card.kik .image {
   margin: auto;
   padding-top: 1rem;
