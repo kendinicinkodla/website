@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ this.title }}{% endblock %}
+
+{% block body %}
+<section class="section">
+  <h1 class="title">{{ this.title }}</h1>
+
+  <p class="is-size-5">
+    {{ this.lead_in }}
+  </p>
+  {{ this.body }}
+</section>
+{% endblock %}

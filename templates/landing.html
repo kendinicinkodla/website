@@ -30,6 +30,13 @@
 </section>
 
 <section class="section">
+  <h2 class="subtitle">{{ bag('translate', this.alt, 'news') }}</h2>
+  {% for newsitem in site.query('/haberler').filter(F._model=='newsitem').order_by('-date').limit(3) %}
+    <p><a href="{{ newsitem.path}}">{{ newsitem.title }}</a><br/><small><time datetime="newsitem.date">{{ newsitem.date|dateformat('long') }}</time></small></p>
+  {% endfor %}
+</section>
+
+<section class="section">
   <h2 class="subtitle">{{ bag('translate', this.alt, 'upcoming-workshops') }}</h2>
 
   {% from "macros/workshop.html" import render_workshop_card, render_workshop_modal %}
