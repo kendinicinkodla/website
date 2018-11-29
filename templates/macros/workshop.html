@@ -11,7 +11,7 @@
   <div class="card-content is-clearfix">
     <div class="media">
       <div class="media-content has-text-centered">
-        <h4 class="is-size-4">{{ material.title }}<br>ATÖLYESİ</h4>
+        <h4 class="is-size-4">{{ material.title }}<br>{{ bag('translate', alt, 'workshop-suffixed') }}</h4>
         <small>
           {{ workshop.city }} —
           <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time>
