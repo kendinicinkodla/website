@@ -18,12 +18,11 @@ img#kik-logo {
 
 .card.kik .image {
   margin: auto;
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
 .card.workshop {
   border-radius: 20px;
-  padding: 0.8rem;
 }
 
 .card.workshop:hover {

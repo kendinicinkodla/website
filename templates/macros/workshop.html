@@ -1,5 +1,5 @@
 {% macro render_workshop_card(workshop, alt) %}
-<div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="content card kik workshop is-clearfix">
+<div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="content card kik workshop">
   {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
 
   <div class="card-image is-pulled-left">
@@ -8,7 +8,7 @@
     </figure>
   </div>
 
-  <div class="card-content is-pulled-right">
+  <div class="card-content is-clearfix">
     <div class="media">
       <div class="media-content has-text-centered">
       <p class="is-size-4">{{ material.title }}<br>ATÖLYESİ</p>
