@@ -19,8 +19,16 @@ img#kik-logo {
 
 .card.workshop {
   border-radius: 20px;
+  padding: 0.8rem;
 }
 
 .card.workshop:hover {
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.card.workshop .media-content {
+  font-family: "Patrick Hand", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #905EB0;
 }
