@@ -12,6 +12,10 @@ img#kik-logo {
   display: none;
 }
 
+.subtitle {
+  font-family: "Patrick Hand", sans-serif;
+}
+
 .card.kik .image {
   margin: auto;
   padding-top: 1rem;
