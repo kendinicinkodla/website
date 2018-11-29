@@ -2,33 +2,13 @@
   "banners": [
     {
       "active": true,
-      "src": "amethyst.png",
-      "url": "#",
+      "src": "/atolyeler/va-1801/afis.jpg",
+      "url": "/atolyeler/va-1801/",
       "alt": {
-        "tr": "Banner 1"
+        "tr": "Veri Analitiği ve Görselleştirme - Edirne"
       },
       "title": {
-        "tr": "Sitemizdeki bilgiler henüz kesinleşmemiştir."
-      }
-    },
-    {
-      "src": "carrot.png",
-      "url": "#",
-      "alt": {
-        "tr": "Banner 2"
-      },
-      "title": {
-        "tr": "Sitemizdeki bilgiler henüz kesinleşmemiştir."
-      }
-    },
-    {
-      "src": "belize.png",
-      "url": "#",
-      "alt": {
-        "tr": "Banner 3"
-      },
-      "title": {
-        "tr": "Sitemizdeki bilgiler henüz kesinleşmemiştir."
+        "tr": "İlk atölyemiz Edirne'de"
       }
     }
   ]
