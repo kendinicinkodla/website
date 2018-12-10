@@ -42,15 +42,11 @@
 
   {% from "macros/workshop.html" import render_workshop_card, render_workshop_modal %}
   <div class="columns">
-    {% for child in this.children %}
-    {%   if child._model == 'workshops' %}
-    {%     for workshop in child.children.all()[:3] %}
+    {% for workshop in site.query('/atolyeler').filter(F._model=='workshop' and F.status != 'passed').order_by('date').limit(3) %}
     <div class="column">
     {{       render_workshop_card(workshop, this.alt) }}
     {{       render_workshop_modal(workshop, this.alt) }}
     </div>
-    {%     endfor %}
-    {%   endif %}
     {% endfor %}
   </div>
 </section>
