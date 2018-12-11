@@ -1,0 +1,28 @@
+_model: newsitem
+---
+title: İlk atölyemiz tamamlandı
+---
+date: 2018-12-09
+---
+status: published
+---
+lead_in:
+
+Edirne'de düzenlediğimiz "Veri Analitiği ve Görselleştirme" atölyesi
+8 Aralık'daki son oturum ve sertifika töreniyle sona erdi.
+---
+body:
+
+1, 2 ve 8 Aralık tarihlerinde yaptığımız toplam 18 saatlik atölyede
+çeşitli liselerden 20 öğrenci günümüzün bu alanda en yaygın kullanılan
+programlama dillerinden Python'a ve geliştirme ortamlarından Jupyter'a
+giriş yaptılar. Veri üzerinde analizler yaparak ve veriyi görsel hale
+getirerek sorularına nasıl yanıt arayabileceklerine ilişkin örnekler
+görerek bu meslekle ilgili bir fikir sahibi oldular. Atölyenin sonunda
+Edirne İl Milli Eğitim Müdürü Sn. Hakan CIRIT'ın katılımıyla
+sertifika töreni yapıldı.
+
+Atölyenin düzenlenmesinde büyük katkıları bulunan tüm yetkililere
+teşekkürlerimizin yanısıra, bu yorucu çalışmayı büyük bir başarıyla
+tamamlayan katılımcılarımızı kutluyor, eğitimlerinde ve mesleklerinde
+yollarının açık olmasını diliyoruz.
