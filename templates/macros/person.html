@@ -1,18 +1,18 @@
 {% macro render_person_card(person, contribution, alt) %}
-<div class="content card kik">
-  <div class="card-image">
-    <figure class="image is-128x128">
-      <a href="{{ person|url }}"><img src="{{ (person.path + '/photo.jpg')|url }}" alt="{{ person.name }}"></a>
-    </figure>
-  </div>
+          <div class="content card kik">
+            <div class="card-image">
+              <figure class="image is-128x128">
+                <a href="{{ person|url }}"><img src="{{ (person.path + '/photo.jpg')|url }}" alt="{{ person.name }}"></a>
+              </figure>
+            </div>
 
-  <div class="card-content">
-    <div class="media">
-      <div class="media-content has-text-centered">
-        <p class="title is-5"><a href="{{ person|url }}">{{ person.name }}</a></p>
-        <p>{{ contribution }}</p>
-      </div>
-    </div>
-  </div>
-</div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content has-text-centered">
+                  <p class="title is-5"><a href="{{ person|url }}">{{ person.name }}</a></p>
+                  <p>{{ contribution }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
 {% endmacro %}
