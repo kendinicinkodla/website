@@ -37,14 +37,16 @@
         </table>
       </section>
 
-      <p>
-        {{ material.summary }}<br>
-        <a href="{{ material|url }}">{{ bag('translate', this.alt, 'more-info') }}</a>
-      </p>
+      <section class="section">
+        <p>
+          {{ material.summary }}<br>
+          <a href="{{ material|url }}">{{ bag('translate', this.alt, 'more-info') }}</a>
+        </p>
 
-      <hr>
+        <hr>
 
-      {{ this.body }}
+        {{ this.body }}
+      </section>
 
       {% if this.alt == 'tr' and this.status == 'open' and this.apply %}
       <p class="has-text-right"><a class="button is-primary" href="{{ this.apply }}">{{ bag('translate', this.alt, 'apply') }}</a></p>
