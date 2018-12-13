@@ -2,13 +2,10 @@ _model: about
 ---
 title: Hakkımızda
 ---
-founders:
-
-tosun
-uyar
----
 contributors:
 
+tosun: Kurucu, genel koordinasyon, içerik hazırlama, atölye eğitmenliği.
+uyar: Kurucu, web sitesi yönetimi, içerik hazırlama, atölye eğitmenliği.
 baykal: İçerik hazırlama, atölye eğitmenliği.
 islek: İçerik hazırlama, atölye eğitmenliği.
 kaptan: Grafik tasarım, proje logosu.

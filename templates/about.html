@@ -8,18 +8,7 @@
     {% from "macros/person.html" import render_person_card %}
 
     <section class="section">
-      <div class="columns">
-        {% for founder in this.founders %}
-        {%   set person = site.query('/hakkimizda').filter(F._slug == founder).first() %}
-        <div class="column is-one-third">
-          {{ render_person_card(person, '', this.alt) }}
-        </div>
-        {% endfor %}
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="subtitle">{{ bag('translate', this.alt, 'contributors') }}</h2>
+      <!-- h2 class="subtitle">{{ bag('translate', this.alt, 'contributors') }}</h2 -->
       {% for row in this.contributors|batch(3) %}
       <div class="columns">
         {% for contributor in row %}
