@@ -31,7 +31,7 @@
 
     {% set future_workshops = site.query('/atolyeler').filter((F.material == this._slug).and(F.status != 'passed')).order_by('date') %}
     {% if future_workshops.count() > 0 %}
-    <section class="section">
+    <section class="section container">
       <h2 class="subtitle">{{ bag('translate', this.alt, 'future-workshops') }}</h2>
       {% for workshop in future_workshops %}
         {{ render_workshop_list(workshop, this.alt, summary=False) }}
@@ -41,7 +41,7 @@
 
     {% set passed_workshops = site.query('/atolyeler').filter((F.material == this._slug).and(F.status == 'passed')).order_by('-date') %}
     {% if passed_workshops.count() > 0 %}
-    <section class="section">
+    <section class="section container">
       <h2 class="subtitle">{{ bag('translate', this.alt, 'passed-workshops') }}</h2>
       {% for workshop in passed_workshops %}
         {{ render_workshop_list(workshop, this.alt, summary=False) }}
