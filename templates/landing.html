@@ -44,7 +44,7 @@
     {% if workshops.count() > 0 %}
     {%   from "macros/workshop.html" import render_workshop_card, render_workshop_modal %}
     <section class="section">
-      <h2 class="subtitle">{{ bag('translate', this.alt, 'upcoming-workshops') }}</h2>
+      <h2 class="subtitle">{{ bag('translate', this.alt, 'future-workshops') }}</h2>
       <div class="columns">
         {% for workshop in workshops %}
         <div class="column">
