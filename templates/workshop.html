@@ -5,53 +5,53 @@
 {% block title %}{{ material.title }}{% endblock %}
 
 {% block body %}
-<div class="container">
-  <section class="section">
-    <h2 class="subtitle">{{ material.title }}</h2>
+    <div class="container">
+      <section class="section">
+        <h2 class="subtitle">{{ material.title }}</h2>
 
-    <p class="box has-background-grey has-text-light has-text-centered is-size-5">{{ bag('translate', this.alt, 'help_' + this.status) }}</p>
+        <p class="box has-background-grey has-text-light has-text-centered is-size-5">{{ bag('translate', this.alt, 'help_' + this.status) }}</p>
 
-    <table>
-      <tr>
-        <th>{{ bag('translate', this.alt, 'instructors') }}:</th>
-        <td>
-          {% for instructor in this.instructors %}
-          {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
-          {%   if person %}<a href="{{ person|url }}">{{ person.name }}</a>{%
-               else %}{{ instructor }}{% endif %}{% if not loop.last %},{% endif %}
-          {% endfor %}
-        </td>
-      </tr>
-      <tr>
-        <th>{{ bag('translate', this.alt, 'city') }}:</th>
-        <td>{{ this.city }}</td>
-      </tr>
-      <tr>
-        <th>{{ bag('translate', this.alt, 'venue') }}:</th>
-        <td>{{ this.venue }}</td>
-      </tr>
-      <tr>
-        <th>{{ bag('translate', this.alt, 'dates') }}:</th>
-        <td>{{ this.dates }}</td>
-      </tr>
-    </table>
-  </section>
+        <table>
+          <tr>
+            <th>{{ bag('translate', this.alt, 'instructors') }}:</th>
+            <td>
+              {% for instructor in this.instructors %}
+              {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
+              {%   if person %}<a href="{{ person|url }}">{{ person.name }}</a>{%
+                   else %}{{ instructor }}{% endif %}{% if not loop.last %},{% endif %}
+              {% endfor %}
+            </td>
+          </tr>
+          <tr>
+            <th>{{ bag('translate', this.alt, 'city') }}:</th>
+            <td>{{ this.city }}</td>
+          </tr>
+          <tr>
+            <th>{{ bag('translate', this.alt, 'venue') }}:</th>
+            <td>{{ this.venue }}</td>
+          </tr>
+          <tr>
+            <th>{{ bag('translate', this.alt, 'dates') }}:</th>
+            <td>{{ this.dates }}</td>
+          </tr>
+        </table>
+      </section>
 
-  <section class="section">
-    <p>
-      {{ material.summary }}
-      <a href="{{ material|url }}">({{ bag('translate', this.alt, 'more-info') }})</a>
-    </p>
-  </section>
+      <section class="section">
+        <p>
+          {{ material.summary }}<br>
+          <a href="{{ material|url }}">{{ bag('translate', this.alt, 'more-info') }}</a>
+        </p>
+      </section>
 
-  <hr>
+      <hr>
 
-  <section class="section">
-    {{ this.body }}
-  </section>
+      <section class="section">
+        {{ this.body }}
+      </section>
 
-  {% if this.alt == 'tr' and this.status == 'open' and this.apply %}
-  <p class="has-text-right"><a class="button is-primary" href="{{ this.apply }}">{{ bag('translate', this.alt, 'apply') }}</a></p>
-  {% endif %}
-</div>
+      {% if this.alt == 'tr' and this.status == 'open' and this.apply %}
+      <p class="has-text-right"><a class="button is-primary" href="{{ this.apply }}">{{ bag('translate', this.alt, 'apply') }}</a></p>
+      {% endif %}
+    </div>
 {% endblock %}
