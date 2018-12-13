@@ -57,7 +57,7 @@
       {% for row in attached|batch(3) %}
       <div class="columns">
         {% for image in row %}
-        <div class="column is-one-third">
+        <div class="column is-one-third has-text-centered">
           <a href="{{ image.path }}"><img src="{{ image.thumbnail(240) }}" alt="Atölye çalışmaları"></a>
         </div>
         {% endfor %}
