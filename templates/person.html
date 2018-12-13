@@ -3,46 +3,44 @@
 {% block title %}{{ this.name }}{% endblock %}
 
 {% block body %}
-<div class="container">
-  <section class="section">
-    <div class="card-image">
-      <figure class="is-1by1">
-        <img src="{{ 'photo.jpg'|url }}" alt="{{ this.name }}">
-      </figure>
-    </div>
-
-    <div class="card-content">
-      <div class="media">
-        <div class="media-content has-text-centered">
-          <h2 class="title">{{ this.name }}</h2>
-          {% if this.url %}<p><a class="button is-link" href="{{ this.url }}">{{ bag('translate', this.alt, 'personal-page' ) }}</a></p>{% endif %}
+    <div class="container">
+      <section class="section">
+        <div class="card-image">
+          <figure class="is-1by1">
+            <img src="{{ 'photo.jpg'|url }}" alt="{{ this.name }}">
+          </figure>
         </div>
-      </div>
+
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content has-text-centered">
+              <h2 class="title">{{ this.name }}</h2>
+              {% if this.url %}<p><a class="button is-link" href="{{ this.url }}">{{ bag('translate', this.alt, 'personal-page' ) }}</a></p>{% endif %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {% set authored = site.query('/kutuphane').filter(F.authors.contains(this._slug)) %}
+      {% if authored %}
+      {%   from "macros/material.html" import render_material_list %}
+      <section class="section">
+        <h3 class="subtitle">{{ bag('translate', this.alt, 'authored') }}</h3>
+        {% for material in authored %}
+          {{ render_material_list(material, this.alt) }}
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      {% set instructed = site.query('/atolyeler').filter(F.instructors.contains(this._slug) and F.status == 'passed').order_by('-date') %}
+      {% if instructed %}
+      {%   from "macros/workshop.html" import render_workshop_list %}
+      <section class="section">
+        <h3 class="subtitle">{{ bag('translate', this.alt, 'instructed') }}</h3>
+        {% for workshop in instructed %}
+          {{ render_workshop_list(workshop, this.alt, summary=False) }}
+        {% endfor %}
+      </section>
+      {% endif %}
     </div>
-  </section>
-
-  {% set authored = site.query('/kutuphane').filter(F.authors.contains(this._slug)) %}
-  {% if authored %}
-  <section class="section">
-    <h3 class="subtitle">{{ bag('translate', this.alt, 'authored') }}</h3>
-
-    {% from "macros/material.html" import render_material_list %}
-    {% for material in authored %}
-      {{ render_material_list(material, this.alt) }}
-    {% endfor %}
-  </section>
-  {% endif %}
-
-  {% set instructed = site.query('/atolyeler').filter(F.instructors.contains(this._slug)).order_by('date') %}
-  {% if instructed %}
-  <section class="section">
-    <h3 class="subtitle">{{ bag('translate', this.alt, 'instructed') }}</h3>
-
-    {% from "macros/workshop.html" import render_workshop_list %}
-    {% for workshop in instructed %}
-      {{ render_workshop_list(workshop, this.alt, summary=False) }}
-    {% endfor %}
-  </section>
-  {% endif %}
-</div>
 {% endblock %}

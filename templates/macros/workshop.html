@@ -50,31 +50,10 @@
 {% endmacro %}
 
 {% macro render_workshop_list(workshop, alt, summary=True) %}
-<div class="level">
-  {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
-  <div class="level-left">
-    <div class="level-item">
-      <figure class="image is-128x128">
-        <img src="{{ (material.path + '/logo.svg')|url }}" alt="{{ material.title }}">
-      </figure>
-    </div>
-
-    <div class="level-item">
-      <div class="content">
-        <h2 class="subtitle"><a href="{{ workshop|url }}">{{ material.title }}</a></h2>
-        <p>
-          {% for instructor in workshop.instructors %}
-          {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
-          <strong>{% if person %}{{ person.name }}{% else %}{{ instructor }}{% endif %}</strong>{% if not loop.last %},{% endif %}
-          {% endfor %}
-        </p>
-        {% if summary %}<p>{{ material.summary }}</p>{% endif %}
-        <p>
-          {{ workshop.city }} —
-          <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+        <ul>
+          {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
+          <li><a href="{{ workshop|url }}" class="is-size-5">{{ material.title }}</a> -
+            {{ workshop.city }},
+            <time datetime="{{ workshop.date }}">{{ workshop.date|dateformat('long') }}</time></li>
+        </ul>
 {% endmacro %}
