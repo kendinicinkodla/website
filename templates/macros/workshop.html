@@ -1,5 +1,5 @@
 {% macro render_workshop_card(workshop, alt) %}
-          {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
+          {% set material = site.query('/kutuphane').filter(F._slug == workshop.material).first() %}
           <div id="{{ workshop._slug }}" data-target="modal-{{ workshop._slug }}" class="content card kik workshop">
             <div class="card-image is-pulled-left">
               <figure class="image is-128x128">
@@ -23,7 +23,7 @@
 
 {% macro render_workshop_modal(workshop, alt) %}
           <div id="modal-{{ workshop._slug }}" class="modal">
-            {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
+            {% set material = site.query('/kutuphane').filter(F._slug == workshop.material).first() %}
             <div class="modal-background"></div>
             <div class="modal-content">
               <div class="box">
@@ -33,7 +33,7 @@
                       <h2 class="subtitle">{{ material.title }}</h2>
                       <div>
                         {% for instructor in workshop.instructors %}
-                        {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
+                        {%   set person = site.query('/hakkimizda').filter(F._slug == instructor).first() %}
                         <strong>{% if person %}{{ person.name }}{% else %}{{ instructor }}{% endif %}</strong>{% if not loop.last %},{% endif %}
                         {% endfor %}
                         <br>
@@ -51,7 +51,7 @@
 
 {% macro render_workshop_list(workshop, alt, summary=True) %}
         <div class="level">
-          {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
+          {% set material = site.query('/kutuphane').filter(F._slug == workshop.material).first() %}
           <div class="level-left">
             <div class="level-item">
               <figure class="image is-128x128">
@@ -64,7 +64,7 @@
                 <h2 class="subtitle"><a href="{{ workshop|url }}">{{ material.title }}</a></h2>
                 <p>
                   {% for instructor in workshop.instructors %}
-                  {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
+                  {%   set person = site.query('/hakkimizda').filter(F._slug == instructor).first() %}
                   <strong>{% if person %}{{ person.name }}{% else %}{{ instructor }}{% endif %}</strong>{% if not loop.last %},{% endif %}
                   {% endfor %}
                 </p>

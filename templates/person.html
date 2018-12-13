@@ -32,7 +32,7 @@
       </section>
       {% endif %}
 
-      {% set instructed = site.query('/atolyeler').filter(F.instructors.contains(this._slug) and F.status == 'passed').order_by('-date') %}
+      {% set instructed = site.query('/atolyeler').filter((F.instructors.contains(this._slug)).and(F.status == 'passed')).order_by('-date') %}
       {% if instructed %}
       {%   from "macros/workshop.html" import render_workshop_list %}
       <section class="section">

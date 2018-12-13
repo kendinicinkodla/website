@@ -10,7 +10,7 @@
 <div class="container">
   <section class="section">
     {% set workshop = this.parent %}
-    {% set material = site.query('/kutuphane').filter(F._slug==workshop.material).first() %}
+    {% set material = site.query('/kutuphane').filter(F._slug == workshop.material).first() %}
     <h1 class="title has-text-centered">
       {{ material.title }}
       - {{ workshop.city }}, {{ workshop.date|dateformat('long') }}

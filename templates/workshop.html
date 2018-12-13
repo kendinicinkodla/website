@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% set material = site.query('/kutuphane').filter(F._slug==this.material).first() %}
+{% set material = site.query('/kutuphane').filter(F._slug == this.material).first() %}
 
 {% block title %}{{ material.title }}{% endblock %}
 
@@ -16,7 +16,7 @@
             <th>{{ bag('translate', this.alt, 'instructors') }}:</th>
             <td>
               {% for instructor in this.instructors %}
-              {%   set person = site.query('/hakkimizda').filter(F._slug==instructor).first() %}
+              {%   set person = site.query('/hakkimizda').filter(F._slug == instructor).first() %}
               {%   if person %}<a href="{{ person|url }}">{{ person.name }}</a>{%
                    else %}{{ instructor }}{% endif %}{% if not loop.last %},{% endif %}
               {% endfor %}
