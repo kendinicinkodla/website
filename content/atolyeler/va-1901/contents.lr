@@ -6,11 +6,19 @@ instructors:
 
 tosun
 islek
+uyar
 ---
 city: İstanbul
+---
+venue: TED Rönesans Koleji
 ---
 date: 2019-01-24
 ---
 dates: 24, 25, 26 Ocak 2019
 ---
-status: tentative
+status: open
+---
+body:
+
+Bu atölye İstanbul Kadıköy bölgesindeki okulların öğrencilerine açıktır.
+Başvuruların nasıl yapılacağı okullar tarafından duyurulacaktır.
