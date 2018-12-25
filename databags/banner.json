@@ -2,13 +2,24 @@
   "banners": [
     {
       "active": true,
+      "src": "/atolyeler/va-1901/afis.png",
+      "url": "/atolyeler/va-1901/",
+      "alt": {
+        "tr": "Veri Analitiği ve Görselleştirme - İstanbul, Ocak 2019"
+      },
+      "title": {
+        "tr": "Veri Analitiği atölyemiz Ocak ayında İstanbul'da."
+      }
+    },
+    {
+      "active": true,
       "src": "/atolyeler/va-1801/afis.jpg",
       "url": "/atolyeler/va-1801/",
       "alt": {
         "tr": "Veri Analitiği ve Görselleştirme - Edirne, Aralık 2018"
       },
       "title": {
-        "tr": "İlk atölyemiz Edirne'de"
+        "tr": "Projemizin ilk atölyesi Edirne'de yapıldı."
       }
     }
   ]
