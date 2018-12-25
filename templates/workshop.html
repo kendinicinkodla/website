@@ -52,7 +52,7 @@
     {% endif %}
 
     {% set attached = this.attachments.images %}
-    {% if attached.count() > 0 %}
+    {% if this.status == 'passed' and attached.count() > 0 %}
     <section class="section container">
       {% for row in attached|batch(3) %}
       <div class="columns">
