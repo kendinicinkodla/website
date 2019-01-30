@@ -1,0 +1,27 @@
+_model: newsitem
+---
+title: Küçükyalı'da düzenlediğimiz "Veri Analitiği" atölyesi tamamlandı
+---
+date: 2019-01-27
+---
+status: published
+---
+lead_in:
+
+TED Rönesans Koleji'nin evsahipliğinde İstanbul Küçükyalı'da
+gerçekleştirdiğimiz "Veri Analitiği ve Görselleştirme" atölyesi
+26 Ocak günü tamamlandı.
+---
+body:
+
+24-26 Ocak tarihleri arasında 3 gün süren atölyeye çeşitli liselerden
+15 öğrenci katıldı. Günümüzün bu alanda en yaygın kullanılan programlama
+dillerinden Python ve geliştirme ortamlarından Jupyter ile çalışan
+öğrenciler istatistiksel analizler ve çizdirilen grafikler yardımıyla
+sorulara nasıl yanıt aranabileceğine ilişkin örnekler gördüler. Atölye
+sonunda katılımcılara sertifikaları törenle dağıtıldı.
+
+Atölyenin düzenlenmesini sağlayan Türk Eğitim Derneği'ne ve evsahipliği
+yapan TED Rönesans Koleji'ne teşekkürlerimizi sunuyoruz.
+
+[Atölye bilgileri ve fotoları için tıklayın](../../atolyeler/va-1901/)
