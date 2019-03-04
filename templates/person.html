@@ -21,7 +21,9 @@
         </div>
       </section>
 
-      {{ this.body }}
+      <section class="section">
+        {{ this.body }}
+      </section>
 
       {% set authored = site.query('/kutuphane').filter(F.authors.contains(this._slug)) %}
       {% if authored %}
