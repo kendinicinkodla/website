@@ -21,6 +21,8 @@
         </div>
       </section>
 
+      {{ this.body }}
+
       {% set authored = site.query('/kutuphane').filter(F.authors.contains(this._slug)) %}
       {% if authored %}
       {%   from "macros/material.html" import render_material_list %}
