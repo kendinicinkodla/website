@@ -2,6 +2,17 @@
   "banners": [
     {
       "active": true,
+      "src": "/atolyeler/ot-1901/afis.png",
+      "url": "/atolyeler/ot-1901/",
+      "alt": {
+        "tr": "Önyüz Tasarımı - İstanbul, Mart 2019"
+      },
+      "title": {
+        "tr": "Atakent Önyüz Tasarımı atölyemiz başladı."
+      }
+    },
+    {
+      "active": true,
       "src": "/atolyeler/va-1901/afis.png",
       "url": "/atolyeler/va-1901/",
       "alt": {
@@ -9,17 +20,6 @@
       },
       "title": {
         "tr": "Küçükyalı Veri Analitiği atölyemiz tamamlandı."
-      }
-    },
-    {
-      "active": true,
-      "src": "/atolyeler/va-1801/afis.jpg",
-      "url": "/atolyeler/va-1801/",
-      "alt": {
-        "tr": "Veri Analitiği ve Görselleştirme - Edirne, Aralık 2018"
-      },
-      "title": {
-        "tr": "Projemizin ilk atölyesi Edirne'de yapıldı."
       }
     }
   ]
