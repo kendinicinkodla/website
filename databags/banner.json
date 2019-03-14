@@ -2,13 +2,13 @@
   "banners": [
     {
       "active": true,
-      "src": "/atolyeler/ot-1901/afis.png",
-      "url": "/atolyeler/ot-1901/",
+      "src": "/atolyeler/og-1901/afis.png",
+      "url": "/atolyeler/og-1901/",
       "alt": {
-        "tr": "Önyüz Tasarımı - İstanbul, Mart 2019"
+        "tr": "Önyüz Geliştirme - İstanbul, Mart 2019"
       },
       "title": {
-        "tr": "Atakent Önyüz Tasarımı atölyemiz başladı."
+        "tr": "Atakent Önyüz Geliştirme atölyemiz başladı."
       }
     },
     {
