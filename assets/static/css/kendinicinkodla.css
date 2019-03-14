@@ -49,3 +49,20 @@ img#kik-logo {
 .footer strong {
   color: #eeeeee;
 }
+
+.related {
+  position: relative;
+  border: 2px solid #bbbbbb;
+  margin-top: 2em;
+  padding: 0.8em;
+}
+
+.related h3 {
+  position: absolute;
+  top: 0;
+  font-size: 1em;
+  font-weight: normal;
+  margin-top: -0.6em;
+  background: #ffffff;
+  padding: 0 0.5em 0 0.5em;
+}

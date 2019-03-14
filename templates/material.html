@@ -25,6 +25,18 @@
 
     <section class="section container">
       {{ this.body }}
+
+      {% set resources = this.children %}
+      {% if resources %}
+      <div class="related">
+        <h3>Kaynaklar</h3>
+        <ul>
+        {% for resource in resources %}
+          <li><a href="{{ resource.path }}">{{ resource.title }}</a></li>
+        {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
     </section>
 
     {% from "macros/workshop.html" import render_workshop_list %}
