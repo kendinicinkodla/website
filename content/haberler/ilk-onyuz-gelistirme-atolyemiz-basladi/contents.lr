@@ -1,0 +1,20 @@
+_model: newsitem
+---
+title: İlk "Önyüz Geliştirme" atölyemiz başladı
+---
+date: 2019-03-14
+---
+status: published
+---
+lead_in:
+
+Önyüz geliştirme üzerine hazırladığımız ilk atölye TED Atakent Koleji'nde
+yapılıyor.
+---
+body:
+
+Mart ayı boyunca dört hafta sonunda yarımşar gün boyunca düzenlenen
+oturumlarda katılımcılar web sitesi tasarımı ve kodlaması konularına
+giriş yapıyorlar.
+
+[Atölye bilgileri için tıklayın](../../atolyeler/og-1901/)
