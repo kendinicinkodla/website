@@ -4,6 +4,67 @@ sort_key: 30
 ---
 body:
 
+Bulma için::
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://unpkg.com/bulmaswatch/default/bulmaswatch.min.css"/>
+```
+
+Dönmedolap için::
+
+```
+<link rel="stylesheet" href="https://kendinicinkodla.org/static/css/bulma-carousel.min.css"/>
+<script src="https://kendinicinkodla.org/static/js/bulma-carousel.min.js" defer></script>
+<script src="https://kendinicinkodla.org/static/js/kik-carousel.js" defer></script>
+<script src="https://kendinicinkodla.org/static/js/fontawesome.min.js" defer></script>
+<script src="https://kendinicinkodla.org/static/js/fontawesome.solid.min.js" defer></script>
+```
+
+Kart:
+
+```
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <a href="agac_kurbagasi.html">
+        <img src="https://gitlab.com/kendinicinkodla/onyuz/raw/master/agac_kurbagasi_1.jpg"
+             alt="Ağaç kurbağası"/>
+      </a>
+    </figure>
+  </div>
+  <div class="card-content has-text-centered">
+    <p class="title is-6">Ağaç Kurbağası</p>
+  </div>
+</div>
+```
+
+Dönmedolap:
+
+```
+          <div class="carousel carousel-animated carousel-animate-slide">
+            <div class="carousel-container">
+              <div class="carousel-item has-background is-active">
+                <p>Metin 1</p>
+              </div>
+              <div class="carousel-item has-background is-active">
+                <p>Metin 2</p>
+              </div>
+            </div>
+                            
+            <div class="carousel-navigation">
+              <div class="carousel-nav-left">
+                <i class="fa fa-chevron-left"></i>
+              </div>
+              <div class="carousel-nav-right">
+                <i class="fa fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+```
+
+Hayvanlar:
+
 - Ağaç kurbağası: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/agac_kurbagasi.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/agac_kurbagasi.jpg)
 - Arı: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/ari.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/ari.jpg)
 - Aslan: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/aslan.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/aslan.jpg)
