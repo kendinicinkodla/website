@@ -4,31 +4,237 @@ sort_key: 30
 ---
 body:
 
-- Ağaç kurbağası: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/agac_kurbagasi.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/agac_kurbagasi.jpg)
-- Arı: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/ari.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/ari.jpg)
-- Aslan: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/aslan.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/aslan.jpg)
-- At: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/at.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/at.jpg)
-- Balina: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/balina.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/balina.jpg)
-- Baykuş: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/baykus.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/baykus.jpg)
-- Bukalemun: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/bukalemun.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/bukalemun.jpg)
-- Çayır köpeği: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/cayir_kopegi.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/cayir_kopegi.jpg)
-- Denizanası: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/denizanasi.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/denizanasi.jpg)
-- Deniz yıldızı: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/deniz_yildizi.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/deniz_yildizi.jpg)
-- Fil: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/fil.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/fil.jpg)
-- Flamingo: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/flamingo.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/flamingo.jpg)
-- Geyik: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/geyik.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/geyik.jpg)
-- Kaplumbağa: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/kaplumbaga.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/kaplumbaga.jpg)
-- Kartal: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/kartal.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/kartal.jpg)
-- Keçi: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/keci.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/keci.jpg)
-- Kızıl panda: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/kizil_panda.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/kizil_panda.jpg)
-- Koala: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/koala.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/koala.jpg)
-- Kunduz: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/kunduz.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/kunduz.jpg)
-- Kutup ayısı: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/kutup_ayisi.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/kutup_ayisi.jpg)
-- Mirket: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/mirket.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/mirket.jpg)
-- Palyaço balığı: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/palyaco_baligi.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/palyaco_baligi.jpg)
-- Penguen: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/penguen.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/penguen.jpg)
-- Piton: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/piton.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/piton.jpg)
-- Sırtlan: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/sirtlan.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/sirtlan.jpg)
-- Tavşan: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/tavsan.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/tavsan.jpg)
-- Tavus kuşu: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/tavus_kusu.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/tavus_kusu.jpg)
-- Zürafa: [metin](https://gitlab.com/kendinicinkodla/onyuz/raw/master/zurafa.txt), [foto](https://gitlab.com/kendinicinkodla/onyuz/raw/master/zurafa.jpg)
+| Hayvan         | Metin        | Büyük foto  | Küçük fotolar                                   |
+| -------------- | ------------ | ----------- | ----------------------------------------------- |
+| Ağaç kurbağası | [metin][akm] | [foto][ak0] | [1][ak1] --- [2][ak2] --- [3][ak3] --- [4][ak4] |
+| Arı            | [metin][arm] | [foto][ar0] | [1][ar1] --- [2][ar2] --- [3][ar3] --- [4][ar4] |
+| Aslan          | [metin][asm] | [foto][as0] | [1][as1] --- [2][as2] --- [3][as3] --- [4][as4] |
+| At             | [metin][atm] | [foto][at0] | [1][at1] --- [2][at2] --- [3][at3] --- [4][at4] |
+| Balina         | [metin][blm] | [foto][bl0] | [1][bl1] --- [2][bl2] --- [3][bl3] --- [4][bl4] |
+| Baykuş         | [metin][bkm] | [foto][bk0] | [1][bk1] --- [2][bk2] --- [3][bk3] --- [4][bk4] |
+| Bukalemun      | [metin][bum] | [foto][bu0] | [1][bu1] --- [2][bu2] --- [3][bu3] --- [4][bu4] |
+| Çayır köpeği   | [metin][ckm] | [foto][ck0] | [1][ck1] --- [2][ck2] --- [3][ck3] --- [4][ck4] |
+| Deniz yıldızı  | [metin][dym] | [foto][dy0] | [1][dy1] --- [2][dy2] --- [3][dy3] --- [4][dy4] |
+| Denizanası     | [metin][dam] | [foto][da0] | [1][da1] --- [2][da2] --- [3][da3] --- [4][da4] |
+| Fil            | [metin][fim] | [foto][fi0] | [1][fi1] --- [2][fi2] --- [3][fi3] --- [4][fi4] |
+| Flamingo       | [metin][flm] | [foto][fl0] | [1][fl1] --- [2][fl2] --- [3][fl3] --- [4][fl4] |
+| Geyik          | [metin][gem] | [foto][ge0] | [1][ge1] --- [2][ge2] --- [3][ge3] --- [4][ge4] |
+| Kaplumbağa     | [metin][kbm] | [foto][kb0] | [1][kb1] --- [2][kb2] --- [3][kb3] --- [4][kb4] |
+| Karga          | [metin][kgm] | [foto][kg0] | [1][kg1] --- [2][kg2] --- [3][kg3] --- [4][kg4] |
+| Kartal         | [metin][ktm] | [foto][kt0] | [1][kt1] --- [2][kt2] --- [3][kt3] --- [4][kt4] |
+| Keçi           | [metin][kcm] | [foto][kc0] | [1][kc1] --- [2][kc2] --- [3][kc3] --- [4][kc4] |
+| Kızıl panda    | [metin][kpm] | [foto][kp0] | [1][kp1] --- [2][kp2] --- [3][kp3] --- [4][kp4] |
+| Koala          | [metin][kom] | [foto][ko0] | [1][ko1] --- [2][ko2] --- [3][ko3] --- [4][ko4] |
+| Kunduz         | [metin][kum] | [foto][ku0] | [1][ku1] --- [2][ku2] --- [3][ku3] --- [4][ku4] |
+| Kutup ayısı    | [metin][kam] | [foto][ka0] | [1][ka1] --- [2][ka2] --- [3][ka3] --- [4][ka4] |
+| Mirket         | [metin][mim] | [foto][mi0] | [1][mi1] --- [2][mi2] --- [3][mi3] --- [4][mi4] |
+| Palyaço balığı | [metin][pbm] | [foto][pb0] | [1][pb1] --- [2][pb2] --- [3][pb3] --- [4][pb4] |
+| Penguen        | [metin][pgm] | [foto][pg0] | [1][pg1] --- [2][pg2] --- [3][pg3] --- [4][pg4] |
+| Piton          | [metin][ptm] | [foto][pt0] | [1][pt1] --- [2][pt2] --- [3][pt3] --- [4][pt4] |
+| Sırtlan        | [metin][sim] | [foto][si0] | [1][si1] --- [2][si2] --- [3][si3] --- [4][si4] |
+| Tavşan         | [metin][tvm] | [foto][tv0] | [1][tv1] --- [2][tv2] --- [3][tv3] --- [4][tv4] |
+| Tavus kuşu     | [metin][tkm] | [foto][tk0] | [1][tk1] --- [2][tk2] --- [3][tk3] --- [4][tk4] |
+| Zürafa         | [metin][zum] | [foto][zu0] | [1][zu1] --- [2][zu2] --- [3][zu3] --- [4][zu4] |
+
+[akm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/agac_kurbagasi.txt
+[ak0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/agac_kurbagasi.jpg
+[ak1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/agac_kurbagasi_1.jpg
+[ak2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/agac_kurbagasi_2.jpg
+[ak3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/agac_kurbagasi_3.jpg
+[ak4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/agac_kurbagasi_4.jpg
+
+[arm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/ari.txt
+[ar0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/ari.jpg
+[ar1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/ari_1.jpg
+[ar2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/ari_2.jpg
+[ar3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/ari_3.jpg
+[ar4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/ari_4.jpg
+
+[asm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/aslan.txt
+[as0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/aslan.jpg
+[as1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/aslan_1.jpg
+[as2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/aslan_2.jpg
+[as3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/aslan_3.jpg
+[as4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/aslan_4.jpg
+
+[atm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/at.txt
+[at0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/at.jpg
+[at1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/at_1.jpg
+[at2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/at_2.jpg
+[at3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/at_3.jpg
+[at4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/at_4.jpg
+
+[blm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/balina.txt
+[bl0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/balina.jpg
+[bl1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/balina_1.jpg
+[bl2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/balina_2.jpg
+[bl3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/balina_3.jpg
+[bl4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/balina_4.jpg
+
+[bkm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/baykus.txt
+[bk0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/baykus.jpg
+[bk1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/baykus_1.jpg
+[bk2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/baykus_2.jpg
+[bk3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/baykus_3.jpg
+[bk4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/baykus_4.jpg
+
+[bum]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/bukalemun.txt
+[bu0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/bukalemun.jpg
+[bu1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/bukalemun_1.jpg
+[bu2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/bukalemun_2.jpg
+[bu3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/bukalemun_3.jpg
+[bu4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/bukalemun_4.jpg
+
+[ckm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/cayir_kopegi.txt
+[ck0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/cayir_kopegi.jpg
+[ck1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/cayir_kopegi_1.jpg
+[ck2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/cayir_kopegi_2.jpg
+[ck3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/cayir_kopegi_3.jpg
+[ck4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/cayir_kopegi_4.jpg
+
+[dym]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/deniz_yildizi.txt
+[dy0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/deniz_yildizi.jpg
+[dy1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/deniz_yildizi_1.jpg
+[dy2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/deniz_yildizi_2.jpg
+[dy3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/deniz_yildizi_3.jpg
+[dy4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/deniz_yildizi_4.jpg
+
+[dam]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/denizanasi.txt
+[da0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/denizanasi.jpg
+[da1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/denizanasi_1.jpg
+[da2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/denizanasi_2.jpg
+[da3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/denizanasi_3.jpg
+[da4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/denizanasi_4.jpg
+
+[fim]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/fil.txt
+[fi0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/fil.jpg
+[fi1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/fil_1.jpg
+[fi2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/fil_2.jpg
+[fi3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/fil_3.jpg
+[fi4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/fil_4.jpg
+
+[flm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/flamingo.txt
+[fl0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/flamingo.jpg
+[fl1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/flamingo_1.jpg
+[fl2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/flamingo_2.jpg
+[fl3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/flamingo_3.jpg
+[fl4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/flamingo_4.jpg
+
+[gem]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/geyik.txt
+[ge0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/geyik.jpg
+[ge1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/geyik_1.jpg
+[ge2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/geyik_2.jpg
+[ge3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/geyik_3.jpg
+[ge4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/geyik_4.jpg
+
+[kbm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kaplumbaga.txt
+[kb0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kaplumbaga.jpg
+[kb1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kaplumbaga_1.jpg
+[kb2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kaplumbaga_2.jpg
+[kb3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kaplumbaga_3.jpg
+[kb4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kaplumbaga_4.jpg
+
+[kgm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/karga.txt
+[kg0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/karga.jpg
+[kg1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/karga_1.jpg
+[kg2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/karga_2.jpg
+[kg3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/karga_3.jpg
+[kg4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/karga_4.jpg
+
+[ktm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kartal.txt
+[kt0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kartal.jpg
+[kt1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kartal_1.jpg
+[kt2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kartal_2.jpg
+[kt3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kartal_3.jpg
+[kt4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kartal_4.jpg
+
+[kcm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/keci.txt
+[kc0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/keci.jpg
+[kc1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/keci_1.jpg
+[kc2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/keci_2.jpg
+[kc3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/keci_3.jpg
+[kc4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/keci_4.jpg
+
+[kpm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kizil_panda.txt
+[kp0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kizil_panda.jpg
+[kp1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kizil_panda_1.jpg
+[kp2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kizil_panda_2.jpg
+[kp3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kizil_panda_3.jpg
+[kp4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kizil_panda_4.jpg
+
+[kom]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/koala.txt
+[ko0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/koala.jpg
+[ko1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/koala_1.jpg
+[ko2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/koala_2.jpg
+[ko3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/koala_3.jpg
+[ko4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/koala_4.jpg
+
+[kum]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kunduz.txt
+[ku0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kunduz.jpg
+[ku1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kunduz_1.jpg
+[ku2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kunduz_2.jpg
+[ku3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kunduz_3.jpg
+[ku4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kunduz_4.jpg
+
+[kam]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kutup_ayisi.txt
+[ka0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kutup_ayisi.jpg
+[ka1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kutup_ayisi_1.jpg
+[ka2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kutup_ayisi_2.jpg
+[ka3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kutup_ayisi_3.jpg
+[ka4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/kutup_ayisi_4.jpg
+
+[mim]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/mirket.txt
+[mi0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/mirket.jpg
+[mi1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/mirket_1.jpg
+[mi2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/mirket_2.jpg
+[mi3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/mirket_3.jpg
+[mi4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/mirket_4.jpg
+
+[pbm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/palyaco_baligi.txt
+[pb0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/palyaco_baligi.jpg
+[pb1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/palyaco_baligi_1.jpg
+[pb2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/palyaco_baligi_2.jpg
+[pb3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/palyaco_baligi_3.jpg
+[pb4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/palyaco_baligi_4.jpg
+
+[pgm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/penguen.txt
+[pg0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/penguen.jpg
+[pg1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/penguen_1.jpg
+[pg2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/penguen_2.jpg
+[pg3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/penguen_3.jpg
+[pg4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/penguen_4.jpg
+
+[ptm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/piton.txt
+[pt0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/piton.jpg
+[pt1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/piton_1.jpg
+[pt2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/piton_2.jpg
+[pt3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/piton_3.jpg
+[pt4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/piton_4.jpg
+
+[sim]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/sirtlan.txt
+[si0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/sirtlan.jpg
+[si1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/sirtlan_1.jpg
+[si2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/sirtlan_2.jpg
+[si3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/sirtlan_3.jpg
+[si4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/sirtlan_4.jpg
+
+[tvm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavsan.txt
+[tv0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavsan.jpg
+[tv1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavsan_1.jpg
+[tv2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavsan_2.jpg
+[tv3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavsan_3.jpg
+[tv4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavsan_4.jpg
+
+[tkm]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavus_kusu.txt
+[tk0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavus_kusu.jpg
+[tk1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavus_kusu_1.jpg
+[tk2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavus_kusu_2.jpg
+[tk3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavus_kusu_3.jpg
+[tk4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/tavus_kusu_4.jpg
+
+[zum]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/zurafa.txt
+[zu0]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/zurafa.jpg
+[zu1]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/zurafa_1.jpg
+[zu2]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/zurafa_2.jpg
+[zu3]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/zurafa_3.jpg
+[zu4]: https://gitlab.com/kendinicinkodla/atolye-onyuz-site-icerigi/raw/master/zurafa_4.jpg
