@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Önyüz Geliştirme</title>
+
+    <link rel="stylesheet" href="_static/css/tailwind.min.css"/>
+    <link rel="stylesheet" href="_static/pygments.css"/>
+    <link rel="stylesheet" href="_static/css/classic-slides.css"/>
+    <link rel="stylesheet" href="_static/css/kirlent.css"/>
+    <link rel="stylesheet" href="_static/kik.css"/>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+  </head>
+  <body>
+    <div id="impress"
+         data-width="990"
+         data-height="700"
+         data-min-scale="0.2"
+         data-max-scale="1.0"
+         data-perspective="1000"
+         data-transition-duration="1000">
+      
+  <h1 id="search-documentation">Ara</h1>
+  <div id="fallback" class="admonition warning">
+  <script type="text/javascript">$('#fallback').hide();</script>
+  <p>
+    Arama işlevini kullanabilmek için lütfen JavaScript'i
+    etkinleştirin.
+  </p>
+  </div>
+  <p>
+    Burada belgeler içinde arama yapabilirsiniz. Aradığınız kelimeyi 
+aşağıdaki kutuya yazıp "ara" düğmesine basınız. Arama işlevi 
+otomatik olarak bütün kelimeleri arayacaktır. Eksik kelime içeren 
+sayfalar sonuç listesinde görünmez.
+  </p>
+  <form action="" method="get">
+    <input type="text" name="q" value="" />
+    <input type="submit" value="ara" />
+    <span id="search-progress" style="padding-left: 10px"></span>
+  </form>
+  
+  <div id="search-results">
+  
+  </div>
+
+    </div>
+
+    <script src="_static/js/impress.js"></script>
+    <script>
+      impress().init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Önyüz Geliştirme</title>
+
+    <link rel="stylesheet" href="_static/css/tailwind.min.css"/>
+    <link rel="stylesheet" href="_static/pygments.css"/>
+    <link rel="stylesheet" href="_static/css/classic-slides.css"/>
+    <link rel="stylesheet" href="_static/css/kirlent.css"/>
+    <link rel="stylesheet" href="_static/kik.css"/>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+  </head>
+  <body>
+    <div id="impress"
+         data-width="990"
+         data-height="700"
+         data-min-scale="0.2"
+         data-max-scale="1.0"
+         data-perspective="1000"
+         data-transition-duration="1000">
+      
+  <section class="title slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0" data-x="0">
+<h2>Önyüz Geliştirme</h2>
+<h3>CSS</h3>
+<div class="copyright docutils">
+<p>H. Turgut Uyar</p>
+<p>Mart 2019</p>
+</div>
+<div class="svg-invert mt-8 docutils">
+<a class="reference external image-reference" href="https://kendinicinkodla.org/"><img alt="Kendin için Kodla logosu." src="_images/kik-logo.svg" width="128" /></a>
+</div>
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Lisans</h2>
+<div class="columns docutils">
+<div class="column mr-4 docutils">
+<a class="reference internal image-reference" href="_images/cc-by-nc-sa.svg"><img alt="Creative Commons BY-NC-SA lisansı." src="_images/cc-by-nc-sa.svg" width="192" /></a>
+</div>
+<div class="column text-xl docutils">
+<div class="line-block">
+<div class="line">Creative Commons</div>
+<div class="line">Atıf - GayriTicari - AynıLisanslaPaylaş 4.0 Uluslararası</div>
+</div>
+</div>
+</div>
+<div class="text-xl mt-12 docutils">
+<ul class="simple">
+<li><p>yazarının adı belirtilmelidir</p></li>
+<li><p>ticari amaçla kullanılamaz</p></li>
+<li><p>türetilen eserler aynı lisansla paylaşılmalıdır</p></li>
+</ul>
+</div>
+<div class="mt-8 docutils">
+<p><a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.tr">ayrıntılı bilgi</a></p>
+</div>
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0" id="genel-yapi">
+<h2>İçindekiler</h2>
+<ul class="simple">
+<li><p><em>genel yapı</em></p></li>
+<li><p><a class="reference external" href="#yazi-stilleri">yazı stilleri</a></p></li>
+<li><p><a class="reference external" href="#renkler">renkler</a></p></li>
+<li><p><a class="reference external" href="#bosluklar">boşluklar</a></p></li>
+<li><p><a class="reference external" href="#yerlestirme">yerleştirme</a></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>CSS</h2>
+<ul class="simple">
+<li><p><em>Cascading Style Sheets</em></p></li>
+</ul>
+<ul class="simple">
+<li><p>düz metin</p></li>
+</ul>
+<div class="substep task docutils">
+<ul class="simple">
+<li><p>boş stil dosyasını oluşturalım</p></li>
+</ul>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Stil bağlantısı</h2>
+<ul class="simple">
+<li><p>HTML dosyasının baş kısmında: <code class="docutils literal notranslate"><span class="pre">link</span></code></p></li>
+<li><p>stil dosyası olduğunu belirtmek için: <code class="docutils literal notranslate"><span class="pre">rel</span></code></p></li>
+<li><p>stil dosyası adresi: <code class="docutils literal notranslate"><span class="pre">href</span></code></p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Doğa Kaşifleri - Karga<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="hll">  <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;kik.css&quot;</span><span class="p">/&gt;</span>
+</span><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Stil ayarları</h2>
+<ul class="simple">
+<li><p>hangi elemanlara uygulanacak?</p></li>
+<li><p>ayar ismi</p></li>
+<li><p>ayar değeri</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">eleman</span> <span class="p">{</span>
+  <span class="n">ayar_ismi</span><span class="p">:</span> <span class="n">ayar_değeri</span><span class="p">;</span>
+  <span class="n">ayar_ismi</span><span class="p">:</span> <span class="n">ayar_değeri</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Metin hizalama</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="o">-</span><span class="n">align</span><span class="p">:</span> <span class="n">HİZA_YÖNÜ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>sola: <code class="docutils literal notranslate"><span class="pre">left</span></code></p></li>
+<li><p>sağa: <code class="docutils literal notranslate"><span class="pre">right</span></code></p></li>
+<li><p>ortaya: <code class="docutils literal notranslate"><span class="pre">center</span></code></p></li>
+<li><p>çift yandan: <code class="docutils literal notranslate"><span class="pre">justify</span></code></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Metin hizalama</h2>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">th</span> <span class="p">{</span>
+  <span class="k">text-align</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="columns justify-center mt-8 docutils">
+<div class="column flex-unset mr-12 docutils">
+<img alt="Normalde başlık hücreleri ortaya hizalı." src="_images/stil-hizalama-once.png" />
+</div>
+<div class="column flex-unset docutils">
+<img alt="Kuraldan sonra başlık hücreleri sola hizalı." src="_images/stil-hizalama-sonra.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="0" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0" id="yazi-stilleri">
+<h2>İçindekiler</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#genel-yapi">genel yapı</a></p></li>
+<li><p><em>yazı stilleri</em></p></li>
+<li><p><a class="reference external" href="#renkler">renkler</a></p></li>
+<li><p><a class="reference external" href="#bosluklar">boşluklar</a></p></li>
+<li><p><a class="reference external" href="#yerlestirme">yerleştirme</a></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Yazı tipi</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">font</span><span class="o">-</span><span class="n">family</span><span class="p">:</span> <span class="s1">&#39;Seçenek 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Seçenek 2&#39;</span><span class="p">,</span> <span class="s1">&#39;Seçenek 3&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul>
+<li><p>her seçenek bir yazı tipi “ailesi”</p></li>
+<li><p>sıradaki seçeneği bulamıyorsan sonrakine geç</p></li>
+<li><div class="line-block">
+<div class="line">son seçenek şunlardan biri olmalı:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">serif</span></code>, <code class="docutils literal notranslate"><span class="pre">sans-serif</span></code>, <code class="docutils literal notranslate"><span class="pre">monospace</span></code></div>
+</div>
+</li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Google Fonts</h2>
+<ul class="simple">
+<li><p>serbestçe kullanılabilecek yazı tipleri</p></li>
+</ul>
+<ul class="simple">
+<li><p>önce stil dosyasına alınmalı</p></li>
+</ul>
+<div class="small highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://fonts.googleapis.com/css?family=Cabin:400,700|Nunito:400,700&#39;</span><span class="o">)</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="substep task mt-12 docutils">
+<ul class="simple">
+<li><p>biri gövde, biri başlıklar için iki yazı tipi seçelim</p></li>
+</ul>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Seçerken ağırlıklar 400/700 olsun.</p></li>
+<li><p>Latin Extended seçmek gerekebilir.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Varsayılan yazı tipi</h2>
+<ul>
+<li><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">body</span></code> elemanına uygulanırsa</div>
+<div class="line">bütün sayfa için geçerli olur</div>
+</div>
+</li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Varsayılan yazı tipi</h2>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Cabin&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="columns mt-8 docutils">
+<div class="column docutils">
+<img alt="Normalde yazılar tarayıcının standart yazı tipiyle gösteriliyor." src="_images/stil-yazi-tipi-once.png" />
+</div>
+<div class="column docutils">
+<img alt="Kuraldan sonra yazılar bizim seçtiğimiz Cabin yazı tipiyle gösteriliyor." src="_images/stil-yazi-tipi-sonra.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="0" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Çoklu elemanlar</h2>
+<ul class="simple">
+<li><p>birden fazla elemana aynı stil uygulanabilir</p></li>
+<li><p>elemanları virgülle ayırarak:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">eleman_1</span><span class="o">,</span> <span class="nt">eleman_2</span> <span class="p">{</span>
+   <span class="n">ayar_ismi</span><span class="p">:</span> <span class="n">ayar_değeri</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="substep mt-8 docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Nunito&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Yazı boyu</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">font</span><span class="o">-</span><span class="n">size</span><span class="p">:</span> <span class="n">BOYUT</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>boyut çeşitli birimlerde verilebilir</p></li>
+</ul>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">px</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">em</span></code> — geçerli boya göre ölçek</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rem</span></code> — taban boya göre ölçek</p></li>
+</ul>
+<aside class="notes">
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rem</span></code> tarayıcının seçtiği temel boy, masaüstünde genelde 16px.</p></li>
+<li><p>Cabin yazı tipinin harf boyunun biraz küçük olduğuna dikkat çek.</p></li>
+<li><p>1.125rem = 18px</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Yazı boyu</h2>
+<div class="columns docutils">
+<div class="column mr-8 docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Cabin&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.125</span><span class="kt">rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">3</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<img alt="Normalde yazılar tarayıcının standart yazı boylarıyla gösteriliyor." src="_images/stil-yazi-boyu-once.png" />
+<img alt="Kuraldan sonra gövde yazı boyu ve başlığın bu boya oranı değişiyor." class="mt-12" src="_images/stil-yazi-boyu-sonra.png" />
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Tarayıcının normal ayarında <code class="docutils literal notranslate"><span class="pre">h1</span></code> boyu <code class="docutils literal notranslate"><span class="pre">1.5em</span></code>.</p></li>
+<li><p>Eskisinde <code class="docutils literal notranslate"><span class="pre">body</span></code> 16px, <code class="docutils literal notranslate"><span class="pre">h1</span></code> 24px.</p></li>
+<li><p>Yenisinde <code class="docutils literal notranslate"><span class="pre">body</span></code> 18px, <code class="docutils literal notranslate"><span class="pre">h1</span></code> 54px.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step view" data-rel-x="250" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="800" data-rel-y="0" data-rel-z="0">
+<h2>Yazı tipi stili</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">font</span><span class="o">-</span><span class="n">style</span><span class="p">:</span> <span class="n">STİL</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>normal: <code class="docutils literal notranslate"><span class="pre">normal</span></code></p></li>
+<li><p>italik: <code class="docutils literal notranslate"><span class="pre">italic</span></code></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Yazı tipi stili</h2>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">em</span> <span class="p">{</span>
+  <span class="k">font-style</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="columns mt-8 docutils">
+<div class="column docutils">
+<img alt="Normalde vurgular italik gösteriliyor." src="_images/stil-yazi-stili-once.png" />
+</div>
+<div class="column docutils">
+<img alt="Kuraldan sonra vurgular normal gösteriliyor." src="_images/stil-yazi-stili-sonra.png" />
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Vurgunun düz metinden farkı kalmıyor, değiştirmek gerek.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step view" data-rel-x="-250" data-rel-y="0" data-rel-z="0" data-scale="0.3">
+</section>
+<section class="slide step view" data-rel-x="450" data-rel-y="0" data-rel-z="0" data-scale="0.3">
+</section>
+<section class="slide step" data-rel-x="850" data-rel-y="0" data-rel-z="0">
+<h2>Yazı tipi ağırlığı</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">font</span><span class="o">-</span><span class="n">weight</span><span class="p">:</span> <span class="n">AĞIRLIK</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>normal: <code class="docutils literal notranslate"><span class="pre">normal</span></code></p></li>
+<li><p>kalın: <code class="docutils literal notranslate"><span class="pre">bold</span></code></p></li>
+<li><p>veya: <code class="docutils literal notranslate"><span class="pre">400</span></code>, <code class="docutils literal notranslate"><span class="pre">700</span></code></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Yazı tipi ağırlığı</h2>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">em</span> <span class="p">{</span>
+  <span class="k">font-style</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+  <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="columns mt-8 docutils">
+<div class="column docutils">
+<img alt="Normalde vurgular italik gösteriliyor." src="_images/stil-yazi-stili-once.png" />
+</div>
+<div class="column docutils">
+<img alt="Kuraldan sonra vurgular kalın gösteriliyor." src="_images/stil-yazi-agirligi-sonra.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="-250" data-rel-y="100" data-rel-z="0" data-scale="0.3">
+</section>
+<section class="slide step view" data-rel-x="450" data-rel-y="0" data-rel-z="0" data-scale="0.3">
+</section>
+<section class="slide step" data-rel-x="850" data-rel-y="-100" data-rel-z="0">
+<h2>Alt-üst çizgileri</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">text</span><span class="o">-</span><span class="n">decoration</span><span class="p">:</span> <span class="n">ÇİZGİ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>yok: <code class="docutils literal notranslate"><span class="pre">none</span></code></p></li>
+<li><p>altına: <code class="docutils literal notranslate"><span class="pre">underline</span></code></p></li>
+<li><p>üstüne: <code class="docutils literal notranslate"><span class="pre">overline</span></code></p></li>
+<li><p>ortasına: <code class="docutils literal notranslate"><span class="pre">line-through</span></code></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Alt-üst çizgileri</h2>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">em</span> <span class="p">{</span>
+  <span class="k">font-style</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+  <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">underline</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="columns mt-8 docutils">
+<div class="column docutils">
+<img alt="Normalde vurgular italik gösteriliyor." src="_images/stil-yazi-stili-once.png" />
+</div>
+<div class="column docutils">
+<img alt="Kuraldan sonra vurgular altı çizili gösteriliyor." src="_images/stil-yazi-altcizgisi-sonra.png" />
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Altçizginin kötü görünümünden söz et (<code class="docutils literal notranslate"><span class="pre">g</span></code> harflerini göster).</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step view" data-rel-x="-250" data-rel-y="100" data-rel-z="0" data-scale="0.3">
+</section>
+<section class="slide step view" data-rel-x="450" data-rel-y="0" data-rel-z="0" data-scale="0.3">
+</section>
+<section class="contents slide step" data-rel-x="850" data-rel-y="-100" data-rel-z="0" id="renkler">
+<h2>İçindekiler</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#genel-yapi">genel yapı</a></p></li>
+<li><p><a class="reference external" href="#yazi-stilleri">yazı stilleri</a></p></li>
+<li><p><em>renkler</em></p></li>
+<li><p><a class="reference external" href="#bosluklar">boşluklar</a></p></li>
+<li><p><a class="reference external" href="#yerlestirme">yerleştirme</a></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Yazı rengi</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">color</span><span class="p">:</span> <span class="n">RENK</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>rengin ismi: <code class="docutils literal notranslate"><span class="pre">white</span></code>, <code class="docutils literal notranslate"><span class="pre">black</span></code>, <code class="docutils literal notranslate"><span class="pre">red</span></code>, …</p></li>
+<li><p>RGB değeri</p></li>
+</ul>
+<aside class="notes">
+<ul class="simple">
+<li><p>Renklerin isimle verilmesi tercih edilmiyor.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Yazı rengi</h2>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">em</span> <span class="p">{</span>
+  <span class="k">font-style</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#C00000</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="columns mt-8 docutils">
+<div class="column docutils">
+<img alt="Normalde vurgular italik ce siyah gösteriliyor." src="_images/stil-yazi-stili-once.png" />
+</div>
+<div class="column docutils">
+<img alt="Kuraldan sonra vurgular düz ve kırmızı gösteriliyor." src="_images/stil-yazi-rengi-sonra.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="-250" data-rel-y="100" data-rel-z="0" data-scale="0.3">
+</section>
+<section class="slide step view" data-rel-x="450" data-rel-y="0" data-rel-z="0" data-scale="0.3">
+</section>
+<section class="slide step" data-rel-x="850" data-rel-y="-100" data-rel-z="0">
+<h2>Arka plan rengi</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="n">RENK</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="task mt-8 docutils">
+<ul class="simple">
+<li><p>altlıkta şunları ayarlayalım:</p>
+<ul>
+<li><p>arka plan rengi, yazı rengi</p></li>
+<li><p>yazı boyu</p></li>
+<li><p>metin hizalaması</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="substep mt-8 text-center docutils">
+<img alt="Altlıkta siyah arka plan, beyaz yazı, küçük boy, sağa dayalı." src="_images/stil-arkaplan-rengi-sonra.png" />
+</div>
+</section>
+<section class="slide step view" data-rel-x="0" data-rel-y="200" data-rel-z="0" data-scale="0.6">
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="-200" data-rel-z="0">
+<h2>Satır aralığı</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">line</span><span class="o">-</span><span class="n">height</span><span class="p">:</span> <span class="n">YÜKSEKLİK</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>yazı boyuna göre katsayı</p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Satır aralığı</h2>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;Cabin&#39;</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.125</span><span class="kt">rem</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="columns mt-8 docutils">
+<div class="column docutils">
+<img alt="Normalde satır aralığı az." src="_images/stil-satir-araligi-once.png" />
+</div>
+<div class="column docutils">
+<img alt="Kuraldan sonra satır aralığı artıyor." src="_images/stil-satir-araligi-sonra.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="0" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0" id="bosluklar">
+<h2>İçindekiler</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#genel-yapi">genel yapı</a></p></li>
+<li><p><a class="reference external" href="#yazi-stilleri">yazı stilleri</a></p></li>
+<li><p><a class="reference external" href="#renkler">renkler</a></p></li>
+<li><p><em>boşluklar</em></p></li>
+<li><p><a class="reference external" href="#yerlestirme">yerleştirme</a></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Boşluklar</h2>
+<div class="w-1-2 m-auto docutils">
+<img alt="Elemandan dışarı yönde boşluklar marjin, içeri yöndekiler dolgu." src="_images/kutu-modeli.svg" /></div>
+<ul class="simple">
+<li><p>elemandan dışarıya doğru: <code class="docutils literal notranslate"><span class="pre">margin</span></code></p></li>
+<li><p>elemandan içeriye doğru: <code class="docutils literal notranslate"><span class="pre">padding</span></code></p></li>
+</ul>
+</section>
+<section class="slide step view" data-rel-x="0" data-rel-y="-50" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="50" data-rel-z="0">
+<h2>Dış boşluklar</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">margin</span><span class="o">-</span><span class="n">YÖN</span><span class="p">:</span> <span class="n">UZAKLIK</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>sol: <code class="docutils literal notranslate"><span class="pre">margin-left</span></code></p></li>
+<li><p>sağ: <code class="docutils literal notranslate"><span class="pre">margin-right</span></code></p></li>
+<li><p>üst: <code class="docutils literal notranslate"><span class="pre">margin-top</span></code></p></li>
+<li><p>alt: <code class="docutils literal notranslate"><span class="pre">margin-bottom</span></code></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Dış boşluklar</h2>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">footer</span> <span class="p">{</span>
+  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">4</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="columns mt-8 items-end docutils">
+<div class="column docutils">
+<img alt="Normalde altlığın ana gövdeye uzaklığı az." src="_images/stil-bosluk-ust-once.png" />
+</div>
+<div class="column docutils">
+<img alt="Kuraldan sonra altlığın ana gövdeye uzaklığı artıyor." src="_images/stil-bosluk-ust-sonra.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="-100" data-rel-y="0" data-rel-z="0" data-scale="0.6">
+</section>
+<section class="slide step" data-rel-x="1150" data-rel-y="0" data-rel-z="0">
+<h2>Dış boşluklar</h2>
+<ul class="simple">
+<li><p>yön belirtilmezse: bütün yönlerden aynı uzaklık</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">figure</span> <span class="p">{</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="substep mt-4 docutils">
+<ul class="simple">
+<li><p>4 yön birden: <code class="docutils literal notranslate"><span class="pre">üst</span> <span class="pre">sağ</span> <span class="pre">alt</span> <span class="pre">sol</span></code> sırasıyla</p></li>
+</ul>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">auto</span></code> niteliği kullanılırsa iki yandan aynı boşluk</p></li>
+</ul>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Yönlerin verilişi saat yönünde.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>İç boşluklar</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">padding</span><span class="p">:</span> <span class="n">UZAKLIK</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>dış boşluklarla aynı yazım</p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>İç boşluklar</h2>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">footer</span> <span class="p">{</span>
+  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">4</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="columns mt-8 docutils">
+<div class="column docutils">
+<img alt="Normalde altlıktaki metnin etrafında boşluk yok." src="_images/stil-bosluk-ic-once.png" />
+</div>
+<div class="column docutils">
+<img alt="Kuraldan sonra altlıktaki metnin dört yanında boşluk var." src="_images/stil-bosluk-ic-sonra.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="100" data-rel-y="0" data-rel-z="0" data-scale="0.6">
+</section>
+<section class="slide step" data-rel-x="950" data-rel-y="0" data-rel-z="0">
+<h2>İçiçe eleman seçimi</h2>
+<div class="task docutils">
+<ul class="simple">
+<li><p>üstlükteki bağlantıların altı çizili olmasın</p></li>
+</ul>
+</div>
+<div class="substep task docutils">
+<ul class="simple">
+<li><p>ama metin içindekiler eskisi gibi kalsın</p></li>
+</ul>
+</div>
+<div class="substep docutils">
+<ul class="simple">
+<li><p>alt eleman seçmek için:</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">üst_eleman</span> <span class="nt">alt_eleman</span> <span class="p">{</span>
+   <span class="n">ayar_ismi</span><span class="p">:</span> <span class="n">ayar_değeri</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Önce <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">{</span> <span class="pre">text-decoration:</span> <span class="pre">none;</span> <span class="pre">}</span></code> göster.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>İçiçe eleman seçimi</h2>
+<div class="columns docutils">
+<div class="column mr-8 docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">header</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">header</span> <span class="nt">nav</span> <span class="nt">a</span> <span class="p">{</span>
+  <span class="k">margin-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="column w-1-3 docutils">
+<img alt="Kuraldan sonra sadece üstlükteki bağlantıların altı çizili değil." src="_images/stil-icice.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="150" data-rel-y="-100" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step view" data-rel-x="0" data-rel-y="300" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="900" data-rel-y="-200" data-rel-z="0">
+<h2>Düzenlemeler</h2>
+<div class="task docutils">
+<ul class="simple">
+<li><p>üstlüğü düzenleyelim:</p>
+<ul>
+<li><p>renkler</p></li>
+<li><p>logo</p></li>
+<li><p>yazı tipleri</p></li>
+<li><p>boşluklar</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Linklerde <code class="docutils literal notranslate"><span class="pre">text-transform:</span> <span class="pre">uppercase</span></code> göster.</p></li>
+<li><p>Sayfa dilini Türkçe vermenin etkisini tartış.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Bu yansıdan sonra ara verilebilir. HTML dosyasında değişiklikler
+gerekecek.</p></li>
+</ul>
+</aside>
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0" id="yerlestirme">
+<h2>İçindekiler</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#genel-yapi">genel yapı</a></p></li>
+<li><p><a class="reference external" href="#yazi-stilleri">yazı stilleri</a></p></li>
+<li><p><a class="reference external" href="#renkler">renkler</a></p></li>
+<li><p><a class="reference external" href="#bosluklar">boşluklar</a></p></li>
+<li><p><em>yerleştirme</em></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Eleman boyutları</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">width</span><span class="p">:</span> <span class="n">BOYUT</span><span class="p">;</span>
+<span class="n">height</span><span class="p">:</span> <span class="n">BOYUT</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<ul class="simple">
+<li><p>uzunluk ölçüsü</p></li>
+<li><p>bulunulan alana göre <code class="docutils literal notranslate"><span class="pre">%</span></code></p></li>
+<li><p>diğer boyuta göre ölçekle: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Eleman boyutları</h2>
+<div class="task docutils">
+<ul class="simple">
+<li><p>büyük resim bulunduğu alanın tüm enini kaplasın</p></li>
+</ul>
+</div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">img</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="substep docutils">
+<ul class="simple">
+<li><p>bütün resimler %100 oluyor</p></li>
+<li><p>sadece o resmi nasıl seçeceğim?</p></li>
+</ul>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Tek eleman ayarı</h2>
+<div class="columns docutils">
+<div class="column flex flex-col items-center justify-center docutils">
+<p class="border-b-2 border-grey px-4 mb-8">HTML</p>
+<ul class="simple">
+<li><p>kimlik niteliği: <code class="docutils literal notranslate"><span class="pre">id</span></code></p></li>
+<li><p>değeri sayfada tek olmalı</p></li>
+</ul>
+</div>
+<div class="column flex flex-col items-center justify-center docutils">
+<p class="text-center border-b-2 px-2">CSS</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eleman#kimlik</span></code></p></li>
+<li><p>veya: <code class="docutils literal notranslate"><span class="pre">#kimlik</span></code></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Tek eleman ayarı</h2>
+<div class="columns docutils">
+<div class="column flex flex-col items-start mr-8 docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;karga.jpg&quot;</span>
+     <span class="na">id</span><span class="o">=</span><span class="s">&quot;poster&quot;</span>
+     <span class="na">width</span><span class="o">=</span><span class="s">&quot;1280&quot;</span>
+     <span class="na">height</span><span class="o">=</span><span class="s">&quot;427&quot;</span>
+     <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Bir parkta ...&quot;</span><span class="p">/&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">img</span><span class="p">#</span><span class="nn">poster</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<img alt="Kuraldan sonra resmin genişliği sayfayla aynı." src="_images/stil-id.png" />
+</div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Maksimum genişlik</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="o">-</span><span class="n">width</span><span class="p">:</span> <span class="n">BOYUT</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="task mt-8 docutils">
+<ul class="simple">
+<li><p>logonun genişliği en fazla 360px olsun</p></li>
+</ul>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Çoklu eleman seçme</h2>
+<div class="task docutils">
+<ul class="simple">
+<li><p>tablonun çift satırlarının arka plan rengini değiştirelim</p></li>
+</ul>
+</div>
+<div class="substep docutils">
+<ul class="simple">
+<li><p>birden fazla eleman nasıl seçeceğim?</p></li>
+</ul>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Eleman sınıfı ayarı</h2>
+<div class="columns docutils">
+<div class="column flex flex-col items-center justify-center docutils">
+<p class="border-b-2 border-grey px-4 mb-8">HTML</p>
+<ul class="simple">
+<li><p>sınıf niteliği: <code class="docutils literal notranslate"><span class="pre">class</span></code></p></li>
+<li><p>bir çok elemanda olabilir</p></li>
+</ul>
+</div>
+<div class="column flex flex-col items-center justify-center docutils">
+<p class="text-center border-b-2 px-2">CSS</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">eleman.sınıf</span></code></p></li>
+<li><p>veya: <code class="docutils literal notranslate"><span class="pre">.sınıf</span></code></p></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Eleman sınıfı ayarı</h2>
+<div class="columns docutils">
+<div class="column mr-4 docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Alem:<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Hayvanlar<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tr</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;cift&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Şube:<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Kordalılar<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Sınıf:<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Kuşlar<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">tr</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;cift&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Takım:<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Ötücü kuşlar<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">tr</span><span class="p">.</span><span class="nc">cift</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#E0E0E0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="flex justify-around mt-8 docutils">
+<img alt="Normalde hücre arka planları beyaz." src="_images/stil-sinif-once.png" />
+<img alt="Kuraldan sonra çift numaralı hücrelerin arka planları gri." src="_images/stil-sinif-sonra.png" />
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li><p>Tablo görünümü düzeltilmek istenirse:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">table</span> <span class="p">{</span>
+  <span class="n">border</span><span class="o">-</span><span class="n">collapse</span><span class="p">:</span> <span class="n">collapse</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">td</span><span class="p">,</span> <span class="n">th</span> <span class="p">{</span>
+  <span class="n">padding</span><span class="p">:</span> <span class="mf">0.5</span><span class="n">em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</aside>
+</section>
+<section class="slide step view" data-rel-x="200" data-rel-y="50" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="850" data-rel-y="-50" data-rel-z="0">
+<h2>Tasarım düzenlemeleri</h2>
+<div class="task docutils">
+<ul class="simple">
+<li><p>içerik kısmına yanlardan boşluk bırakalım</p></li>
+</ul>
+<ul class="simple">
+<li><p>büyük resim kenarlara dayalı</p></li>
+<li><p>başlığın arka plan rengi var</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p>kuralı hangi elemana uygulayacağız?</p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Eleman gruplama</h2>
+<ul class="simple">
+<li><p>gruplama elemanı: <code class="docutils literal notranslate"><span class="pre">div</span></code></p></li>
+<li><p>çoğu zaman <code class="docutils literal notranslate"><span class="pre">class</span></code> niteliğiyle kullanılır</p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Eleman gruplama</h2>
+<div class="columns docutils">
+<div class="column flex flex-col items-start mr-12 docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icerik&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>İri yapılı, ...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  ...
+  <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+    ...
+  <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">icerik</span> <span class="p">{</span>
+  <span class="k">max-width</span><span class="p">:</span> <span class="mi">50</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<img alt="Kuraldan sonra içerik kısmı daha dar ve ortaya hizalı." src="_images/stil-div.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="200" data-rel-y="200" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="850" data-rel-y="-200" data-rel-z="0">
+<h2>Kod açıklamaları</h2>
+<ul class="simple">
+<li><p>hangi elemanı kapattığını takip etmek zorlaşıyor</p></li>
+</ul>
+<ul class="simple">
+<li><p>açıklama yazmak okurken yardımcı olur:</p></li>
+</ul>
+<div class="columns docutils">
+<div class="column docutils">
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;!--</span></code> ile başla</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--&gt;</span></code> ile bitir</p></li>
+</ul>
+</div>
+<div class="column docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icerik&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>İri yapılı, ...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  ...
+  <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+    ...
+  <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="c">&lt;!-- icerik --&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Tasarım düzenlemeleri</h2>
+<div class="task docutils">
+<ul class="simple">
+<li><p>başlığın arka plan rengini ayarlayalım</p></li>
+<li><p>kenarlara ve büyük fotoya dayayalım</p></li>
+</ul>
+</div>
+<div class="text-center docutils">
+<img alt="Başlık kenarlara ve fotoya dayalı." src="_images/stil-icice-div.png" />
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Tasarım düzenlemeleri</h2>
+<div class="columns docutils">
+<div class="column mr-12 docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;afis&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;icerik&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Karga<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="c">&lt;!-- icerik --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="c">&lt;!-- afis --&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column flex flex-col items-start docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">afis</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#E0E0E0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">afis</span> <span class="nt">h1</span> <span class="p">{</span>
+  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="substep mt-8 docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">img</span><span class="p">#</span><span class="nn">poster</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Paragraf içi eleman gruplama</h2>
+<div class="task docutils">
+<ul class="simple">
+<li><p>ilk harfin boyunu büyütüp arka plan rengini değiştirelim</p></li>
+</ul>
+</div>
+<div class="column text-center docutils">
+<img alt="İlk harf daha büyük ve arka planı farklı." src="_images/stil-span.png" />
+</div>
+<div class="substep mt-8 docutils">
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">div</span></code> paragraf düzeyinde gruplama için</p></li>
+<li><p>paragraf içi: <code class="docutils literal notranslate"><span class="pre">span</span></code></p></li>
+</ul>
+</div>
+</section>
+<section class="slide step view" data-rel-x="-20" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="1070" data-rel-y="0" data-rel-z="0">
+<h2>Paragraf içi eleman gruplama</h2>
+<div class="flex flex-col items-start docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ilk-harf&quot;</span><span class="p">&gt;</span>İ<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>ri yapılı,
+  düz gagalı, ...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">ilk-harf</span> <span class="p">{</span>
+  <span class="k">font-family</span><span class="p">:</span> <span class="n">Georgia</span><span class="p">,</span> <span class="kc">serif</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">3</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">margin-right</span><span class="p">:</span> <span class="mf">0.15</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#E0E0E0</span><span class="p">;</span>
+  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Sütunlar</h2>
+<div class="task docutils">
+<ul class="simple">
+<li><p>galeri fotolarını sütunlara dizelim</p></li>
+<li><p>her sütun için bir <code class="docutils literal notranslate"><span class="pre">div</span></code> tanımlayalım</p></li>
+<li><p>sütunları gruplamak için de bir üst <code class="docutils literal notranslate"><span class="pre">div</span></code></p></li>
+</ul>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Sütunlar</h2>
+<div class="columns docutils">
+<div class="column mr-12 docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sutun&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+    ...
+  <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="c">&lt;!-- sutun: 1 --&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column flex flex-col items-start docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sutunlar&quot;</span><span class="p">&gt;</span>
+
+   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sutun&quot;</span><span class="p">&gt;</span>
+       ...
+   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="c">&lt;!-- sutun: 1 --&gt;</span>
+
+   ...
+
+   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sutun&quot;</span><span class="p">&gt;</span>
+       ...
+   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="c">&lt;!-- sutun: 4 --&gt;</span>
+
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> <span class="c">&lt;!-- sutunlar --&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Eleman dizme</h2>
+<div class="ref docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="columns mt-4 docutils">
+<div class="column docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">sutunlar</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+  <span class="k">justify-content</span><span class="p">:</span> <span class="kc">space-between</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="column text-center docutils">
+<img alt="Galeri fotoları dört sütun halinde dizilmiş." src="_images/stil-flex.png" />
+</div>
+</div>
+<div class="substep task mt-4 text-left docutils">
+<ul class="simple">
+<li><p>resimleri yuvarlatalım</p></li>
+<li><p>resim yazılarını ortalayalım</p></li>
+</ul>
+</div>
+</section>
+<section class="slide step view" data-rel-x="200" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="850" data-rel-y="0" data-rel-z="0">
+<h2>Yuvarlak fotolar</h2>
+<div class="flex flex-col items-start docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;galeri&quot;</span><span class="p">&gt;</span>
+</span>  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Galeri<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    ...
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span> <span class="c">&lt;!-- galeri --&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="columns mt-8 docutils">
+<div class="column docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">galeri</span> <span class="nt">img</span> <span class="p">{</span>
+  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">galeri</span> <span class="nt">figcaption</span> <span class="p">{</span>
+  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<img alt="Galeri fotoları yuvarlak, foto yazıları ortadan hizalı." src="_images/stil-yuvarlak.png" />
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Değişik <code class="docutils literal notranslate"><span class="pre">border-radius</span></code> ayarları denesinler.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Yerleştirme düzenlemesi</h2>
+<div class="task docutils">
+<ul class="simple">
+<li><p>yazıları birinci, tabloyu ikinci sütuna alalım</p></li>
+</ul>
+</div>
+<div class="w-1-2 m-auto docutils">
+<img alt="Tablo ikinci sütunda." src="_images/stil-ana-sutunlar.png" />
+</div>
+</section>
+<section class="slide step view" data-rel-x="-20" data-rel-y="0" data-rel-z="0" data-scale="0.6">
+</section>
+<section class="slide step" data-rel-x="1070" data-rel-y="0" data-rel-z="0">
+<h2>Çoklu sınıf</h2>
+<ul class="simple">
+<li><p>bir elemana birden fazla sınıf atanabilir</p></li>
+<li><p>boşlukla ayırarak</p></li>
+</ul>
+<div class="columns docutils">
+<div class="column docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sutun ucte-iki&quot;</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">ucte-iki</span> <span class="p">{</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mf">66.7</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<p>CSS bölümünün sonu</p>
+</section>
+
+
+    </div>
+
+    <script src="_static/js/impress.js"></script>
+    <script>
+      impress().init();
+    </script>
+  </body>
+</html>

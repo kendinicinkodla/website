@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Önyüz Geliştirme</title>
+
+    <link rel="stylesheet" href="_static/css/tailwind.min.css"/>
+    <link rel="stylesheet" href="_static/pygments.css"/>
+    <link rel="stylesheet" href="_static/css/classic-slides.css"/>
+    <link rel="stylesheet" href="_static/css/kirlent.css"/>
+    <link rel="stylesheet" href="_static/kik.css"/>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/translations.js"></script>
+  </head>
+  <body>
+    <div id="impress"
+         data-width="990"
+         data-height="700"
+         data-min-scale="0.2"
+         data-max-scale="1.0"
+         data-perspective="1000"
+         data-transition-duration="1000">
+      
+  <section class="title slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0" data-x="0">
+<h2>Önyüz Geliştirme</h2>
+<h3>HTML</h3>
+<div class="copyright docutils">
+<p>H. Turgut Uyar</p>
+<p>Mart 2019</p>
+</div>
+<div class="svg-invert mt-8 docutils">
+<a class="reference external image-reference" href="https://kendinicinkodla.org/"><img alt="Kendin için Kodla logosu." src="_images/kik-logo.svg" width="128" /></a>
+</div>
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Lisans</h2>
+<div class="columns docutils">
+<div class="column mr-4 docutils">
+<a class="reference internal image-reference" href="_images/cc-by-nc-sa.svg"><img alt="Creative Commons BY-NC-SA lisansı." src="_images/cc-by-nc-sa.svg" width="192" /></a>
+</div>
+<div class="column text-xl docutils">
+<div class="line-block">
+<div class="line">Creative Commons</div>
+<div class="line">Atıf - GayriTicari - AynıLisanslaPaylaş 4.0 Uluslararası</div>
+</div>
+</div>
+</div>
+<div class="text-xl mt-12 docutils">
+<ul class="simple">
+<li><p>yazarının adı belirtilmelidir</p></li>
+<li><p>ticari amaçla kullanılamaz</p></li>
+<li><p>türetilen eserler aynı lisansla paylaşılmalıdır</p></li>
+</ul>
+</div>
+<div class="mt-8 docutils">
+<p><a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.tr">ayrıntılı bilgi</a></p>
+</div>
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0" id="genel-yapi">
+<h2>İçindekiler</h2>
+<ul class="simple">
+<li><p><em>genel yapı</em></p></li>
+<li><p><a class="reference external" href="#sayfa-sablonu">sayfa şablonu</a></p></li>
+<li><p><a class="reference external" href="#icerik-elemanlari">içerik elemanları</a></p></li>
+<li><p><a class="reference external" href="#govde-sablonu">gövde şablonu</a></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>HTML</h2>
+<ul class="simple">
+<li><p><em>HyperText Markup Language</em></p></li>
+</ul>
+<ul class="simple">
+<li><p>düz metin</p></li>
+</ul>
+<div class="substep task docutils">
+<ul class="simple">
+<li><p>ilk dosyamızı oluşturalım</p></li>
+<li><p>içine hayvanın ismini yazalım</p></li>
+</ul>
+</div>
+<div class="substep task docutils">
+<ul class="simple">
+<li><p>ilk paragrafı ekleyelim</p></li>
+</ul>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Türkçe harflerin bozuk çıktığına dikkat çek.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Boşluklar</h2>
+<ul class="simple">
+<li><p>fazladan boşlukların etkisi yok</p></li>
+</ul>
+<div class="columns docutils">
+<div class="column docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>Karga
+
+İri yapılı, düz gagalı,
+pençeli, tüyleri çoğunlukla
+siyah, yüksek ve rahatsız
+edici sesli kuş. Daha büyük
+ve genellikle leş yiyici
+olanlarına &quot;karakarga&quot; veya
+&quot;kuzgun&quot; denir.
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<img alt="Boşlukların etkisi olmadığından yazı tek blok halinde." src="_images/karga_bosluklar.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="200" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="850" data-rel-y="0" data-rel-z="0">
+<h2>Düz metin yetersiz</h2>
+<ul class="simple">
+<li><p>başlığı nasıl belirteceğim?</p></li>
+<li><p>nasıl tablo yapacağım?</p></li>
+<li><p>bir yeri nasıl vurgulayacağım?</p></li>
+</ul>
+<ul class="simple">
+<li><p>işaretler koyalım</p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>İşaretleme</h2>
+<ul>
+<li><div class="line-block">
+<div class="line">işaretlemek istediğimiz yerin başına ve sonuna</div>
+<div class="line"><em>etiketler</em> yazıyoruz:</div>
+</div>
+</li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;etiket&gt;</span>işaretlenen bölge<span class="nt">&lt;/etiket&gt;</span>
+</pre></div>
+</div>
+<ul class="mt-8 simple">
+<li><p>her etiket çifti bir <em>eleman</em> işaretliyor</p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Temel elemanlar</h2>
+<ul class="simple">
+<li><p>başlık: <code class="docutils literal notranslate"><span class="pre">h1</span></code></p></li>
+<li><p>paragraf: <code class="docutils literal notranslate"><span class="pre">p</span></code></p></li>
+</ul>
+<div class="columns docutils">
+<div class="column docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Karga<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>İri yapılı, düz gagalı,
+  pençeli, tüyleri çoğunlukla
+  siyah, yüksek ve rahatsız
+  edici sesli kuş. Daha büyük
+  ve genellikle leş yiyici
+  olanlarına &quot;karakarga&quot; veya
+  &quot;kuzgun&quot; denir.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<img alt="Paragraf ve başlık elemanlarının kullanımı." src="_images/karga_etiketler.png" />
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Boşlukların düzeldiğine dikkat çek.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step view" data-rel-x="-150" data-rel-y="150" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="1200" data-rel-y="-150" data-rel-z="0">
+<h2>İçiçe elemanlar</h2>
+<ul class="simple">
+<li><p>bir elemanın içine başka bir eleman konabilir</p></li>
+<li><p>sonra açılan eleman önce kapanmalı</p></li>
+</ul>
+<div class="columns items-center docutils">
+<div class="column docutils">
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dış&gt;</span>dış bölge<span class="nt">&lt;iç&gt;</span>iç bölge<span class="nt">&lt;/iç&gt;</span>dış bölge<span class="nt">&lt;/dış&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dış&gt;</span>
+  dış bölge
+  <span class="nt">&lt;iç&gt;</span>
+    iç bölge
+  <span class="nt">&lt;/iç&gt;</span>
+  dış bölge
+<span class="nt">&lt;/dış&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Editörde kod katlama özelliğini kullanarak açma/kapama etiketlerinin
+nasıl eşleştiklerini göster.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step view" data-rel-x="-100" data-rel-y="0" data-rel-z="0" data-scale="0.6">
+</section>
+<section class="slide step view" data-rel-x="350" data-rel-y="50" data-rel-z="0" data-scale="0.6">
+</section>
+<section class="slide step" data-rel-x="800" data-rel-y="-50" data-rel-z="0">
+<h2>Vurgu</h2>
+<ul class="simple">
+<li><p>vurgu: <code class="docutils literal notranslate"><span class="pre">em</span></code></p></li>
+<li><p>normalde italik gösterilir</p></li>
+</ul>
+<div class="columns docutils">
+<div class="column mr-8 docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Karga<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>İri yapılı, düz gagalı,
+  pençeli, tüyleri çoğunlukla
+  siyah, yüksek ve rahatsız
+  edici sesli kuş. Daha büyük
+  ve genellikle leş yiyici
+  olanlarına <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>karakarga<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+  veya <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>kuzgun<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> denir.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<img alt="Vurgu elemanının italik gösterilimi." src="_images/karga_vurgu.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="-150" data-rel-y="220" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step view" data-rel-x="370" data-rel-y="-60" data-rel-z="0" data-scale="0.35">
+</section>
+<section class="slide step" data-rel-x="830" data-rel-y="-160" data-rel-z="0">
+<h2>Boş elemanlar</h2>
+<ul class="simple">
+<li><p>bazı elemanların kapanış etiketi yok:</p></li>
+</ul>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;etiket/&gt;</span>
+</pre></div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Eleman nitelikleri</h2>
+<ul class="simple">
+<li><p>elemanların nitelikleri olabilir</p></li>
+<li><p>açılış etiketinde belirtilir</p></li>
+</ul>
+<ul class="simple">
+<li><p>örneğin elemanın hangi dilde olduğu: <code class="docutils literal notranslate"><span class="pre">lang</span></code></p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;tr&quot;</span><span class="p">&gt;</span>İri yapılı, düz gagalı, pençeli, tüyleri
+  çoğunlukla siyah, yüksek ve rahatsız edici sesli kuş.
+  Daha büyük ve genellikle leş yiyici olanlarına
+  &quot;karakarga&quot; veya &quot;kuzgun&quot; denir.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0" id="sayfa-sablonu">
+<h2>İçindekiler</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#genel-yapi">genel yapı</a></p></li>
+<li><p><em>sayfa şablonu</em></p></li>
+<li><p><a class="reference external" href="#icerik-elemanlari">içerik elemanları</a></p></li>
+<li><p><a class="reference external" href="#govde-sablonu">gövde şablonu</a></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Sayfa elemanları</h2>
+<ul class="simple">
+<li><p>sayfanın ana elemanı: <code class="docutils literal notranslate"><span class="pre">html</span></code></p></li>
+</ul>
+<ul class="simple">
+<li><p>içinde iki eleman bulunur:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">head</span></code>: sayfayla ilgili bilgiler (baş)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code>: sayfanın içeriği (gövde)</p></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><div class="line-block">
+<div class="line">HTML dosyası olduğunu belirtmek için başa:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">DOCTYPE</span></code></div>
+</div>
+</li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Şablon</h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;tr&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    ... sayfa bilgileri ...
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    ... sayfa içeriği ...
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Gövde</h2>
+<ul class="simple">
+<li><p>şu ana kadar yazdıklarımız gövdenin içinde</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Karga<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>İri yapılı, düz gagalı, pençeli, tüyleri çoğunlukla
+    siyah, yüksek ve rahatsız edici sesli kuş. Daha büyük
+    ve genellikle leş yiyici olanlarına <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>karakarga<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+    veya <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>kuzgun<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> denir.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="substep task docutils">
+<ul class="simple">
+<li><p>ömür ve ilginç bilgi paragraflarını ekleyelim</p></li>
+</ul>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Görüntülemeye bir etkisi yok.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Baş</h2>
+<ul class="simple">
+<li><p>sayfa bilgileri</p></li>
+</ul>
+<ul class="simple">
+<li><p>sayfa başlığı</p></li>
+<li><p>sayfanın yazarı, tarihi, telif hakkı, …</p></li>
+</ul>
+<div class="substep docutils">
+<ul class="simple">
+<li><p>hangi harflerle yazıldığı: <code class="docutils literal notranslate"><span class="pre">charset</span></code></p></li>
+</ul>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Harf tabloları</h2>
+<ul>
+<li><p>hangi sayı hangi harfe karşı düşecek?</p></li>
+<li><p>en yaygın kullanılan tablo: <code class="docutils literal notranslate"><span class="pre">utf-8</span></code></p>
+<blockquote>
+<div><div class="columns mt-8 docutils">
+<div class="column mr-8 self-center docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column self-center docutils">
+<img alt="Harf tablosu belirtilince Türkçe harfler doğru çıkıyor." src="_images/karga_charset.png" />
+</div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<aside class="notes">
+<ul class="simple">
+<li><p>Türkçe harflerin düzeldiğine dikkat çek.</p></li>
+<li><p>Editörün kullandığını seçmek gerektiğini vurgula.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step view" data-rel-x="200" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="850" data-rel-y="0" data-rel-z="0">
+<h2>Sayfa başlığı</h2>
+<ul class="simple">
+<li><p>sayfa başlığı: <code class="docutils literal notranslate"><span class="pre">title</span></code></p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Doğa Kaşifleri - Karga<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Başlığın nerede göründüğünü sor.</p></li>
+</ul>
+</aside>
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0" id="icerik-elemanlari">
+<h2>İçindekiler</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#genel-yapi">genel yapı</a></p></li>
+<li><p><a class="reference external" href="#sayfa-sablonu">sayfa şablonu</a></p></li>
+<li><p><em>içerik elemanları</em></p></li>
+<li><p><a class="reference external" href="#govde-sablonu">gövde şablonu</a></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Altbaşlıklar</h2>
+<ul>
+<li><div class="line-block">
+<div class="line">6 düzey başlık var:</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">h1</span></code>, <code class="docutils literal notranslate"><span class="pre">h2</span></code>, <code class="docutils literal notranslate"><span class="pre">h3</span></code>, <code class="docutils literal notranslate"><span class="pre">h4</span></code>, <code class="docutils literal notranslate"><span class="pre">h5</span></code>, <code class="docutils literal notranslate"><span class="pre">h6</span></code></div>
+</div>
+</li>
+</ul>
+<div class="substep task docutils">
+<ul class="simple">
+<li><p>beslenme altbölümünü sayfaya ekleyelim</p></li>
+</ul>
+</div>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Bağlantılar</h2>
+<ul class="simple">
+<li><p>bağlantı: <code class="docutils literal notranslate"><span class="pre">a</span></code></p></li>
+<li><p>hedef adres niteliği: <code class="docutils literal notranslate"><span class="pre">href</span></code></p></li>
+<li><p>normalde mavi renkte ve altı çizili gösterilir</p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Bağlantılar</h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Kargalar tuhaf sesleri, siyah renkleri, parlak cisimlere olan
+  düşkünlükleri ile bilinirler.
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://awesci.com/ultimate-problem-solving-crow/&quot;</span><span class="p">&gt;</span>Bazı
+  araştırmalar<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> kargaların çok zeki olduklarını
+  göstermektedir.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="text-center mt-8 docutils">
+<img alt="Seçilen sözcükler bağlantının metnini oluşturuyor." src="_images/karga_baglanti.png" />
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Link adresi sitedeki listeden kopyalanabilir.</p></li>
+<li><p>Linkin metni ile adresinin farklı şeyler olduğunu vurgula.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step view" data-rel-x="20" data-rel-y="140" data-rel-z="0" data-scale="0.75">
+</section>
+<section class="slide step" data-rel-x="1030" data-rel-y="-140" data-rel-z="0">
+<h2>Resimler</h2>
+<ul class="simple">
+<li><p>resim: <code class="docutils literal notranslate"><span class="pre">img</span></code></p></li>
+<li><p>adres niteliği: <code class="docutils literal notranslate"><span class="pre">src</span></code></p></li>
+<li><p>genişlik ve yükseklik nitelikleri: <code class="docutils literal notranslate"><span class="pre">width</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code></p></li>
+<li><p>yerine konacak metin niteliği: <code class="docutils literal notranslate"><span class="pre">alt</span></code></p></li>
+</ul>
+<aside class="notes">
+<ul class="simple">
+<li><p>Genişlik ve yükseklik için dosyanın orijinal boyutları verilmeli.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alt</span></code> niteliğinin öneminden söz et: görme özürlü kullanıcılar.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Resimler</h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;karga.jpg&quot;</span>
+     <span class="na">width</span><span class="o">=</span><span class="s">&quot;1280&quot;</span>
+     <span class="na">height</span><span class="o">=</span><span class="s">&quot;427&quot;</span>
+     <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Bir parkta çimenlerin önüne konmuş bir karga.&quot;</span><span class="p">/&gt;</span>
+</pre></div>
+</div>
+<div class="text-center mt-4 docutils">
+<img alt="Foto belirtilen boya ölçekli olarak yerleştirilir." src="_images/karga_foto.png" />
+</div>
+<div class="task substep docutils">
+<ul class="simple">
+<li><p>galeri altbölümüne küçük fotoların ilkini koyalım</p></li>
+</ul>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Foto adresi sitedeki listeden kopyalanabilir.</p></li>
+<li><p>Küçük foto genişliği 128.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Şekiller</h2>
+<ul>
+<li><div class="line-block">
+<div class="line">şekiller değişik türden olabilir:</div>
+<div class="line">foto, resim, diyagram, …</div>
+</div>
+</li>
+</ul>
+<ul class="simple">
+<li><p>şekil: <code class="docutils literal notranslate"><span class="pre">figure</span></code></p></li>
+<li><p>yazı eklemek istersek: <code class="docutils literal notranslate"><span class="pre">figcaption</span></code></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Şekiller</h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;karga_1.jpg&quot;</span>
+       <span class="na">width</span><span class="o">=</span><span class="s">&quot;128&quot;</span>
+       <span class="na">height</span><span class="o">=</span><span class="s">&quot;128&quot;</span>
+       <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Foto 1&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>Foto 1<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="task substep mt-4 docutils">
+<ul class="simple">
+<li><p>büyük fotoyu <code class="docutils literal notranslate"><span class="pre">figure</span></code> içine alalım, yazısı olmasın</p></li>
+<li><p>bütün küçük resimleri ekleyelim</p></li>
+</ul>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">figure</span></code> olmasa <code class="docutils literal notranslate"><span class="pre">img</span></code> elemanları yanyana diziliyor</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">figure</span></code> ayrıca resmin etrafına boşluk ekliyor</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Listeler</h2>
+<div class="columns docutils">
+<div class="column mr-8 docutils">
+<ul class="simple">
+<li><p>sırasız liste: <code class="docutils literal notranslate"><span class="pre">ul</span></code></p></li>
+<li><p>sıralı liste: <code class="docutils literal notranslate"><span class="pre">ol</span></code></p></li>
+<li><p>liste maddesi: <code class="docutils literal notranslate"><span class="pre">li</span></code></p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Türler<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Avustralya kargası<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Orman kargası<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Küçük karga<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column self-end docutils">
+<img alt="Sırasız listeler maddeler halinde gösterilir." src="_images/karga_liste.png" />
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ul</span></code> yerine <code class="docutils literal notranslate"><span class="pre">ol</span></code> kullanarak sıralı liste denesinler.</p></li>
+<li><p>Hangisinin daha anlamlı olduğunu tartış.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step view" data-rel-x="-150" data-rel-y="100" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step view" data-rel-x="350" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="850" data-rel-y="-100" data-rel-z="0">
+<h2>Tablolar</h2>
+<ul class="simple">
+<li><p>tablo: <code class="docutils literal notranslate"><span class="pre">table</span></code></p></li>
+<li><p>tablo satırı: <code class="docutils literal notranslate"><span class="pre">tr</span></code></p></li>
+<li><p>tablo hücresi: <code class="docutils literal notranslate"><span class="pre">td</span></code></p></li>
+<li><p>başlık hücresi: <code class="docutils literal notranslate"><span class="pre">th</span></code></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Tablolar</h2>
+<div class="columns docutils">
+<div class="column mr-8 docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Sınıf:<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Kuşlar<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Familya:<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Kargagiller<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Cins:<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Corvus<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column self-center docutils">
+<img alt="Sırasız listeler maddeler halinde gösterilir." src="_images/karga_tablo.png" />
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">td</span></code> ile <code class="docutils literal notranslate"><span class="pre">th</span></code> elemanlarının görüntülenme farklarını tartış.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step view" data-rel-x="-110" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="contents slide step" data-rel-x="1160" data-rel-y="0" data-rel-z="0" id="govde-sablonu">
+<h2>İçindekiler</h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#genel-yapi">genel yapı</a></p></li>
+<li><p><a class="reference external" href="#sayfa-sablonu">sayfa şablonu</a></p></li>
+<li><p><a class="reference external" href="#icerik-elemanlari">içerik elemanları</a></p></li>
+<li><p><em>gövde şablonu</em></p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Gövde şablonu</h2>
+<ul class="simple">
+<li><p>bir sitedeki sayfalar aynı şablona uyar</p></li>
+</ul>
+<ul class="simple">
+<li><p>üstlük: logo, navigasyon menüsü, …</p></li>
+<li><p>ana içerik</p></li>
+<li><p>altlık: site haritası, telif hakkı, …</p></li>
+</ul>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Gövde bileşenleri</h2>
+<div class="columns docutils">
+<div class="column mr-8 docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+    ... logo, navigasyon, ...
+  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+     ... ana içerik ...
+  <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+    ... site haritası, ...
+  <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<ul class="simple">
+<li><p>üstlük: <code class="docutils literal notranslate"><span class="pre">header</span></code></p></li>
+<li><p>ana: <code class="docutils literal notranslate"><span class="pre">main</span></code></p></li>
+<li><p>altlık: <code class="docutils literal notranslate"><span class="pre">footer</span></code></p></li>
+</ul>
+<div class="task substep m-0 docutils">
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">body</span></code> altındakileri <code class="docutils literal notranslate"><span class="pre">main</span></code> içine alalım</p></li>
+</ul>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Görüntülemeye bir etkisi yok.</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Altlık</h2>
+<ul class="simple">
+<li><p>altlığa ana içerikle aynı türden elemanlar yazılır</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>(C) 2019, Kendin için Kodla<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="text-center mt-8 docutils">
+<img alt="Altlık ana içerikle aynı şekilde görüntülenir." src="_images/karga_altlik.png" />
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Görüntülemeye bir etkisi yok.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(C)</span></code> yerine <code class="docutils literal notranslate"><span class="pre">&amp;copy;</span></code> gösterilebilir.</p></li>
+<li><p>Unicode sembol seçtirilebilir: shapecatcher.com</p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Üstlük</h2>
+<div class="columns mt-12 docutils">
+<div class="column mr-8 docutils">
+<ul class="simple">
+<li><p>üstlük de aynı şekilde</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;logo_siyah.png&quot;</span>
+       <span class="na">width</span><span class="o">=</span><span class="s">&quot;434&quot;</span>
+       <span class="na">height</span><span class="o">=</span><span class="s">&quot;88&quot;</span>
+       <span class="na">alt</span><span class="o">=</span><span class="s">&quot;Doğa Kaşifleri logosu&quot;</span><span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="substep task docutils">
+<ul class="simple">
+<li><p>logoyu ana sayfaya bağlantı haline getirelim</p></li>
+</ul>
+</div>
+</div>
+<div class="column w-1-2 docutils">
+<img alt="Üstlük de ana içerikle aynı şekilde görüntülenir." src="_images/karga_ustluk.png" />
+</div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Görüntülemeye bir etkisi yok.</p></li>
+<li><p>Ana sayfanın bağlantı adresi: <code class="docutils literal notranslate"><span class="pre">index.html</span></code></p></li>
+</ul>
+</aside>
+</section>
+<section class="slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<h2>Navigasyon</h2>
+<ul class="simple">
+<li><p>navigasyon menüsü: <code class="docutils literal notranslate"><span class="pre">nav</span></code></p></li>
+</ul>
+<div class="columns mt-12 docutils">
+<div class="column mr-8 docutils">
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;turler.html&quot;</span><span class="p">&gt;</span>Hayvan türleri<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;oyun.html&quot;</span><span class="p">&gt;</span>Biliyor musun?<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="column docutils">
+<img alt="Navigasyona yalnızca linklerin yazılması yeterli." src="_images/karga_menu.png" />
+</div>
+</div>
+</section>
+<section class="slide step view" data-rel-x="250" data-rel-y="0" data-rel-z="0" data-scale="0.5">
+</section>
+<section class="slide step" data-rel-x="800" data-rel-y="0" data-rel-z="0">
+<h2>Metin bölümleri</h2>
+<ul class="simple">
+<li><p>ana içerik bölümler içine alınabilir: <code class="docutils literal notranslate"><span class="pre">section</span></code></p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Galeri<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+    ...
+  <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+    ...
+  <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<aside class="notes">
+<ul class="simple">
+<li><p>Görüntülemeye bir etkisi yok.</p></li>
+</ul>
+</aside>
+</section>
+<section class="contents slide step" data-rel-x="1050" data-rel-y="0" data-rel-z="0">
+<p>HTML bölümünün sonu</p>
+<p>➤ <a class="reference external" href="css.html">CSS</a></p>
+</section>
+
+
+    </div>
+
+    <script src="_static/js/impress.js"></script>
+    <script>
+      impress().init();
+    </script>
+  </body>
+</html>

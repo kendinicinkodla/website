@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,700|Inconsolata:400,700');
+
+body {
+  background-color: #DAE1E7;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+section {
+  background-color: #FFFFFF;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11),
+              0  5px 15px 0 rgba(0, 0, 0, 0.08);
+}
+
+pre {
+  font-family: 'Inconsolata', monospace;
+  border-width: 1px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
+  padding: 0.5em;
+}
+
+section.title,
+section.contents {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+section.contents a {
+  color: #FFFFFF;
+}
+
+section.contents a:hover {
+  color: #000000;
+}
+
+
+section.title h2 {
+  margin-bottom: 0;
+}
+
+section.title .subtitle {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+section.title .copyright {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.svg-invert {
+  filter: invert(100%);
+}
+
+section.contents h2 {
+  border-bottom: 2px solid #F1F5F8;
+  padding: 0 1em 0.1em 1em;
+}
+
+section h2 {
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+section.contents em {
+  color: #ffff00;
+}
+
+section .task {
+  background-color: #EFEFEF;
+  font-size: 0.8em;
+  margin-left: 4em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
+.ref .highlight {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.ref pre {
+  background-color: #6060FF;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 1em;
+}
+
+.ref .highlight span {
+  color: inherit;
+}
+
+.small {
+  font-size: 0.85em;
+}
+
+.column.flex-unset {
+  flex: unset;
+}
+
+@media print {
+  section h2,
+  section.title,
+  section.contents,
+  .ref pre {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-shadow: none;
+  }
+}
+
+/* for impress.js */
+
+#overview {
+  display: none;
+}
+
+.impress-on-overview .step {
+  opacity: 1;
+  cursor: pointer;
+}
