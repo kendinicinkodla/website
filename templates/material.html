@@ -28,7 +28,7 @@
 
       {% if this.resources %}
       <div class="related">
-        <h3>Kaynaklar</h3>
+        <h3>{{ bag('translate', this.alt, 'resources') }}:</h3>
         <ul>
         {% for resource in this.resources %}
           {%   set link, title = resource.split(': ') %}
