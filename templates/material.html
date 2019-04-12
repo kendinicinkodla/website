@@ -32,7 +32,7 @@
         <h3>Kaynaklar</h3>
         <ul>
         {% for resource in resources %}
-          <li><a href="{{ resource.path }}">{{ resource.title }}</a></li>
+          <li><a href="{{ resource.path|url }}">{{ resource.title }}</a></li>
         {% endfor %}
         </ul>
       </div>
