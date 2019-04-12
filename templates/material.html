@@ -26,13 +26,13 @@
     <section class="section container">
       {{ this.body }}
 
-      {% set resources = this.children %}
-      {% if resources %}
+      {% if this.resources %}
       <div class="related">
         <h3>Kaynaklar</h3>
         <ul>
-        {% for resource in resources %}
-          <li><a href="{{ resource.path|url }}">{{ resource.title }}</a></li>
+        {% for resource in this.resources %}
+          {%   set link, title = resource.split(': ') %}
+          <li><a href="{{ link }}/">{{ title }}</a></li>
         {% endfor %}
         </ul>
       </div>
