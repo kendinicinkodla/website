@@ -1,0 +1,42 @@
+_model: material
+---
+title: Kriptografi
+---
+sort_key: 40
+---
+img_credit: Foto: <a href="https://unsplash.com/@icons8">Icons8 team</a> -- <a href="https://unsplash.com/">Unsplash</a>
+---
+authors:
+
+uyar
+---
+summary:
+
+Bilişim güvenliğinin yapıtaşlarını oluşturan şifreleme yöntemlerinin
+öğrenilmesi ve kodlanması.
+---
+body:
+
+İletişim gizliliği eski çağlardan beri insanlığın çözmeye çalıştığı
+zorlu problemlerden biri olmuştur. Günümüzde bilişim teknolojisinin
+inanılmaz miktarlarda veri topladığı ve bu verilerin önemli bir kısmının
+hassas olduğunu gözönüne alındığında bu verilerin gerek iletim
+sırasında gerekse depolandıkları yerde gizliliklerinin sağlanması
+büyük önem kazanmıştır. Gizliliğin yanısıra verilerin bozulmaması,
+gönderici ile alıcının karşılıklı birbirlerinin kimliklerinden
+emin olabilmeleri gibi uygulamalara gereksinim ortaya çıkmıştır.
+
+Kriptografi bu sorunlara getirilen modern çözümlerin tümünün
+temelinde yatan teknikleri kapsar. Bilişim teknolojisi ile
+matematiğin en içiçe oldukları bir alandır ve çok ilginç ve eğlenceli
+problemlere çözüm arar.
+
+Bu atölyede katılımcılar programlamaya kısa bir giriş yaptıktan sonra
+kriptografinin geçmişten günümüze uygulanan yöntemlerini görecek
+ve kodlayacaklar.
+
+---
+resources:
+
+plan: Atölye planı (eğitmenlere yönelik)
+---

@@ -1,0 +1,49 @@
+title: Atölye planı
+---
+body:
+
+## Süre
+
+Atölye her biri yaklaşık 2.5-3 saat süren 4 oturum şeklinde planlanmıştır.
+
+## Kapsam
+
+## Oturumlar
+
+1. oturum:
+
+  - Python'a giriş (2x45dk).
+  - Kriptografiye giriş: Sezar şifresi (45dk).
+
+2. oturum:
+
+  - Sezar şifresi örneğinde akış denetimi yapıları (3x45).
+
+3. oturum:
+
+  - Modüler aritmetik, Vigenere şifresi (3x45dk).
+
+4. oturum:
+
+  - Modern yöntemlerin yapıtaşları (75dk).
+  - Açık anahtar kriptografisi, protokoller (75dk).
+
+## Kaynaklar
+
+- [Jupyter not defteri](kriptografi.ipynb)
+
+  *RISE* eklentisi kuruluysa sunum olarak da kullanılabilir.
+
+## Notlar
+
+- Bu atölye hem programlama hem de kriptografi öğrettiği için
+  katılımcılar için çok yorucu olabilir. Duruma göre
+  hafifletilmesi gerekmesi olasılığı yüksektir.
+
+- Kaynak olarak bir Jupyter not defteri verilmiş olmakla birlikte
+  bu atölyede bu tip bir etkileşimli ortam kullanılması pek etkin
+  olmayabilir çünkü sürekli olan kodların geliştirilmesi şeklinde
+  ilerlemektedir. Ayrıca adım adım gitme, değişken değerlerini
+  inceleme gibi teknikler yardımcı olacaktır. Bu nedenle uygun
+  bir geliştirme ortamı seçilmesi önerilir. Biz atölyemizde
+  [Thonny](https://thonny.org/) kullanıyoruz.
