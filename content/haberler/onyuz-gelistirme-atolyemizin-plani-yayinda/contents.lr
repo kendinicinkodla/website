@@ -1,0 +1,20 @@
+_model: newsitem
+---
+title: "Önyüz Geliştirme" atölyemizin planı yayında
+---
+date: 2019-07-10
+---
+status: published
+---
+lead_in:
+
+Önyüz geliştirme atölyemizin planlamasına ilişkin eğitmenlere
+yönelik bilgileri ve atölye sunumlarını eğitim kütüphanemize
+koyduk.
+---
+body:
+
+Atölye planında oturum süre ve içerikleri, teknik altyapıya
+ilişkin öneriler gibi bilgiler yer alıyor.
+
+[Atölye planı için tıklayın](../../kutuphane/onyuz-gelistirme/plan/)
