@@ -15,12 +15,15 @@ hayvanlar üzerine bir site üzerinde çalışılıyor.
 Sitede 3 çeşit sayfa bulunur:
 
 - Ayrıntı sayfası: Her katılımcı için farklıdır. Bizim örneğimizde
-  her katılımcı ayrı bir hayvanın sayfasını hazırlar.
+  her katılımcı ayrı bir hayvanın sayfasını hazırlar
+  ([örnek tasarım](sayfa_ayrinti.png)).
 
 - Özet sayfası: Herkes için ortaktır. Ayrıntı sayfalarına bağlantıları
-  sağlar. Bir giriş sayfası olarak düzenlenebilir.
+  sağlar. Bir giriş sayfası olarak düzenlenebilir
+  ([örnek tasarım](sayfa_ozet.png)).
 
-- Etkileşimli sayfa: Kullanıcıdan bilgi alınan formlar içerir.
+- Etkileşimli sayfa: Kullanıcıdan bilgi alınan formlar içerir
+  ([örnek tasarım](sayfa_form.png)).
   Arkayüz atölyesine bağlantı amacıyla planlanmıştır.
   Bizim örneğimizde hayvanlar üzerine bir "bilgi oyunu" olarak
   düşünülmüştür.
@@ -95,3 +98,9 @@ Sitede 3 çeşit sayfa bulunur:
   Bu durumda konu atlamak veya hızlanmak yerine işlenen konunun
   anlaşılmasına öncelik verip gidilebildiği kadar gitmek
   daha doğru olur.
+
+- Zaman olursa ya da katılımcılara ek proje olarak verilmek
+  istenirse bütün ayrıntı sayfalarına bağlantı verecek bir
+  derleme sayfası yaptırılabilir ([örnek tasarım](sayfa_derleme.png)).
+  Bu sayfa katılımcının kendi tasarımına göre değişik
+  bileşenlerle gerçekleştirilebilir.
