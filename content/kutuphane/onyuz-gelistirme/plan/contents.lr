@@ -1,0 +1,97 @@
+title: Atölye planı
+---
+body:
+
+## Süre
+
+Atölye her biri yaklaşık 2.5-3 saat süren 4 oturum şeklinde planlanmıştır.
+
+## Kapsam
+
+Atölyede katılımcılar metin içeriği ve görsel malzemeleri önceden
+hazırlanmış bir siteyi adım adım oluştururlar. Bizim örneğimizde
+hayvanlar üzerine bir site üzerinde çalışılıyor.
+
+Sitede 3 çeşit sayfa bulunur:
+
+- Ayrıntı sayfası: Her katılımcı için farklıdır. Bizim örneğimizde
+  her katılımcı ayrı bir hayvanın sayfasını hazırlar.
+
+- Özet sayfası: Herkes için ortaktır. Ayrıntı sayfalarına bağlantıları
+  sağlar. Bir giriş sayfası olarak düzenlenebilir.
+
+- Etkileşimli sayfa: Kullanıcıdan bilgi alınan formlar içerir.
+  Arkayüz atölyesine bağlantı amacıyla planlanmıştır.
+  Bizim örneğimizde hayvanlar üzerine bir "bilgi oyunu" olarak
+  düşünülmüştür.
+
+## Oturumlar
+
+1. oturum:
+
+  - Oluşturulacak sitenin tanıtımı ve tasarımının açıklanması (10dk).
+  - Ayrıntı sayfasının HTML kodlaması (3x45dk).
+
+2. oturum:
+
+  - Genel tasarım ilkelerinin açıklanması (ders formatında, 45dk).
+  - Ayrıntı sayfasının CSS kodlaması (2x45dk). Bu kısımda HTML
+    kodunda değişiklik gerekmeyen düzenlemeler yapılır.
+
+3. oturum:
+
+  - Ayrıntı sayfasının CSS kodlamasına devam (2x45dk). Bu kısımda
+    HTML kodunda da değişiklik gerektiren (`div`, `class` gibi)
+    düzenlemeler yapılır.
+  - Ayrıntı sayfasının bir CSS anaçatısına göre düzenlenmesi (45dk)
+    Bu konuda eğitmenler uygun gördükleri projeyi seçebilir
+    (örneğin Bootstrap); biz atölyemizde daha anlaşılır olduğu
+    düşüncesiyle [Bulma](https://bulma.io/) kullanıyoruz.
+
+4. oturum:
+
+  - Özet sayfasının oluşturulması (2x45dk).
+  - Etkileşimli sayfanın oluşturulması (45dk).
+
+## Kaynaklar
+
+- [Sunum](../sunum/)
+
+## Notlar
+
+- Örnek siteyle ilgili içeriklerin düz metin dosyaları olarak
+  hazırlanması ve aynı şekilde görsellerin uygun şekilde hazır
+  bulunması zamanı etkin kullanmak açısından çok önemli.
+  Bunların İnternet üzerinden erişilebilir olması katılımcıların
+  metinleri ve özellikle link adreslerini elle yazmalarının
+  çıkardığı zorlukların önüne geçiyor.
+
+- Bu atölye için özel bir yazılım gerekmiyor. Bir metin düzenleyici
+  ve bir tarayıcı ile yapılabilir. Ancak metin düzenleyicinin
+  HTML ve CSS için yardımcı olması (renklendirme, girintileme gibi)
+  çok yararlı oluyor.
+
+- Biz atölyemizde [PythonAnywhere](https://pythonanywhere.com/)
+  sitesini kullandık. Böylece hem sitenin HTML düzenleyicisinden
+  yararlanabildik, hem de hazırlanan sayfalar doğrudan İnternet
+  üzerinden erişilebilir oldu. Ayrıca sitede öğrenci-öğretmen
+  hesapları ayarları yapılırsa katılımcılara örnek dosyaların
+  dağıtılması ve ayrıntı sayfalarının bütün katılımcılara
+  paylaştırılması çok daha kolay oluyor.
+
+- İçerik kısmında en çok zorlanılan konu HTML kodlarındaki
+  hiyerarşi oluyor. İlk oturumlardan itibaren HTML elemanlarının
+  düzgün bir hiyerarşiye sokulmasına vurgu yapmak ve katılımcıların
+  yaptıklarını kontrol etmek gerek. Bu yapılmazsa tarayıcı sorunlu
+  da olsa HTML kodunu bir şekilde gösteriyor ama CSS kurallarını
+  uygulamaya gelince ortalık karışıyor. Bu konuda HTML düzenleyicinin
+  "kod katlama" özelliğini kullanmak yararlı (bir elemen düzgün kapatılıp
+  açılamıyorsa sorun vardır).
+
+- Kullanılan CSS anaçatısının temalarını kullanarak sayfaların
+  görüntüsünü tamamıyla değiştirmeyi göstermek ilgi çekici.
+
+- Yukarıda belirtilen sürelere uymak mümkün olmayabilir.
+  Bu durumda konu atlamak veya hızlanmak yerine işlenen konunun
+  anlaşılmasına öncelik verip gidilebildiği kadar gitmek
+  daha doğru olur.
