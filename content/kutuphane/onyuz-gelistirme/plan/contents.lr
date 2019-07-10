@@ -88,7 +88,7 @@ Sitede 3 çeşit sayfa bulunur:
   yaptıklarını kontrol etmek gerek. Bu yapılmazsa tarayıcı sorunlu
   da olsa HTML kodunu bir şekilde gösteriyor ama CSS kurallarını
   uygulamaya gelince ortalık karışıyor. Bu konuda HTML düzenleyicinin
-  "kod katlama" özelliğini kullanmak yararlı (bir elemen düzgün kapatılıp
+  "kod katlama" özelliğini kullanmak yararlı (bir eleman düzgün kapatılıp
   açılamıyorsa sorun vardır).
 
 - Kullanılan CSS anaçatısının temalarını kullanarak sayfaların
