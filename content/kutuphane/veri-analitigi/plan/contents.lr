@@ -1,0 +1,64 @@
+title: Atölye planı
+---
+body:
+
+## Süre
+
+Atölye her biri yaklaşık 2.5-3 saat süren 4 oturum şeklinde planlanmıştır.
+
+## Kapsam
+
+Bu atölyede katılımcılar önce Python programlamaya giriş yaptıktan
+sonra iki farklı veri seti üzerinde çeşitli analizler ve
+görselleştirmeler yapar. Biz örnek olarak [Kaggle'ın çikolata verileri]
+ve [IMDb'nin "Stranger Things" dizisi için puanlama verilerini]
+kullandık.
+
+[Kaggle'ın çikolata verileri]: https://www.kaggle.com/rtatman/chocolate-bar-ratings
+[IMDb'nin "Stranger Things" dizisi için puanlama verilerini]: https://www.imdb.com/title/tt4574334/ratings
+
+Bu atölye için veri analitiğinde yaygın kullanılan pek çok dil
+ya da geliştirme ortamı tercih edilebilir. Biz yaygınlığı,
+ek yazılım kurulumu gerektirmeden İnternet üzerinden kullanabilmemiz,
+yazımının göreli olarak basitliği ve diğer atölyelerimizle uyum
+açısından Python dili ve Pandas-Jupyter Notebook ortamını
+kullanmayı seçtik.
+
+## Oturumlar
+
+1. oturum:
+
+   - Veri analitiğine giriş ve atölyede yapılacak analizlerin
+     tanıtımı (ders formatında, 15dk).
+   - Python programlama diline giriş (3x45dk)
+
+2. oturum:
+
+   - Birinci veri kümesi üzerinde temel analizler (3x45dk).
+
+3. oturum:
+
+   - Birinci veri kümesi üzerinde daha ileri analizler
+     (gruplama gibi) ve görselleştirme (3x45dk).
+
+4. oturum:
+
+   - İkinci veri seti üzerinde daha çok katılımcılara bırakılan çalışma
+     (3x45dk).
+
+## Kaynaklar
+
+- Çikolata verisi Jupyter not defteri
+- "Stranger Things" verisi Jupyter not defteri
+- [Pandas başvuru kağıdı](pandas.pdf)
+- [Python'a giriş için Jupyter not defteri](python.ipynb)
+
+## Notlar
+
+- Azure Notebooks
+
+- Python'a giriş kısmında yalnızca bu atölyede gerekecek konulara
+  değinmek yeterli, daha fazlasına zaman kalmayacaktır.
+  Bizim planımızda seçim, döngü, kendi fonksiyonunu yazmak gibi
+  konular bile yer almıyor. Yalnızca Pandas'ın anlaşılabilmesi için
+  gerektiği kadarı anlatılıyor.
