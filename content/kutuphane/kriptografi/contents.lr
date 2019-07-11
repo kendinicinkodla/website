@@ -18,17 +18,17 @@ Bilişim güvenliğinin yapıtaşlarını oluşturan şifreleme yöntemlerinin
 body:
 
 İletişim gizliliği eski çağlardan beri insanlığın çözmeye çalıştığı
-zorlu problemlerden biri olmuştur. Günümüzde bilişim teknolojisinin
-inanılmaz miktarlarda veri topladığı ve bu verilerin önemli bir kısmının
-hassas olduğunu gözönüne alındığında bu verilerin gerek iletim
+zorlu problemlerden biri olmuştur. Günümüzde bilişim teknolojilerinin
+inanılmaz miktarlarda veri topladıkları ve bu verilerin önemli bir kısmının
+hassas olduğu gözönüne alındığında bu verilerin gerek iletim
 sırasında gerekse depolandıkları yerde gizliliklerinin sağlanması
 büyük önem kazanmıştır. Gizliliğin yanısıra verilerin bozulmaması,
 gönderici ile alıcının karşılıklı birbirlerinin kimliklerinden
-emin olabilmeleri gibi uygulamalara gereksinim ortaya çıkmıştır.
+emin olabilmeleri gibi uygulamalara yoğun gereksinim ortaya çıkmıştır.
 
 Kriptografi bu sorunlara getirilen modern çözümlerin tümünün
-temelinde yatan teknikleri kapsar. Bilişim teknolojisi ile
-matematiğin en içiçe oldukları bir alandır ve çok ilginç ve eğlenceli
+temelinde yatan teknikleri kapsar. Bilişim teknolojileri ile
+matematiğin en içiçe oldukları alanlardan biridir ve çok ilginç ve eğlenceli
 problemlere çözüm arar.
 
 Bu atölyede katılımcılar programlamaya kısa bir giriş yaptıktan sonra

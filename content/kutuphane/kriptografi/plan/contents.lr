@@ -21,7 +21,7 @@ Atölye her biri yaklaşık 2.5-3 saat süren 4 oturum şeklinde planlanmıştı
 
 3. oturum:
 
-  - Modüler aritmetik, Vigenere şifresi (3x45dk).
+  - Modüler aritmetik, Vigenère şifresi (3x45dk).
 
 4. oturum:
 
@@ -36,14 +36,14 @@ Atölye her biri yaklaşık 2.5-3 saat süren 4 oturum şeklinde planlanmıştı
 
 ## Notlar
 
-- Bu atölye hem programlama hem de kriptografi öğrettiği için
+- Bu atölyede hem programlama hem de kriptografi öğrenildiği için
   katılımcılar için çok yorucu olabilir. Duruma göre
-  hafifletilmesi gerekmesi olasılığı yüksektir.
+  hafifletilmesine yönelik yedek planlar hazırlamak iyi olur.
 
 - Kaynak olarak bir Jupyter not defteri verilmiş olmakla birlikte
-  bu atölyede bu tip bir etkileşimli ortam kullanılması pek etkin
-  olmayabilir çünkü sürekli olan kodların geliştirilmesi şeklinde
-  ilerlemektedir. Ayrıca adım adım gitme, değişken değerlerini
-  inceleme gibi teknikler yardımcı olacaktır. Bu nedenle uygun
-  bir geliştirme ortamı seçilmesi önerilir. Biz atölyemizde
-  [Thonny](https://thonny.org/) kullanıyoruz.
+  bu atölyede bu tip bir etkileşimli ortam kullanılması pek etkili
+  olmayabilir çünkü yeni kod parçaları yazmaktan çok yazılan kodların
+  geliştirilmesi şeklinde ilerlemektedir. Ayrıca adım adım gitme,
+  değişken değerlerini inceleme gibi teknikler yardımcı olacaktır.
+  Bu nedenle uygun bir geliştirme ortamı seçilmesi önerilir.
+  Biz atölyemizde [Thonny](https://thonny.org/) kullanıyoruz.
