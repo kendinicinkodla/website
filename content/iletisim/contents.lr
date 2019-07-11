@@ -1,3 +1,41 @@
 title: İletişim
 ---
 body:
+
+<section class="hero">
+  <div class="hero-body">
+    <p class="has-text-centered">
+      Aşağıdaki formu doldurarak bize mesaj gönderebilirsiniz.<br/>
+      <em>Form henüz aktif değildir, yakında hizmete girecektir.</em>
+    </p>
+
+    <form action="https://formspree.io/iletisim@kendinicinkodla.groups.io" method="POST">
+      <div class="field">
+        <label class="label" for="name">Adınız</label>
+        <div class="control">
+          <input class="input" type="text" name="name" placeholder="ad soyad" id="name" required disabled/>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="_replyto">E-posta adresiniz</label>
+        <div class="control">
+          <input class="input" type="email" name="_replyto" placeholder="adsoyad@ornek.com" id="_replyto" required disabled/>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label" for="message">Mesajınız</label>
+        <div class="control">
+          <textarea class="textarea" name="message" id="message" required disabled></textarea>
+        </div>
+      </div>
+
+      <input type="text" name="_gotcha" style="display: none"/>
+      <input type="hidden" name="_subject" value="KiK sitesi üzerinden mesaj"/>
+      <div class="has-text-centered">
+        <button class="button is-link" disabled>Gönder</button>
+      </divp>
+    </form>
+  </div>
+</section>
