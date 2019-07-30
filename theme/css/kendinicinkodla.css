@@ -11,6 +11,13 @@
 .box:not(:last-child), .content:not(:last-child), .title:not(:last-child), .subtitle:not(:last-child), .level:not(:last-child) {
   margin-bottom: 1.5rem; }
 
+.image.is-2by1 img {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
 .button, .input, .textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -358,12 +365,23 @@ table th {
   font-size: 1.75em;
   margin-bottom: 0.5714em; }
 
-.content figure {
-  margin-left: 2em;
-  margin-right: 2em;
-  text-align: center; }
-  .content figure img {
-    display: inline-block; }
+.image {
+  display: block;
+  position: relative; }
+  .image img {
+    display: block;
+    height: auto;
+    width: 100%; }
+    .image img.is-rounded {
+      border-radius: 290486px; }
+  .image.is-2by1 img {
+    height: 100%;
+    width: 100%; }
+  .image.is-2by1 {
+    padding-top: 50%; }
+  .image.is-128x128 {
+    height: 128px;
+    width: 128px; }
 
 .title,
 .subtitle {
@@ -384,6 +402,21 @@ table th {
   font-size: 2em;
   font-weight: 700;
   line-height: 1.25; }
+
+.card {
+  background-color: white;
+  box-shadow: 0 2px 3px rgba(33, 33, 33, 0.1), 0 0 0 1px rgba(33, 33, 33, 0.1);
+  color: #4a4a4a;
+  max-width: 100%;
+  position: relative; }
+
+.card-image {
+  display: block;
+  position: relative; }
+
+.card-content {
+  background-color: transparent;
+  padding: 1.5rem; }
 
 .level {
   align-items: center;
@@ -626,3 +659,8 @@ img#kik-logo {
 
 .content p:not(:last-child) {
   margin-bottom: 1rem; }
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  padding: 1rem; }

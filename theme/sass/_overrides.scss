@@ -17,3 +17,9 @@ img#kik-logo {
 .content p:not(:last-child) {
   margin-bottom: 1rem;
 }
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
