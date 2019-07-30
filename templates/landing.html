@@ -35,7 +35,7 @@
 
     <div class="content">
       {% for newsitem in newsitems %}
-      <p><a href="{{ newsitem.path }}">{{ newsitem.title }}</a><br/><small><time datetime="newsitem.date">{{ newsitem.date|dateformat('long') }}</time></small></p>
+      <p><a href="{{ newsitem.path|url }}">{{ newsitem.title }}</a><br/><small><time datetime="newsitem.date">{{ newsitem.date|dateformat('long') }}</time></small></p>
       {% endfor %}
 
       <p class="is-pulled-right"><a href="{{ '/haberler'|url }}">Tüm haberler</a></p>
