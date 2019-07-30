@@ -1,11 +1,13 @@
 {% extends "layout.html" %}
 
 {% block body %}
-{{ this.body }}
-
 {% from "macros/person.html" import render_person_card %}
 
 <div class="container">
+
+<div class="content">
+  {{ this.body }}
+</div>
 
 <section class="section">
   {% for row in this.contributors|batch(3) %}

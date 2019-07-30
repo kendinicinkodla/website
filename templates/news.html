@@ -3,7 +3,7 @@
 {% block body %}
 <div class="container">
   <section class="section">
-    <h1 class="title">{{ bag('translate', this.alt, 'news') }}</h1>
+    <h2 class="subtitle">{{ bag('translate', this.alt, 'news') }}</h2>
 
     <div class="content">
       {% for newsitem in this.children.order_by('-date') %}
