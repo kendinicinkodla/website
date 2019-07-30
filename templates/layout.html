@@ -6,14 +6,14 @@
 
   <title>{% if this.title %}{{ this.title.lower() }} — {% endif %}{{ bag('translate', this.alt, 'kik') }}</title>
 
-  <link rel="stylesheet" href="{{ '/static/css/cosmo.min.css'|url }}">
-  <link rel="stylesheet" href="{{ '/static/css/kendinicinkodla.css'|url }}">
-  <link rel="stylesheet" href="{{ '/static/css/PatrickHand.css'|url }}">
+  <link rel="stylesheet" href="{{ '/static/css/cosmo.min.css'|asseturl }}">
+  <link rel="stylesheet" href="{{ '/static/css/kendinicinkodla.css'|asseturl }}">
+  <link rel="stylesheet" href="{{ '/static/css/PatrickHand.css'|asseturl }}">
 
-  <script src="{{ '/static/js/bulma-burger.js'|url }}" defer></script>
+  <script src="{{ '/static/js/bulma-burger.js'|asseturl }}" defer></script>
 
-  <script src="{{ '/static/js/fontawesome.min.js'|url }}" defer></script>
-  <script src="{{ '/static/js/fontawesome.solid.min.js'|url }}" defer></script>
+  <script src="{{ '/static/js/fontawesome.min.js'|asseturl }}" defer></script>
+  <script src="{{ '/static/js/fontawesome.solid.min.js'|asseturl }}" defer></script>
 
   {% block extra_head %}{% endblock %}
 </head>
@@ -24,7 +24,7 @@
       <div class="navbar-brand">
         <a class="navbar-item{% if this._path == '/' %} is-active{% endif %}" href="{{ '/'|url }}">
           <figure class="image">
-            <img id="kik-logo" src="{{ '/static/logo.svg'|url }}" alt="{{ bag('translate', this.alt, 'kik-logo') }}">
+            <img id="kik-logo" src="{{ '/static/logo.svg'|asseturl }}" alt="{{ bag('translate', this.alt, 'kik-logo') }}">
           </figure>
         </a>
 
