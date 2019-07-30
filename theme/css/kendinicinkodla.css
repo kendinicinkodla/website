@@ -390,7 +390,7 @@ table th {
 .title {
   color: #363636;
   font-family: "Patrick Hand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.125; }
   .title.is-5 {
@@ -399,7 +399,7 @@ table th {
 .subtitle {
   color: #4a4a4a;
   font-family: "Patrick Hand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", sans-serif;
-  font-size: 2em;
+  font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.25; }
 
