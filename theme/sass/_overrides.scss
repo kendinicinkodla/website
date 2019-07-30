@@ -13,3 +13,7 @@ img#kik-logo {
 .footer strong {
   color: darken($white, 20%);
 }
+
+.content p:not(:last-child) {
+  margin-bottom: 1rem;
+}

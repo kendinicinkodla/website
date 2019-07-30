@@ -1,8 +1,10 @@
 {% macro render_groupsio_form(page) %}
     <section class="section has-background-grey-lighter">
-      <p class="has-text-centered">
-        Yenilikleri haber almak isterseniz e-posta listemize üye olabilirsiniz.
-      </p>
+      <div class="content">
+        <p class="has-text-centered">
+          Yenilikleri haber almak isterseniz e-posta listemize üye olabilirsiniz.
+        </p>
+      </div>
       <form action="https://kendinicinkodla.groups.io/g/bilgi/signup?u=2454984236911534640" method="post" target="_blank">
         <div class="field">
           <div class="control is-expanded">
@@ -11,7 +13,7 @@
         </div>
         <div class="field">
           <div class="control has-text-centered">
-            <input type="submit" class="button is-primary" name="subscribe" value="{{ bag('translate', page.alt, 'subscribe') }}">
+            <input type="submit" class="button is-link" name="subscribe" value="{{ bag('translate', page.alt, 'subscribe') }}">
           </div>
         </div>
       </form>
