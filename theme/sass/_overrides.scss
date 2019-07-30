@@ -50,6 +50,15 @@ img#kik-logo {
   padding: 1rem;
 }
 
+.card.workshop:hover {
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.card.workshop h4 {
+  text-transform: uppercase;
+  color: $lilac;
+}
+
 .related {
   position: relative;
   border: 2px solid #bbbbbb;
