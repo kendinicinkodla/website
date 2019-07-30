@@ -2,8 +2,6 @@
 
 {% set material = site.query('/kutuphane').filter(F._slug == this.material).first() %}
 
-{% block title %}{{ material.title }}{% endblock %}
-
 {% block body %}
     <section class="section container">
       <h2 class="subtitle">{{ material.title }}</h2>

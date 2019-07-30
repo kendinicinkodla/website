@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if this.title %}{% block title %}{% endblock %} — {% endif %}{{ config.PROJECT.name }}</title>
+  <title>{% if this.title %}{{ this.title.lower() }} — {% endif %}{{ config.PROJECT.name }}</title>
 
   <link rel="stylesheet" href="{{ '/static/css/cosmo.min.css'|url }}">
   <link rel="stylesheet" href="{{ '/static/css/kendinicinkodla.css'|url }}">
