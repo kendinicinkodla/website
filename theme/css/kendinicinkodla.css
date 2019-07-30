@@ -203,7 +203,7 @@ table th {
 .box {
   background-color: white;
   border-radius: 6px;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  box-shadow: 0 2px 3px rgba(33, 33, 33, 0.1), 0 0 0 1px rgba(33, 33, 33, 0.1);
   color: #4a4a4a;
   display: block;
   padding: 1.25rem; }
@@ -244,7 +244,7 @@ table th {
   line-height: 1.25; }
 
 .navbar {
-  background-color: white;
+  background-color: #212121;
   min-height: 3.25rem;
   position: relative;
   z-index: 30; }
@@ -259,7 +259,7 @@ table th {
   background-color: transparent; }
 
 .navbar-burger {
-  color: #4a4a4a;
+  color: white;
   cursor: pointer;
   display: block;
   height: 3.25rem;
@@ -290,7 +290,7 @@ table th {
   display: none; }
 
 .navbar-item {
-  color: #4a4a4a;
+  color: white;
   display: block;
   line-height: 1.5;
   padding: 0.5rem 0.75rem;
@@ -299,23 +299,23 @@ table th {
 a.navbar-item {
   cursor: pointer; }
   a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active {
-    background-color: #fafafa;
-    color: #3273dc; }
+    background-color: transparent;
+    color: #b3e6ff; }
 
 .navbar-item {
   display: block;
   flex-grow: 0;
   flex-shrink: 0; }
   .navbar-item img {
-    max-height: 1.75rem; }
+    max-height: 3rem; }
 
 @media screen and (max-width: 1023px) {
   .navbar-brand .navbar-item {
     align-items: center;
     display: flex; }
   .navbar-menu {
-    background-color: white;
-    box-shadow: 0 8px 16px rgba(10, 10, 10, 0.1);
+    background-color: #212121;
+    box-shadow: 0 8px 16px rgba(33, 33, 33, 0.1);
     padding: 0.5rem 0; } }
 
 @media screen and (min-width: 1024px) {
@@ -340,7 +340,13 @@ a.navbar-item {
     justify-content: flex-end;
     margin-left: auto; }
   a.navbar-item.is-active {
-    color: #0a0a0a; }
+    color: #b3e6ff; }
   a.navbar-item.is-active:not(:focus):not(:hover),
   .navbar-link.is-active:not(:focus):not(:hover) {
     background-color: transparent; } }
+
+img#kik-logo {
+  filter: invert(100%); }
+
+.navbar .icon {
+  margin-right: 0.25rem; }

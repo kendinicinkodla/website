@@ -5,7 +5,18 @@ $family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helve
 $family-title: "Patrick Hand", $family-sans-serif;
 $weight-bold: 700;
 
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 13%);
+$blue-light: hsl(200, 100%, 85%);
+
 $title-family: $family-title;
 $subtitle-family: $title-family;
 $subtitle-size: 2em;
 $subtitle-weight: $weight-bold;
+
+$navbar-background-color: $black;
+$navbar-item-color: $white;
+$navbar-item-active-color: $blue-light;
+$navbar-item-hover-color: $navbar-item-active-color;
+$navbar-item-hover-background-color: transparent;
+$navbar-item-img-max-height: 3rem;

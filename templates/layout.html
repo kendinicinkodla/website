@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="{{ '/static/css/kendinicinkodla.css'|asseturl }}">
 
-  <script defer src="{{ '/static/js/bulma-burger.js'|asseturl }}"></script>
+  <script defer src="{{ '/static/js/bulma-burger.js'|url }}"></script>
   <script defer src="{{ '/static/js/fontawesome.min.js'|asseturl }}"></script>
   <script defer src="{{ '/static/js/fontawesome.solid.min.js'|asseturl }}"></script>
 
@@ -21,7 +21,7 @@
       <div class="navbar-brand">
         <a class="navbar-item{% if this._path == '/' %} is-active{% endif %}" href="{{ '/'|url }}">
           <figure class="image">
-            <img id="kik-logo" src="{{ '/static/logo.svg'|asseturl }}" alt="{{ bag('translate', this.alt, 'kik-logo') }}">
+            <img id="kik-logo" src="{{ '/static/logo.svg'|asseturl }}" alt="{{ bag('translate', this.alt, 'kik-logo') }} width="65" height="45">
           </figure>
         </a>
 
