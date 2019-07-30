@@ -2,6 +2,10 @@ img#kik-logo {
   filter: invert(100%);
 }
 
+.is-fullwidth {
+  width: 100%;
+}
+
 .navbar .icon {
   margin-right: 0.25rem;
 }
@@ -16,6 +20,14 @@ img#kik-logo {
 
 .content p:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.level-item .subtitle {
+  font-size: 1.5em;
+}
+
+.level-item .image {
+  margin-right: 1rem;
 }
 
 .card-image {

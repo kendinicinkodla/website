@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ '/static/css/bulma-carousel.min.css'|asseturl }}">
 <script defer src="{{ '/static/js/bulma-carousel.min.js'|asseturl }}"></script>
 <script defer src="{{ '/static/js/kik-carousel.js'|asseturl }}"></script>
-<script defer src="{{ '/static/js/bulma-modal.js'|asseturl }}"></script>
+<script src="{{ '/static/js/bulma-modal.js'|asseturl }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -63,6 +63,6 @@
 
 {% if this.alt in ['tr'] %}
 {%   from "macros/groupsio.html" import render_groupsio_form %}
-{{   render_groupsio_form(this) }}
+{{ render_groupsio_form(this) }}
 {% endif %}
 {% endblock %}

@@ -1,17 +1,65 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
 @import url("https://fonts.googleapis.com/css?family=Patrick+Hand:400,700");
 
-.button {
+.modal-close, .button {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
 
-.box:not(:last-child), .content:not(:last-child), .title:not(:last-child), .subtitle:not(:last-child), .level:not(:last-child) {
+.box:not(:last-child), .content:not(:last-child), .table:not(:last-child), .title:not(:last-child), .subtitle:not(:last-child), .level:not(:last-child) {
   margin-bottom: 1.5rem; }
 
-.image.is-2by1 img {
+.modal-close {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(33, 33, 33, 0.2);
+  border: none;
+  border-radius: 290486px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 20px; }
+  .modal-close::before, .modal-close::after {
+    background-color: white;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center; }
+  .modal-close::before {
+    height: 2px;
+    width: 50%; }
+  .modal-close::after {
+    height: 50%;
+    width: 2px; }
+  .modal-close:hover, .modal-close:focus {
+    background-color: rgba(33, 33, 33, 0.3); }
+  .modal-close:active {
+    background-color: rgba(33, 33, 33, 0.4); }
+  .is-large.modal-close {
+    height: 32px;
+    max-height: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    min-width: 32px;
+    width: 32px; }
+
+.image.is-2by1 img, .modal, .modal-background {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -58,13 +106,15 @@ pre,
 hr,
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
   padding: 0; }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-size: 100%;
   font-weight: normal; }
 
@@ -108,6 +158,7 @@ html {
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%; }
 
+article,
 aside,
 figure,
 footer,
@@ -191,6 +242,9 @@ table th {
 
 .is-pulled-right {
   float: right !important; }
+
+.is-size-4 {
+  font-size: 1.5rem !important; }
 
 .is-size-5 {
   font-size: 1.25rem !important; }
@@ -383,6 +437,35 @@ table th {
     height: 128px;
     width: 128px; }
 
+.table {
+  background-color: white;
+  color: #363636; }
+  .table td,
+  .table th {
+    border: 1px solid #dbdbdb;
+    border-width: 0 0 1px;
+    padding: 0.5em 0.75em;
+    vertical-align: top; }
+  .table th {
+    color: #363636; }
+    .table th:not([align]) {
+      text-align: left; }
+  .table tbody {
+    background-color: transparent; }
+    .table tbody tr:last-child td,
+    .table tbody tr:last-child th {
+      border-bottom-width: 0; }
+  .table.is-bordered td,
+  .table.is-bordered th {
+    border-width: 1px; }
+  .table.is-bordered tr:last-child td,
+  .table.is-bordered tr:last-child th {
+    border-bottom-width: 1px; }
+  .table.is-fullwidth {
+    width: 100%; }
+  .table.is-striped tbody tr:not(.is-selected):nth-child(even) {
+    background-color: #fafafa; }
+
 .title,
 .subtitle {
   word-break: break-word; }
@@ -457,6 +540,38 @@ table th {
   @media screen and (min-width: 769px), print {
     .level-left {
       display: flex; } }
+
+.modal {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: 40; }
+
+.modal-background {
+  background-color: rgba(33, 33, 33, 0.86); }
+
+.modal-content {
+  margin: 0 20px;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  position: relative;
+  width: 100%; }
+  @media screen and (min-width: 769px), print {
+    .modal-content {
+      margin: 0 auto;
+      max-height: calc(100vh - 40px);
+      width: 640px; } }
+
+.modal-close {
+  background: none;
+  height: 40px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 40px; }
 
 .navbar {
   background-color: #212121;
@@ -648,6 +763,9 @@ a.navbar-item {
 img#kik-logo {
   filter: invert(100%); }
 
+.is-fullwidth {
+  width: 100%; }
+
 .navbar .icon {
   margin-right: 0.25rem; }
 
@@ -659,6 +777,12 @@ img#kik-logo {
 
 .content p:not(:last-child) {
   margin-bottom: 1rem; }
+
+.level-item .subtitle {
+  font-size: 1.5em; }
+
+.level-item .image {
+  margin-right: 1rem; }
 
 .card-image {
   display: flex;

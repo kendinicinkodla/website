@@ -3,64 +3,68 @@
 {% set material = site.query('/kutuphane').filter(F._slug == this.material).first() %}
 
 {% block body %}
-    <section class="section container">
-      <h2 class="subtitle">{{ material.title }}</h2>
+<div class="container">
+<section class="section">
+  <h1 class="title">{{ material.title }}</h1>
 
-      <p class="box has-background-grey has-text-light has-text-centered is-size-5">{{ bag('translate', this.alt, 'help_' + this.status) }}</p>
+  <p class="box has-background-grey has-text-light has-text-centered is-size-5">{{ bag('translate', this.alt, 'help_' + this.status) }}</p>
 
-      <table class="table is-bordered is-striped">
-        <tr>
-          <th>{{ bag('translate', this.alt, 'instructors') }}:</th>
-          <td>
-            {% for instructor in this.instructors %}
-            {%   set person = site.query('/hakkimizda').filter(F._slug == instructor).first() %}
-            {%   if person %}<a href="{{ person|url }}">{{ person.name }}</a>{%
-                 else %}{{ instructor }}{% endif %}{% if not loop.last %},{% endif %}
-            {% endfor %}
-          </td>
-        </tr>
-        <tr>
-          <th>{{ bag('translate', this.alt, 'city') }}:</th>
-          <td>{{ this.city }}</td>
-        </tr>
-        <tr>
-          <th>{{ bag('translate', this.alt, 'venue') }}:</th>
-          <td>{{ this.venue }}</td>
-        </tr>
-        <tr>
-          <th>{{ bag('translate', this.alt, 'dates') }}:</th>
-          <td>{{ this.dates }}</td>
-        </tr>
-      </table>
-
-      <p class="has-text-centered">
-        {{ material.summary }}<br>
-        <a href="{{ material|url }}">{{ bag('translate', this.alt, 'more-info') }}</a>
-      </p>
-
-      <hr>
-
-      {{ this.body }}
-    </section>
-
-    {% if this.alt == 'tr' and this.status == 'open' and this.apply %}
-    <section class="section container">
-      <p class="has-text-right"><a class="button is-primary" href="{{ this.apply }}">{{ bag('translate', this.alt, 'apply') }}</a></p>
-    </section>
-    {% endif %}
-
-    {% set attached = this.attachments.images %}
-    {% if this.status == 'passed' and attached.count() > 0 %}
-    <section class="section container">
-      {% for row in attached|batch(3) %}
-      <div class="columns">
-        {% for image in row %}
-        <div class="column is-one-third has-text-centered">
-          <a href="{{ image.path }}"><img src="{{ image.thumbnail(240) }}" alt="Atölye çalışmaları"></a>
-        </div>
+  <table class="table is-bordered is-striped is-fullwidth">
+    <tr>
+      <th>{{ bag('translate', this.alt, 'instructors') }}:</th>
+      <td>
+        {% for instructor in this.instructors %}
+        {%   set person = site.query('/hakkimizda').filter(F._slug == instructor).first() %}
+        {%   if person %}<a href="{{ person|url }}">{{ person.name }}</a>{%
+             else %}{{ instructor }}{% endif %}{% if not loop.last %},{% endif %}
         {% endfor %}
-      </div>
-      {% endfor %}
-    </section>
-    {% endif %}
+      </td>
+    </tr>
+    <tr>
+      <th>{{ bag('translate', this.alt, 'city') }}:</th>
+      <td>{{ this.city }}</td>
+    </tr>
+    <tr>
+      <th>{{ bag('translate', this.alt, 'venue') }}:</th>
+      <td>{{ this.venue }}</td>
+    </tr>
+    <tr>
+      <th>{{ bag('translate', this.alt, 'dates') }}:</th>
+      <td>{{ this.dates }}</td>
+    </tr>
+  </table>
+
+  <div class="content">
+    <p class="has-text-centered">
+      {{ material.summary }}<br>
+      <a href="{{ material|url }}">{{ bag('translate', this.alt, 'more-info') }}</a>
+    </p>
+
+    <hr>
+
+    {{ this.body }}
+  </div>
+</section>
+
+{% if this.alt == 'tr' and this.status == 'open' and this.apply %}
+<section class="section container">
+  <p class="has-text-right"><a class="button is-primary" href="{{ this.apply }}">{{ bag('translate', this.alt, 'apply') }}</a></p>
+</section>
+{% endif %}
+
+{% set attached = this.attachments.images %}
+{% if this.status == 'passed' and attached.count() > 0 %}
+<section class="section">
+  {% for row in attached|batch(3) %}
+  <div class="columns">
+    {% for image in row %}
+    <div class="column is-one-third has-text-centered">
+      <a href="{{ image.path }}"><img src="{{ image.thumbnail(240) }}" alt="Atölye çalışmaları"></a>
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</section>
+{% endif %}
+</div>
 {% endblock %}
