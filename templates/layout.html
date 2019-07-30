@@ -48,7 +48,7 @@
     </nav>
   </header>
 
-  <main class="content">
+  <main>
     {% block body %}{% endblock %}
   </main>
 
@@ -66,11 +66,7 @@
 
     <div class="level">
       <div class="level-item">
-        <p class="content">
-          <small>
-            {{ bag('translate', this.alt, "site-copyright")|safe }}
-          </small>
-        </p>
+        <p><small>{{ bag('translate', this.alt, "site-copyright")|safe }}</small></p>
       </div>
     </div>
   </footer>
