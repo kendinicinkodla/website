@@ -1,10 +1,13 @@
 {% extends "layout.html" %}
 
 {% block body %}
-  <div class="container">
-    <section class="section">
-      <h1>{{ this.title }}</h1>
+<div class="container">
+  <section class="section">
+    <h1 class="title">{{ this.title }}</h1>
+
+    <div class="content">
       {{ this.body }}
-    </section>
-  </div>
+    </div>
+  </section>
+</div>
 {% endblock %}
