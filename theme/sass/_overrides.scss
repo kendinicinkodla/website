@@ -5,3 +5,11 @@ img#kik-logo {
 .navbar .icon {
   margin-right: 0.25rem;
 }
+
+.footer svg {
+  filter: invert(100%);
+}
+
+.footer strong {
+  color: darken($white, 20%);
+}
