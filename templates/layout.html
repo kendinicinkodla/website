@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if this.title %}{{ this.title.lower() }} — {% endif %}{{ config.PROJECT.name }}</title>
+  <title>{% if this.title %}{{ this.title.lower() }} — {% endif %}{{ bag('translate', this.alt, 'kik') }}</title>
 
   <link rel="stylesheet" href="{{ '/static/css/cosmo.min.css'|url }}">
   <link rel="stylesheet" href="{{ '/static/css/kendinicinkodla.css'|url }}">
@@ -24,7 +24,7 @@
       <div class="navbar-brand">
         <a class="navbar-item{% if this._path == '/' %} is-active{% endif %}" href="{{ '/'|url }}">
           <figure class="image">
-            <img id="kik-logo" src="{{ '/static/logo.svg'|url }}" alt="{{ config.PROJECT.name }}" title="{{ config.PROJECT.name }}">
+            <img id="kik-logo" src="{{ '/static/logo.svg'|url }}" alt="{{ bag('translate', this.alt, 'kik-logo') }}">
           </figure>
         </a>
 
