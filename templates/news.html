@@ -1,20 +1,24 @@
 {% extends "layout.html" %}
 
 {% block body %}
-    <section class="section container">
-      <h2 class="subtitle">{{ bag('translate', this.alt, 'news') }}</h2>
+<div class="container">
+  <section class="section">
+    <h1 class="title">{{ bag('translate', this.alt, 'news') }}</h1>
 
-      {{ this.body }}
-
-      <dl>
+    <div class="content">
       {% for newsitem in this.children.order_by('-date') %}
-        <dt>{{ newsitem.title }}<br/><small><time datetime="newsitem.date">{{ newsitem.date|dateformat('long') }}</time></small></dt>
-        <dd>
-          {{ newsitem.lead_in }}<br>
-          <a href="{{ newsitem.path}}">{{ bag('translate', this.alt, 'read-more') }}</a>
-        </dd>
-        <hr>
+      <div class="box">
+        <article>
+          <header>
+            <h2>{{ newsitem.title }}</h2>
+            <time datetime="{{ newsitem.date }}">{{ newsitem.date|dateformat('long')}}</time>
+          </header>
+          <h3>{{ newsitem.lead_in }}</h3>
+          {{ newsitem.body }}
+        </article>
+      </div>
       {% endfor %}
-      </dl>
+    </div>
   </section>
+</div>
 {% endblock %}
