@@ -231,6 +231,29 @@ table th {
   padding: 2rem;
   color: white; }
 
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 0.75rem; }
+  @media screen and (min-width: 769px), print {
+    .column.is-one-third {
+      flex: none;
+      width: 33.3333%; } }
+
+.columns {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-top: -0.75rem; }
+  .columns:last-child {
+    margin-bottom: -0.75rem; }
+  .columns:not(:last-child) {
+    margin-bottom: calc(1.5rem - 0.75rem); }
+  @media screen and (min-width: 769px), print {
+    .columns:not(.is-desktop) {
+      display: flex; } }
+
 .box {
   background-color: white;
   border-radius: 6px;
