@@ -778,3 +778,7 @@ img#kik-logo {
   margin-top: -0.6em;
   background: #ffffff;
   padding: 0 0.5em 0 0.5em; }
+
+/* uncss:ignore */
+#lektor-edit-link {
+  display: none; }
