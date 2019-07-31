@@ -28,7 +28,7 @@ class GulpPlugin(Plugin):
         if watch:
             args.append('watch')
         if after:
-            args.append('build_after')
+            args.append('after_build')
         return portable_popen(args, cwd=gulp_root)
 
     def on_server_spawn(self, **extra):

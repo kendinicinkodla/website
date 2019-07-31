@@ -32,9 +32,9 @@ gulp.task('cssmin', function () {
 });
 
 gulp.task('build', gulp.series('sass'));
-gulp.task('build_after', gulp.series('uncss', 'cssmin'));
+gulp.task('after_build', gulp.series('uncss', 'cssmin'));
 gulp.task('watch', function () {
-    return gulp.watch('./theme/sass/**/*.scss', gulp.series('build', 'build_after'));
+    return gulp.watch('./theme/sass/**/*.scss', gulp.series('build', 'after_build'));
 });
 
 gulp.task('default', gulp.series('build'));
