@@ -117,15 +117,13 @@ pre,
 hr,
 h1,
 h2,
-h3,
-h4 {
+h3 {
   margin: 0;
   padding: 0; }
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   font-size: 100%;
   font-weight: normal; }
 
@@ -253,9 +251,6 @@ table th {
 
 .is-pulled-right {
   float: right !important; }
-
-.is-size-4 {
-  font-size: 1.5rem !important; }
 
 .is-size-5 {
   font-size: 1.25rem !important; }
