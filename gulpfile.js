@@ -12,7 +12,15 @@ gulp.task('uncss', function () {
     const postcss = require('gulp-postcss');
     const uncss = require('postcss-uncss');
     return gulp.src('./assets/static/css/kendinicinkodla.css')
-        .pipe(postcss([uncss({html: ['./_build/**/*.html']})]))
+        .pipe(postcss([
+            uncss({
+                html: ['./_build/**/*.html'],
+                ignore: [
+                    new RegExp('\.modal'),
+                    new RegExp('\.card\.workshop')
+                ]
+            })
+        ]))
         .pipe(gulp.dest('./theme/css/'));
 });
 
@@ -26,7 +34,7 @@ gulp.task('cssmin', function () {
 gulp.task('build', gulp.series('sass'));
 gulp.task('build_after', gulp.series('uncss', 'cssmin'));
 gulp.task('watch', function () {
-    return gulp.watch('./theme/sass/**/*.scss', gulp.series('css', 'cssmin'));
+    return gulp.watch('./theme/sass/**/*.scss', gulp.series('build', 'build_after'));
 });
 
 gulp.task('default', gulp.series('build'));
