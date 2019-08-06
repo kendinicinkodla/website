@@ -58,7 +58,6 @@ zemin hazırlayacak.
 ---
 resources:
 
-ornek-site-icerikleri: Örnek site içerikleri
-internet-kaynaklari: Internet kaynakları
-plan: Atölye planı (eğitmenlere yönelik)
----
+./ornek-site-icerikleri: Örnek site içerikleri
+./internet-kaynaklari: Internet kaynakları
+./plan: Atölye planı (eğitmenlere yönelik)

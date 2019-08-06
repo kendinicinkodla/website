@@ -31,7 +31,7 @@
       <ul>
       {% for resource in this.resources %}
         {%   set link, title = resource.split(': ') %}
-        <li><a href="{{ link }}/">{{ title }}</a></li>
+        <li><a href="{{ link|url }}">{{ title }}</a></li>
       {% endfor %}
       </ul>
     </div>
