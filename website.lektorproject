@@ -1,5 +1,6 @@
 [project]
 name = kendin için kodla
+included_assets = _static, _images
 
 [alternatives.tr]
 name = Türkçe
@@ -15,4 +16,4 @@ locale = tr_TR
 target = ghpages://kendinicinkodla/kendinicinkodla.github.io
 
 [packages]
-lektor-cssbuild = 0.1
+lektor-cssbuild = 0.2
