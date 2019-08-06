@@ -1,6 +1,6 @@
 [project]
 name = kendin için kodla
-included_assets = _static, _images
+included_assets = .nojekyll, _static, _images
 
 [alternatives.tr]
 name = Türkçe
