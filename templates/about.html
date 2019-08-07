@@ -10,13 +10,11 @@
 </div>
 
 <section class="section">
-  {% for row in this.contributors|batch(3) %}
+  {% for row in this.children|batch(3) %}
   <div class="columns">
     {% for contributor in row %}
-    {%   set name, contribution = contributor.split(': ') %}
-    {%   set person = site.query('/hakkimizda').filter(F._slug == name).first() %}
     <div class="column is-one-third">
-      {{ render_person_card(person, contribution, this.alt) }}
+      {{ render_person_card(contributor, this.alt) }}
     </div>
     {% endfor %}
   </div>
