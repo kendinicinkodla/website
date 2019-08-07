@@ -1,5 +1,9 @@
 _model: person
 ---
+sort_key: 31
+---
 family_name: Islek
 ---
 name: İrem İşlek
+---
+role: İçerik hazırlama, atölye eğitmenliği.

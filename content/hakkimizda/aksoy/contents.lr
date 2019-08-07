@@ -1,5 +1,9 @@
 _model: person
 ---
+sort_key: 16
+---
 family_name: Aksoy
 ---
 name: Emir Aksoy
+---
+role: Sosyal medya yönetimi.

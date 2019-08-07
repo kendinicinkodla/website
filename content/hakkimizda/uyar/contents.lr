@@ -1,10 +1,14 @@
 _model: person
 ---
+sort_key: 2
+---
 family_name: Uyar
 ---
 name: H. Turgut Uyar
 ---
 url: http://uyar.github.io/
+---
+role: Kurucu. Web sitesi yönetimi, içerik hazırlama, atölye eğitmenliği.
 ---
 body:
 

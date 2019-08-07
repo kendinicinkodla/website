@@ -1,5 +1,9 @@
 _model: person
 ---
+sort_key: 11
+---
 family_name: Ak
 ---
 name: Elif Ak
+---
+role: Sosyal medya içeriği, atölye eğitmenliği.

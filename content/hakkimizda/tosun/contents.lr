@@ -1,10 +1,14 @@
 _model: person
 ---
+sort_key: 1
+---
 family_name: Tosun
 ---
 name: Ayşe Tosun
 ---
 url: http://web.itu.edu.tr/~tosunay/
+---
+role: Kurucu. Genel koordinasyon, içerik hazırlama, atölye eğitmenliği.
 ---
 body:
 
