@@ -10,18 +10,15 @@
     </div>
 
     <div class="card-content">
-      <div class="media">
-        <div class="media-content has-text-centered">
-          <h1 class="title">{{ this.name }}</h1>
-          {% if this.url %}<p><a class="button is-link" href="{{ this.url }}">{{ bag('translate', this.alt, 'personal-page' ) }}</a></p>{% endif %}
-        </div>
+      <h1 class="title has-text-centered">{{ this.name }}</h1>
+
+      <div class="content">
+        {% if this.url %}<p class="has-text-centered"><a class="button is-link" href="{{ this.url }}">{{ bag('translate', this.alt, 'personal-page' ) }}</a></p>{% endif %}
+
+        {{ this.body }}
       </div>
     </div>
   </section>
-
-  <div class="content">
-    {{ this.body }}
-  </div>
 
   {% set authored = site.query('/kutuphane').filter(F.authors.contains(this._slug)) %}
   {% if authored %}
