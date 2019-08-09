@@ -16,4 +16,4 @@ locale = tr_TR
 target = ghpages://kendinicinkodla/kendinicinkodla.github.io
 
 [packages]
-lektor-cssbuild = 0.2
+lektor-cssbuild = 0.3
