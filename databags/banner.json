@@ -2,6 +2,17 @@
   "banners": [
     {
       "active": true,
+      "src": "/atolyeler/va-1902/afis.png",
+      "url": "/atolyeler/va-1902/",
+      "alt": {
+        "tr": "Veri Analitiği ve Görselleştirme - Samsun, Eylül 2019"
+      },
+      "title": {
+        "tr": "Samsun'da Veri Analitiği ve Görselleştirme atölyesi"
+      }
+    },
+    {
+      "active": true,
       "src": "/atolyeler/og-1901/afis.png",
       "url": "/atolyeler/og-1901/",
       "alt": {
