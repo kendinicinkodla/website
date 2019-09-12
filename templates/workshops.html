@@ -4,7 +4,7 @@
 {% from "macros/workshop.html" import render_workshop_list %}
 
 <div class="container">
-  {% set future_workshops = this.children.filter(F.status != 'passed').order_by('date') %}
+  {% set future_workshops = this.children.filter((F.status == 'open').or(F.status == 'tentative')).order_by('date') %}
   {% if future_workshops.count() > 0 %}
   <section class="section">
     <h2 class="subtitle">{{ bag('translate', this.alt, 'future-workshops') }}</h2>

@@ -43,7 +43,7 @@
   </section>
   {% endif %}
 
-  {% set workshops = site.query('/atolyeler').filter((F._model == 'workshop').and(F.status != 'passed')).order_by('date').limit(3) %}
+  {% set workshops = site.query('/atolyeler').filter((F._model == 'workshop').and((F.status == 'open').or(F.status == 'tentative'))).order_by('date').limit(3) %}
   {% if workshops.count() > 0 %}
   {%   from "macros/workshop.html" import render_workshop_card, render_workshop_modal %}
   <section class="section">
