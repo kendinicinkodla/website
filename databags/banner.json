@@ -2,6 +2,17 @@
   "banners": [
     {
       "active": true,
+      "src": "/atolyeler/kg-1902/afis.png",
+      "url": "/atolyeler/kg-1902/",
+      "alt": {
+        "tr": "Kriptografi - Konya, Ekim 2019"
+      },
+      "title": {
+        "tr": "Konya'da Kriptografi atölyesi."
+      }
+    },
+    {
+      "active": true,
       "src": "/atolyeler/og-1901/afis.png",
       "url": "/atolyeler/og-1901/",
       "alt": {
