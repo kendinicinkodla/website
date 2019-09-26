@@ -21,7 +21,6 @@
     "kik": "kendin için kodla",
     "kik-logo": "kendin için kodla logosu",
     "library": "Eğitim kütüphanesi",
-    "more-info": "Ayrıntılı bilgi",
     "my-email": "e-posta adresim",
     "news": "Haberler",
     "passed-workshops": "Geçmiş atölyeler",
@@ -31,6 +30,8 @@
     "subscribe": "üye ol",
     "site-copyright": "<strong>kendin için kodla</strong> site içeriği <a href=\"http://creativecommons.org/licenses/by-nc-nd/4.0/\" target=\"_blank\">CC BY NC ND 4.0</a> lisansına tabidir. &copy; Ayşe Tosun, <time>2018</time>",
     "venue": "Yer",
+    "workshop-content": "Atölye içeriği",
+    "workshop-info": "Atölye bilgileri",
     "workshop-suffixed": "Atölyesi",
     "workshops": "Atölyeler"
   }
