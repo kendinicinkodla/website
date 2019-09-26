@@ -9,7 +9,7 @@
   <section class="section">
     <h2 class="subtitle">{{ bag('translate', this.alt, 'future-workshops') }}</h2>
     {% for workshop in future_workshops %}
-      {{ render_workshop_list(workshop, this.alt) }}
+      {{ render_workshop_list(workshop, this.alt, summary=False) }}
     {% endfor %}
   </section>
   {% endif %}
@@ -19,7 +19,7 @@
   <section class="section">
     <h2 class="subtitle">{{ bag('translate', this.alt, 'passed-workshops') }}</h2>
     {% for workshop in passed_workshops %}
-      {{ render_workshop_list(workshop, this.alt) }}
+      {{ render_workshop_list(workshop, this.alt, summary=False) }}
     {% endfor %}
   </section>
   {% endif %}
