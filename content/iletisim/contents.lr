@@ -7,11 +7,6 @@ body:
     <p class="has-text-centered">
       Aşağıdaki formu doldurarak bize mesaj gönderebilirsiniz.
     </p>
-    <div class="content has-text-centered has-background-warning">
-      <p>
-        Formumuz şimdilik gönderime kapalıdır, yakında açacağız.
-      </p>
-    </div>
 
     <form action="https://formspree.io/kendinicinkodla@gmail.com" method="POST">
       <div class="field">
