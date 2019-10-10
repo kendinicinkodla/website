@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700");
-@import url("https://fonts.googleapis.com/css?family=Patrick+Hand:400,700");
+@import url("https://fonts.googleapis.com/css?family=Dekko:400,700");
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -4071,7 +4071,7 @@ a.box:active {
 
 .title {
   color: #363636;
-  font-family: "Patrick Hand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", sans-serif;
+  font-family: "Dekko", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", sans-serif;
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.125; }
@@ -4099,7 +4099,7 @@ a.box:active {
 
 .subtitle {
   color: #4a4a4a;
-  font-family: "Patrick Hand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", sans-serif;
+  font-family: "Dekko", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Helvetica", "Arial", sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.25; }
