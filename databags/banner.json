@@ -21,17 +21,6 @@
       "title": {
         "tr": "Atakent Önyüz Geliştirme atölyemiz başladı."
       }
-    },
-    {
-      "active": true,
-      "src": "/atolyeler/va-1901/afis.png",
-      "url": "/atolyeler/va-1901/",
-      "alt": {
-        "tr": "Veri Analitiği ve Görselleştirme - İstanbul, Ocak 2019"
-      },
-      "title": {
-        "tr": "Küçükyalı Veri Analitiği atölyemiz tamamlandı."
-      }
     }
   ]
 }
