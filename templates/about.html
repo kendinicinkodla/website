@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 
 {% block body %}
-{% from "macros/person.html" import render_person_card %}
 
 <div class="container">
 
@@ -10,12 +9,28 @@
 </section>
 
 <section class="section">
+  {% from "macros/person.html" import render_person_card %}
   <h1 class="subtitle">Çalışanlar</h1>
   {% for row in this.children|batch(3) %}
   <div class="columns">
     {% for contributor in row %}
     <div class="column is-one-third">
       {{ render_person_card(contributor, this.alt) }}
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</section>
+
+{% set supporters = this.supporters.blocks %}
+<section class="section">
+  {% from "macros/supporter.html" import render_supporter_card %}
+  <h1 class="subtitle">Destekleyenler</h1>
+  {% for row in supporters|batch(3) %}
+  <div class="columns is-vcentered">
+    {% for supporter in row %}
+    <div class="column is-one-third">
+      {{ render_supporter_card(supporter, this.alt) }}
     </div>
     {% endfor %}
   </div>

@@ -1,0 +1,18 @@
+{% macro render_supporter_card(supporter, alt) %}
+<div class="card is-shadowless">
+  <div class="card-image">
+    <figure class="image">
+      <a href="{{ supporter.url }}"><img src="{{ ('/static/' + supporter.slug + '.jpg')|url }}" alt="{{ supporter.title }}"></a>
+    </figure>
+  </div>
+
+  <div class="card-content">
+    <div class="media">
+      <div class="media-content has-text-centered">
+        <p class="title is-5"><a href="{{ supporter.url }}">{{ supporter.title }}</a></p>
+        <p>{{ supporter.contribution }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
