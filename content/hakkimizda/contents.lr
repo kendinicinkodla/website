@@ -12,3 +12,26 @@ Bu amaçla bilgisayarcılığın çeşitli alanlarında ikişer günlük,
 ve ilgilerini keşfetmelerine yardımcı olmaya çalışır.
 Bu atölyelerin malzemelerini açık olarak ve uygun bir lisansla
 paylaşarak isteyenlerin benzer atölyeler düzenlemelerine fırsat verir.
+---
+supporters:
+
+#### supporter ####
+slug: sahibinden.com
+----
+url: https://www.sahibinden.com/
+----
+contribution:
+
+#### supporter ####
+slug: tbv
+----
+url: http://www.tbv.org.tr/
+----
+contribution:
+
+#### supporter ####
+slug: ted
+----
+url: https://www.ted.org.tr/
+----
+contribution:
