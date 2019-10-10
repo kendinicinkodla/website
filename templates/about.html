@@ -5,11 +5,12 @@
 
 <div class="container">
 
-<div class="content">
+<section class="section">
   {{ this.body }}
-</div>
+</section>
 
 <section class="section">
+  <h1 class="subtitle">Çalışanlar</h1>
   {% for row in this.children|batch(3) %}
   <div class="columns">
     {% for contributor in row %}
