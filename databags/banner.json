@@ -2,6 +2,17 @@
   "banners": [
     {
       "active": true,
+      "src": "/atolyeler/va-1903/afis.png",
+      "url": "/atolyeler/va-1903/",
+      "alt": {
+        "tr": "Veri Analitiği - Kırklareli, Kasım 2019"
+      },
+      "title": {
+        "tr": "Veri Analitiği atölyesi Kırklareli'de."
+      }
+    },
+    {
+      "active": true,
       "src": "/atolyeler/kg-1902/photo1.jpg",
       "url": "/atolyeler/kg-1902/",
       "alt": {
@@ -9,17 +20,6 @@
       },
       "title": {
         "tr": "Konya Kriptografi atölyemiz tamamlandı."
-      }
-    },
-    {
-      "active": true,
-      "src": "/atolyeler/og-1901/afis.png",
-      "url": "/atolyeler/og-1901/",
-      "alt": {
-        "tr": "Önyüz Geliştirme - İstanbul, Mart 2019"
-      },
-      "title": {
-        "tr": "Atakent Önyüz Geliştirme atölyemiz başladı."
       }
     }
   ]
