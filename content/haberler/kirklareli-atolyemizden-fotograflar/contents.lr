@@ -1,0 +1,17 @@
+_model: newsitem
+---
+title: Kırklareli atölyemizden fotoğraflar
+---
+date: 2019-11-10
+---
+status: published
+---
+lead_in:
+
+Kırklareli'de yaptığımız "Veri Analiği ve Görselleştirme" atölyemiz
+tamamlandı.
+---
+body:
+
+Atölye bilgileri ve fotoğraflarını
+[atölye sayfasında](../../atolyeler/va-1903/) bulabilirsiniz.
