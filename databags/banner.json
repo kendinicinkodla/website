@@ -13,6 +13,17 @@
     },
     {
       "active": true,
+      "src": "/atolyeler/kg-1903/afis.png",
+      "url": "/atolyeler/kg-1903/",
+      "alt": {
+        "tr": "Kriptografi - Küçükyalı, Aralık 2019"
+      },
+      "title": {
+        "tr": "İstanbul Küçükyalı'da Kriptografi atölyesi."
+      }
+    },
+    {
+      "active": true,
       "src": "/atolyeler/kg-1902/photo1.jpg",
       "url": "/atolyeler/kg-1902/",
       "alt": {
