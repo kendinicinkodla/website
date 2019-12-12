@@ -2,13 +2,13 @@
   "banners": [
     {
       "active": true,
-      "src": "/atolyeler/va-1903/afis.png",
+      "src": "/atolyeler/va-1903/photo1.jpg",
       "url": "/atolyeler/va-1903/",
       "alt": {
         "tr": "Veri Analitiği - Kırklareli, Kasım 2019"
       },
       "title": {
-        "tr": "Veri Analitiği atölyesi Kırklareli'de."
+        "tr": "Kırklareli Veri Analitiği atölyesinden fotoğraflar."
       }
     },
     {
