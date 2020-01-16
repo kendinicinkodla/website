@@ -2,13 +2,13 @@
   "banners": [
     {
       "active": true,
-      "src": "/atolyeler/va-1903/photo1.jpg",
-      "url": "/atolyeler/va-1903/",
+      "src": "/atolyeler/va-2001/afis.png",
+      "url": "/atolyeler/va-2001/",
       "alt": {
-        "tr": "Veri Analitiği - Kırklareli, Kasım 2019"
+        "tr": "Veri Analitiği - Kayseri, Şubat 2020"
       },
       "title": {
-        "tr": "Kırklareli Veri Analitiği atölyesinden fotoğraflar."
+        "tr": "Veri Analitiği atölyesi Şubat ayında Kayseri'de."
       }
     },
     {
@@ -24,13 +24,13 @@
     },
     {
       "active": true,
-      "src": "/atolyeler/kg-1902/photo1.jpg",
-      "url": "/atolyeler/kg-1902/",
+      "src": "/atolyeler/va-1903/photo1.jpg",
+      "url": "/atolyeler/va-1903/",
       "alt": {
-        "tr": "Kriptografi - Konya, Ekim 2019"
+        "tr": "Veri Analitiği - Kırklareli, Kasım 2019"
       },
       "title": {
-        "tr": "Konya Kriptografi atölyemiz tamamlandı."
+        "tr": "Kırklareli Veri Analitiği atölyesinden fotoğraflar."
       }
     }
   ]
