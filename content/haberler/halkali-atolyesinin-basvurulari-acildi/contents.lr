@@ -1,0 +1,16 @@
+_model: newsitem
+---
+title: Halkalı atölyesinin başvuruları açıldı
+---
+date: 2020-02-06
+---
+status: published
+---
+lead_in:
+
+Halkalı'da yapacağımız "Önyüz Geliştirme" atölyesine
+başvuruları almaya başladık.
+---
+body:
+
+[Atölye bilgileri için tıklayın](../../atolyeler/og-2001/)
