@@ -2,6 +2,17 @@
   "banners": [
     {
       "active": true,
+      "src": "/atolyeler/og-2002/afis.png",
+      "url": "/atolyeler/og-2002/",
+      "alt": {
+        "tr": "Önyüz Geliştirme - Gaziantep, Nisan 2020"
+      },
+      "title": {
+        "tr": "Önyüz Geliştirme atölyemiz Gaziantep'de yapılacak."
+      }
+    },
+    {
+      "active": true,
       "src": "/atolyeler/va-2001/afis.png",
       "url": "/atolyeler/va-2001/",
       "alt": {
@@ -12,18 +23,7 @@
       }
     },
     {
-      "active": true,
-      "src": "/atolyeler/kg-1903/afis.png",
-      "url": "/atolyeler/kg-1903/",
-      "alt": {
-        "tr": "Kriptografi - Küçükyalı, Aralık 2019"
-      },
-      "title": {
-        "tr": "İstanbul Küçükyalı'da Kriptografi atölyesi."
-      }
-    },
-    {
-      "active": true,
+      "active": false,
       "src": "/atolyeler/va-1903/photo1.jpg",
       "url": "/atolyeler/va-1903/",
       "alt": {

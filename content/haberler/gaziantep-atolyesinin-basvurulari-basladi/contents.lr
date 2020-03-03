@@ -1,0 +1,16 @@
+_model: newsitem
+---
+title: Gaziantep atölyesinin başvuruları başladı
+---
+date: 2020-03-03
+---
+status: published
+---
+lead_in:
+
+Nisan ayında Gaziantep'de düzenleyeceğimiz "Önyüz Geliştirme"
+atölyesinin başvuru formu açıldı.
+---
+body:
+
+[Atölye bilgileri için tıklayın](../../atolyeler/og-2002/)
