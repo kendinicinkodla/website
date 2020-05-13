@@ -2,17 +2,6 @@
   "banners": [
     {
       "active": true,
-      "src": "/atolyeler/og-2002/afis.png",
-      "url": "/atolyeler/og-2002/",
-      "alt": {
-        "tr": "Önyüz Geliştirme - Gaziantep, Nisan 2020"
-      },
-      "title": {
-        "tr": "Önyüz Geliştirme atölyesi Nisan ayında Gaziantep'te."
-      }
-    },
-    {
-      "active": true,
       "src": "/atolyeler/va-2001/afis.png",
       "url": "/atolyeler/va-2001/",
       "alt": {
